@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ViewGroups.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">ViewGroups.java</span></div><h1>ViewGroups.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * The ViewGroups class provides methods to view study groups and their details.
+ */
+<span class="fc" id="L23">public class ViewGroups {</span>
+
+    /**
+     * Displays a list of study groups and allows the user to view group details.
+     *
+     * @param groups  The list of study groups to display.
+     * @param scanner The Scanner object for user input.
+     */
+    public static void viewGroups(List&lt;StudyGroup&gt; groups, Scanner scanner) {
+<span class="fc" id="L32">        System.out.println(&quot;---- Study Groups ----&quot;);</span>
+<span class="fc" id="L33">            int index = 1;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">            for (StudyGroup group : groups) {</span>
+<span class="fc" id="L35">                System.out.println(index + &quot;. &quot; + group.getName());</span>
+<span class="fc" id="L36">                index++;</span>
+<span class="fc" id="L37">            }</span>
+
+            // Allow user to view group details
+<span class="fc" id="L40">            scanner.nextLine();</span>
+<span class="fc" id="L41">            System.out.println(&quot;Enter the number of the group to view details (or 0 to go back):&quot;);</span>
+<span class="fc" id="L42">            int choice = scanner.nextInt();</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">            if (choice == 0) {</span>
+<span class="fc" id="L44">                CoordinatorApp.groupManagementMenu(scanner);</span>
+<span class="pc bpc" id="L45" title="1 of 4 branches missed.">            } else if (choice &gt; 0 &amp;&amp; choice &lt;= groups.size()) {</span>
+<span class="fc" id="L46">                StudyGroup selectedGroup = groups.get(choice - 1);</span>
+<span class="fc" id="L47">                viewGroupDetails(selectedGroup, scanner);</span>
+            }
+<span class="fc" id="L49">        }</span>
+
+    /**
+     * Displays the details of a specific study group.
+     *
+     * @param group   The study group to view details for.
+     * @param scanner The Scanner object for user input.
+     */
+    private static void viewGroupDetails(StudyGroup group, Scanner scanner) {
+<span class="fc" id="L58">        System.out.println(&quot;---- Group Details ----&quot;);</span>
+<span class="fc" id="L59">        System.out.println(&quot;Group Name: &quot; + group.getName());</span>
+<span class="fc" id="L60">        System.out.println(&quot;Group Description: &quot; + group.getDescription());</span>
+<span class="fc" id="L61">        System.out.println(&quot;Group Members:&quot;);</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        for (User member : group.getMembers()) {</span>
+<span class="fc" id="L63">            System.out.println(&quot;- &quot; + member.getUsername());</span>
+<span class="fc" id="L64">        }</span>
+
+<span class="fc" id="L66">        scanner.nextLine();</span>
+<span class="fc" id="L67">        System.out.println(&quot;Write 'return' to return&quot;);</span>
+<span class="fc" id="L68">        String input = scanner.nextLine().trim();</span>
+
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (input.equalsIgnoreCase(&quot;return&quot;)) {</span>
+<span class="fc" id="L71">            CoordinatorApp.groupManagementMenu(scanner);</span>
+        }
+<span class="fc" id="L73">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

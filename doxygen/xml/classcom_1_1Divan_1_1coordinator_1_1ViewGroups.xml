@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1ViewGroups" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::ViewGroups</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a1fc5603b8e5fafe0beb531a70011d8d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.ViewGroups.viewGroups</definition>
+        <argsstring>(List&lt; StudyGroup &gt; groups, Scanner scanner)</argsstring>
+        <name>viewGroups</name>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref> &gt;</type>
+          <declname>groups</declname>
+        </param>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a list of study groups and allows the user to view group details.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groups</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of study groups to display. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/ViewGroups.java" line="31" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/ViewGroups.java" bodystart="31" bodyend="49"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" compoundref="StudyGroup_8java" startline="169" endline="178">com.Divan.coordinator.StudyGroup.viewStudyGroup</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a492ee82eee05a39792763781c0f28477" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.ViewGroups.viewGroupDetails</definition>
+        <argsstring>(StudyGroup group, Scanner scanner)</argsstring>
+        <name>viewGroupDetails</name>
+        <param>
+          <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the details of a specific study group.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The study group to view details for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/ViewGroups.java" line="57" column="25" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/ViewGroups.java" bodystart="57" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups" kindref="compound">ViewGroups</ref> class provides methods to view study groups and their details. </para>
+    </detaileddescription>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/ViewGroups.java" line="23" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/ViewGroups.java" bodystart="23" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a492ee82eee05a39792763781c0f28477" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::ViewGroups</scope><name>viewGroupDetails</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a1fc5603b8e5fafe0beb531a70011d8d5" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::ViewGroups</scope><name>viewGroups</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CoordinatorApp.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">CoordinatorApp.java</span></div><h1>CoordinatorApp.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.tree.DefaultTreeCellEditor.EditorContainer;
+
+/**
+ * CoordinatorApp is the main class that manages the functionality of the coordinator application.
+ * This application allows users to manage study groups, schedule sessions, share resources, and participate in discussions.
+ */
+<span class="nc" id="L27">public class CoordinatorApp {</span>
+    /** The account associated with the application. */
+<span class="fc" id="L29">    private static Account account = new Account();</span>
+    
+    /** Scanner object for user input. */
+<span class="fc" id="L32">    private static Scanner scanner = new Scanner(System.in);</span>
+    
+    /** The currently logged-in user. */
+    public static User currentUser;
+    
+    /** The session manager for managing sessions. */
+<span class="fc" id="L38">    public static SessionManager sessionManager = new SessionManager();</span>
+    
+    /** The resource manager for managing resources. */
+<span class="fc" id="L41">    public static ResourceManager resourceManager = new ResourceManager();</span>
+    
+    /** The discussion manager for managing discussions. */
+<span class="fc" id="L44">    public static DiscussionManager discussionManager = new DiscussionManager();</span>
+    
+    /** List of discussions in the application. */
+<span class="fc" id="L47">    public static List&lt;Discussion&gt; discussions = new ArrayList&lt;Discussion&gt;();</span>
+    
+    /** List of resources in the application. */
+<span class="fc" id="L50">    public static List&lt;Resource&gt; resources = new ArrayList&lt;Resource&gt;();</span>
+    
+    /** List of sessions in the application. */
+<span class="fc" id="L53">    public static List&lt;Session&gt; sessions = new ArrayList&lt;Session&gt;();</span>
+
+    /**
+     * Clears the console screen.
+     */
+    public static void clearScreen() {
+<span class="fc" id="L59">        System.out.print(&quot;\033[H\033[2J&quot;);</span>
+<span class="fc" id="L60">        System.out.flush();</span>
+<span class="fc" id="L61">    }</span>
+
+    /**
+     * Displays the main menu of the application.
+     * @param scanner Scanner object for user input
+     */
+    public static void mainMenu(Scanner scanner) {
+<span class="fc" id="L68">        clearScreen();</span>
+<span class="fc" id="L69">        System.out.println(&quot;--- Main Menu ---            Logged in as: &quot; + currentUser.getUsername());</span>
+<span class="fc" id="L70">        System.out.println(&quot;1. Group Management&quot;);</span>
+<span class="fc" id="L71">        System.out.println(&quot;2. Session Scheduling&quot;);</span>
+<span class="fc" id="L72">        System.out.println(&quot;3. Resource Sharing&quot;);</span>
+<span class="fc" id="L73">        System.out.println(&quot;4. Discussion Board&quot;);</span>
+<span class="fc" id="L74">        System.out.println(&quot;5. Exit&quot;);</span>
+<span class="fc" id="L75">        int choice = scanner.nextInt();</span>
+
+<span class="fc bfc" id="L77" title="All 6 branches covered.">        switch (choice) {</span>
+            case 1:
+<span class="fc" id="L79">                groupManagementMenu(scanner);</span>
+<span class="fc" id="L80">                break;</span>
+            case 2:
+<span class="fc" id="L82">                sessionSchedulingMenu(scanner);</span>
+<span class="fc" id="L83">                break;</span>
+            case 3:
+<span class="fc" id="L85">                resourceSharingMenu(scanner);</span>
+<span class="fc" id="L86">                break;</span>
+            case 4:
+<span class="fc" id="L88">                discussionBoardMenu(scanner);</span>
+<span class="fc" id="L89">                break;</span>
+            case 5:
+<span class="fc" id="L91">                System.out.println(&quot;Exiting the program...&quot;);</span>
+<span class="fc" id="L92">                scanner.close();</span>
+<span class="fc" id="L93">                return;</span>
+        }
+<span class="fc" id="L95">    }</span>
+    
+    /**
+     * Displays the group management menu.
+     * @param scanner Scanner object for user input
+     */
+    public static void groupManagementMenu(Scanner scanner) {
+<span class="fc" id="L102">        clearScreen();</span>
+<span class="fc" id="L103">        System.out.println(&quot;--- Group Management Menu ---&quot;);</span>
+<span class="fc" id="L104">        System.out.println(&quot;1. Create Study Group&quot;);</span>
+<span class="fc" id="L105">        System.out.println(&quot;2. View Study Group&quot;);</span>
+<span class="fc" id="L106">        System.out.println(&quot;3. Back to Menu&quot;);</span>
+<span class="fc" id="L107">        int choice = scanner.nextInt();</span>
+
+<span class="fc bfc" id="L109" title="All 4 branches covered.">        switch (choice) {</span>
+            case 1:
+<span class="fc" id="L111">                StudyGroup.createStudyGroup(scanner);</span>
+<span class="fc" id="L112">                break;</span>
+            case 2:
+<span class="fc" id="L114">            	StudyGroup.viewStudyGroup(scanner);</span>
+<span class="fc" id="L115">                break;</span>
+            case 3:
+<span class="fc" id="L117">            	mainMenu(scanner);</span>
+<span class="fc" id="L118">                return;</span>
+        }
+<span class="fc" id="L120">    }</span>
+
+    /**
+     * Displays the session scheduling menu.
+     * @param scanner Scanner object for user input
+     */
+    public static void sessionSchedulingMenu(Scanner scanner) {
+<span class="fc" id="L127">        clearScreen();</span>
+<span class="fc" id="L128">        System.out.println(&quot;--- Session Scheduling Menu ---&quot;);</span>
+<span class="fc" id="L129">        System.out.println(&quot;1. Schedule Session&quot;);</span>
+<span class="fc" id="L130">        System.out.println(&quot;2. View Sessions&quot;);</span>
+<span class="fc" id="L131">        System.out.println(&quot;3. Edit Sessions&quot;);</span>
+<span class="fc" id="L132">        System.out.println(&quot;4. Back to Main Menu&quot;);</span>
+<span class="fc" id="L133">        int choice = scanner.nextInt();</span>
+
+<span class="fc bfc" id="L135" title="All 5 branches covered.">        switch (choice) {</span>
+            case 1:
+<span class="fc bfc" id="L137" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L139">                    scheduleSession(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L142">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L143">            	sessionSchedulingMenu(scanner);</span>
+            	}
+<span class="fc" id="L145">                break;</span>
+            case 2:
+<span class="fc bfc" id="L147" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L149">            		viewSessions(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L152">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L153">            	sessionSchedulingMenu(scanner);</span>
+              
+            	}
+<span class="fc" id="L156">                break;</span>
+            case 3:
+<span class="fc bfc" id="L158" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L160">            		editSessionDetails(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L163">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L164">            	sessionSchedulingMenu(scanner);</span>
+            	}
+<span class="fc" id="L166">            	break;</span>
+            case 4:
+<span class="fc" id="L168">                mainMenu(scanner);</span>
+                break;
+        }
+<span class="fc" id="L171">    }</span>
+
+    /**
+     * Allows the user to schedule a session.
+     * @param scanner Scanner object for user input
+     */
+    public static void scheduleSession(Scanner scanner) {
+<span class="fc" id="L178">        clearScreen();</span>
+<span class="fc" id="L179">        System.out.println(&quot;--- Schedule Session ---&quot;);</span>
+        // Implement session scheduling logic here
+<span class="fc" id="L181">        System.out.println(&quot;Enter session title:&quot;);</span>
+<span class="fc" id="L182">        String title = scanner.next();</span>
+<span class="fc" id="L183">        System.out.println(&quot;Enter session date:&quot;);</span>
+<span class="fc" id="L184">        String date = scanner.next();</span>
+<span class="fc" id="L185">        System.out.println(&quot;Enter session description:&quot;);</span>
+<span class="fc" id="L186">        String description = scanner.next();</span>
+<span class="fc" id="L187">        Session session = new Session(title, date, currentUser.getGroup(), description);</span>
+<span class="fc" id="L188">        sessions.add(session);</span>
+<span class="fc" id="L189">        SessionManager.writeSessionsToFile(sessions);</span>
+<span class="fc" id="L190">        System.out.println(&quot;Session scheduled successfully!&quot;);</span>
+<span class="fc" id="L191">        sessionSchedulingMenu(scanner);</span>
+<span class="fc" id="L192">    }</span>
+
+    /**
+     * Displays the list of sessions for the user's group and allows viewing session details.
+     * @param scanner Scanner object for user input
+     */
+    public static void viewSessions(Scanner scanner) {
+<span class="fc" id="L199">    	scanner.nextLine();</span>
+<span class="fc" id="L200">        clearScreen();</span>
+      
+        
+<span class="fc" id="L203">        System.out.println(&quot;--- View Session Details ---&quot;);</span>
+<span class="fc" id="L204">        sessionManager.displaySessionsForGroup(currentUser.getGroup());</span>
+<span class="fc" id="L205">        System.out.println(&quot;Enter the title of the resource you want to view details for (or type 'cancel' to return to the menu):&quot;);</span>
+<span class="fc" id="L206">        String titleChoice = scanner.nextLine();</span>
+<span class="fc bfc" id="L207" title="All 2 branches covered.">        if (titleChoice.equalsIgnoreCase(&quot;cancel&quot;)) {</span>
+<span class="fc" id="L208">            sessionSchedulingMenu(scanner); // Return to resource sharing menu if user cancels</span>
+<span class="fc" id="L209">            return;</span>
+        }
+
+        // Search for the resource with the specified title and group
+<span class="fc" id="L213">        Session sessionToShow = null;</span>
+<span class="fc bfc" id="L214" title="All 2 branches covered.">        for (Session session : sessionManager.getSessions()) {</span>
+<span class="pc bpc" id="L215" title="1 of 4 branches missed.">            if (session.getTitle().equalsIgnoreCase(titleChoice) &amp;&amp; session.getGroup().getName().equals(currentUser.getGroup().getName())) {</span>
+<span class="fc" id="L216">                sessionToShow = session;</span>
+<span class="fc" id="L217">                break;</span>
+            }
+<span class="fc" id="L219">        }</span>
+
+        // If resource is found, display its details
+<span class="fc bfc" id="L222" title="All 2 branches covered.">        if (sessionToShow != null) {</span>
+<span class="fc" id="L223">            System.out.println(&quot;Title: &quot; + sessionToShow.getTitle());</span>
+<span class="fc" id="L224">            System.out.println(&quot;Date: &quot; + sessionToShow.getDate());</span>
+<span class="fc" id="L225">            System.out.println(&quot;Description: &quot; + sessionToShow.getDescription());</span>
+        } else {
+<span class="fc" id="L227">            System.out.println(&quot;Session not found or you don't have access to view this session.&quot;);</span>
+        }
+
+        // After viewing resource details, return to resource sharing menu
+<span class="fc" id="L231">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L232">        return;</span>
+    }
+    
+    /**
+     * @brief Allows the user to edit details of a session.
+     * 
+     * This method displays a list of sessions for the current user's group and
+     * prompts the user to choose a session to edit. It then allows the user to
+     * edit the session's title, date, and description.
+     * 
+     * @param scanner The Scanner object used for input.
+     */
+    public static void editSessionDetails(Scanner scanner) {
+<span class="fc" id="L245">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L246">        clearScreen();</span>
+<span class="fc" id="L247">        System.out.println(&quot;--- Edit Session Details ---&quot;);</span>
+<span class="fc" id="L248">        sessionManager.displaySessionsForGroup(currentUser.getGroup());</span>
+<span class="fc" id="L249">        System.out.println(&quot;Enter the title of the session you want to edit details for (or type 'cancel' to return to the menu):&quot;);</span>
+<span class="fc" id="L250">        String titleChoice = scanner.nextLine();</span>
+<span class="fc bfc" id="L251" title="All 2 branches covered.">        if (titleChoice.equalsIgnoreCase(&quot;cancel&quot;)) {</span>
+<span class="fc" id="L252">            scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L253">            return;</span>
+        }
+
+        // Search for the session with the specified title and group
+<span class="fc" id="L257">        Session sessionToEdit = null;</span>
+<span class="fc bfc" id="L258" title="All 2 branches covered.">        for (Session session : sessionManager.getSessions()) {</span>
+<span class="pc bpc" id="L259" title="2 of 4 branches missed.">            if (session.getTitle().equalsIgnoreCase(titleChoice) &amp;&amp; session.getGroup().getName().equals(currentUser.getGroup().getName())) {</span>
+<span class="fc" id="L260">                sessionToEdit = session;</span>
+<span class="fc" id="L261">                break;</span>
+            }
+<span class="nc" id="L263">        }</span>
+
+        // If session is found, ask for new details and perform editing
+<span class="fc bfc" id="L266" title="All 2 branches covered.">        if (sessionToEdit != null) {</span>
+<span class="fc" id="L267">            System.out.println(&quot;Enter new title:&quot;);</span>
+<span class="fc" id="L268">            String newTitle = scanner.nextLine();</span>
+<span class="fc" id="L269">            System.out.println(&quot;Enter new date:&quot;);</span>
+<span class="fc" id="L270">            String newDate = scanner.nextLine();</span>
+<span class="fc" id="L271">            System.out.println(&quot;Enter new description:&quot;);</span>
+<span class="fc" id="L272">            String newDescription = scanner.nextLine();</span>
+
+            // Perform editing
+<span class="fc" id="L275">            sessionToEdit.setTitle(newTitle);</span>
+<span class="fc" id="L276">            sessionToEdit.setDate(newDate);</span>
+<span class="fc" id="L277">            sessionToEdit.setDescription(newDescription);</span>
+<span class="fc" id="L278">            SessionManager.writeSessionsToFile(sessionManager.getSessions());</span>
+<span class="fc" id="L279">            System.out.println(&quot;Session details edited successfully!&quot;);</span>
+<span class="fc" id="L280">        } else {</span>
+<span class="fc" id="L281">            System.out.println(&quot;Session not found or you don't have access to edit this session.&quot;);</span>
+        }
+
+        // After editing session details, return to main menu
+<span class="fc" id="L285">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L286">        return;</span>
+    }
+
+    /**
+     * Displays the resource sharing menu and handles user choices.
+     * Allows users to share resources or view existing resources.
+     * @param scanner Scanner object for user input
+     */
+    public static void resourceSharingMenu(Scanner scanner) {
+<span class="fc" id="L295">        clearScreen();</span>
+<span class="fc" id="L296">        System.out.println(&quot;--- Resource Sharing Menu ---&quot;);</span>
+<span class="fc" id="L297">        System.out.println(&quot;1. Share Resource&quot;);</span>
+<span class="fc" id="L298">        System.out.println(&quot;2. View Resources&quot;);</span>
+<span class="fc" id="L299">        System.out.println(&quot;3. Edit Resources&quot;);</span>
+<span class="fc" id="L300">        System.out.println(&quot;4. Back to Main Menu&quot;);</span>
+<span class="fc" id="L301">        int choice = scanner.nextInt();</span>
+
+<span class="fc bfc" id="L303" title="All 5 branches covered.">        switch (choice) {</span>
+            case 1:
+<span class="fc bfc" id="L305" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L307">                    shareResource(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L310">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L311">            	resourceSharingMenu(scanner);</span>
+            	}
+<span class="fc" id="L313">                break;</span>
+            case 2:
+<span class="fc bfc" id="L315" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L317">                    viewResourceDetails(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L320">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L321">            	resourceSharingMenu(scanner);</span>
+            	}
+<span class="fc" id="L323">                break;</span>
+            case 3:
+<span class="fc bfc" id="L325" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L327">            		editResourceDetails(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L330">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L331">            	resourceSharingMenu(scanner);</span>
+            	}
+<span class="fc" id="L333">            	break;</span>
+            case 4:
+<span class="fc" id="L335">                mainMenu(scanner);</span>
+                break;
+        }
+<span class="fc" id="L338">    }</span>
+
+    /**
+     * Allows the user to share a resource by providing title, description, and link.
+     * Adds the shared resource to the system and saves it to file.
+     * @param scanner Scanner object for user input
+     */
+    public static void shareResource(Scanner scanner) {
+<span class="fc" id="L346">        clearScreen();</span>
+<span class="fc" id="L347">        System.out.println(&quot;--- Share Resource ---&quot;);</span>
+        // Implement resource sharing logic here
+<span class="fc" id="L349">        System.out.println(&quot;Enter resource title:&quot;);</span>
+<span class="fc" id="L350">        String title = scanner.next();</span>
+<span class="fc" id="L351">        System.out.println(&quot;Enter resource description:&quot;);</span>
+<span class="fc" id="L352">        String description = scanner.next();</span>
+<span class="fc" id="L353">        System.out.println(&quot;Enter resource link:&quot;);</span>
+<span class="fc" id="L354">        String link = scanner.next();</span>
+<span class="fc" id="L355">        Resource resource = new Resource(title, description, link, currentUser.getGroup());</span>
+<span class="fc" id="L356">        resources.add(resource);</span>
+<span class="fc" id="L357">        ResourceManager.writeResourcesToFile(resources);</span>
+        // After sharing resource, return to resource sharing menu
+<span class="fc" id="L359">        resourceSharingMenu(scanner);</span>
+<span class="fc" id="L360">    }</span>
+
+    /**
+     * Allows the user to view details of a specific resource.
+     * Displays the title, description, and link of the resource if found.
+     * @param scanner Scanner object for user input
+     */
+    public static void viewResourceDetails(Scanner scanner) {
+<span class="fc" id="L368">        scanner.nextLine();</span>
+<span class="fc" id="L369">        clearScreen();</span>
+<span class="fc" id="L370">        System.out.println(&quot;--- View Resource Details ---&quot;);</span>
+<span class="fc" id="L371">        resourceManager.displayResourcesForGroup(currentUser.getGroup());</span>
+<span class="fc" id="L372">        System.out.println(&quot;Enter the title of the resource you want to view details for (or type 'cancel' to return to the menu):&quot;);</span>
+<span class="fc" id="L373">        String titleChoice = scanner.nextLine();</span>
+<span class="fc bfc" id="L374" title="All 2 branches covered.">        if (titleChoice.equalsIgnoreCase(&quot;cancel&quot;)) {</span>
+<span class="fc" id="L375">            resourceSharingMenu(scanner); // Return to resource sharing menu if user cancels</span>
+<span class="fc" id="L376">            return;</span>
+        }
+
+        // Search for the resource with the specified title and group
+<span class="fc" id="L380">        Resource resourceToShow = null;</span>
+<span class="fc bfc" id="L381" title="All 2 branches covered.">        for (Resource resource : resourceManager.getResources()) {</span>
+<span class="pc bpc" id="L382" title="1 of 4 branches missed.">            if (resource.getTitle().equalsIgnoreCase(titleChoice) &amp;&amp; resource.getGroup().getName().equals(currentUser.getGroup().getName())) {</span>
+<span class="fc" id="L383">                resourceToShow = resource;</span>
+<span class="fc" id="L384">                break;</span>
+            }
+<span class="fc" id="L386">        }</span>
+
+        // If resource is found, display its details
+<span class="fc bfc" id="L389" title="All 2 branches covered.">        if (resourceToShow != null) {</span>
+<span class="fc" id="L390">            System.out.println(&quot;Title: &quot; + resourceToShow.getTitle());</span>
+<span class="fc" id="L391">            System.out.println(&quot;Description: &quot; + resourceToShow.getDescription());</span>
+<span class="fc" id="L392">            System.out.println(&quot;Link: &quot; + resourceToShow.getLink());</span>
+        } else {
+<span class="fc" id="L394">            System.out.println(&quot;Resource not found or you don't have access to view this resource.&quot;);</span>
+        }
+
+        // After viewing resource details, return to resource sharing menu
+<span class="fc" id="L398">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L399">        return;</span>
+    }
+    /**
+     * @brief Allows the user to edit details of a resource.
+     * 
+     * This method displays a list of resources for the current user's group and
+     * prompts the user to choose a resource to edit. It then allows the user to
+     * edit the resource's title, link, and description.
+     * 
+     * @param scanner The Scanner object used for input.
+     */
+    public static void editResourceDetails(Scanner scanner) {
+<span class="fc" id="L411">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L412">        clearScreen();</span>
+<span class="fc" id="L413">        System.out.println(&quot;--- Edit Resource Details ---&quot;);</span>
+<span class="fc" id="L414">        resourceManager.displayResourcesForGroup(currentUser.getGroup());</span>
+<span class="fc" id="L415">        System.out.println(&quot;Enter the title of the resource you want to edit details for (or type 'cancel' to return to the menu):&quot;);</span>
+<span class="fc" id="L416">        String titleChoice = scanner.nextLine();</span>
+<span class="fc bfc" id="L417" title="All 2 branches covered.">        if (titleChoice.equalsIgnoreCase(&quot;cancel&quot;)) {</span>
+<span class="fc" id="L418">            return;</span>
+        }
+
+        // Search for the resource with the specified title and group
+<span class="fc" id="L422">        Resource resourceToEdit = null;</span>
+<span class="fc bfc" id="L423" title="All 2 branches covered.">        for (Resource resource : resourceManager.getResources()) {</span>
+<span class="pc bpc" id="L424" title="2 of 4 branches missed.">            if (resource.getTitle().equalsIgnoreCase(titleChoice) &amp;&amp; resource.getGroup().getName().equals(currentUser.getGroup().getName())) {</span>
+<span class="fc" id="L425">                resourceToEdit = resource;</span>
+<span class="fc" id="L426">                break;</span>
+            }
+<span class="nc" id="L428">        }</span>
+
+        // If resource is found, ask for new details and perform editing
+<span class="fc bfc" id="L431" title="All 2 branches covered.">        if (resourceToEdit != null) {</span>
+<span class="fc" id="L432">            System.out.println(&quot;Enter new title:&quot;);</span>
+<span class="fc" id="L433">            String newTitle = scanner.nextLine();</span>
+<span class="fc" id="L434">            System.out.println(&quot;Enter new date:&quot;);</span>
+<span class="fc" id="L435">            String newDescription = scanner.nextLine();</span>
+<span class="fc" id="L436">            System.out.println(&quot;Enter new description:&quot;);</span>
+<span class="fc" id="L437">            String newLink = scanner.nextLine();</span>
+
+            // Perform editing
+<span class="fc" id="L440">            resourceToEdit.setTitle(newTitle);</span>
+<span class="fc" id="L441">            resourceToEdit.setDescription(newDescription);</span>
+<span class="fc" id="L442">            resourceToEdit.setLink(newLink);</span>
+<span class="fc" id="L443">            ResourceManager.writeResourcesToFile(resourceManager.getResources());</span>
+<span class="fc" id="L444">            System.out.println(&quot;Resource details edited successfully!&quot;);</span>
+<span class="fc" id="L445">        } else {</span>
+<span class="fc" id="L446">            System.out.println(&quot;Resource not found or you don't have access to edit this resource.&quot;);</span>
+        }
+
+        // After editing resource details, return to main menu
+<span class="fc" id="L450">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L451">        return;</span>
+    }
+    
+    /**
+     * Displays the discussion board menu and handles user choices.
+     * Allows users to create a new discussion or view existing discussions.
+     * @param scanner Scanner object for user input
+     */
+    public static void discussionBoardMenu(Scanner scanner) {
+<span class="fc" id="L460">        clearScreen();</span>
+<span class="fc" id="L461">        System.out.println(&quot;--- Discussion Board Menu ---&quot;);</span>
+<span class="fc" id="L462">        System.out.println(&quot;1. Create Discussion&quot;);</span>
+<span class="fc" id="L463">        System.out.println(&quot;2. View Discussions&quot;);</span>
+<span class="fc" id="L464">        System.out.println(&quot;3. Edit Discussion&quot;);</span>
+<span class="fc" id="L465">        System.out.println(&quot;4. Back to Main Menu&quot;);</span>
+<span class="fc" id="L466">        int choice = scanner.nextInt();</span>
+
+<span class="fc bfc" id="L468" title="All 5 branches covered.">        switch (choice) {</span>
+            case 1:
+<span class="fc bfc" id="L470" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L472">                    createDiscussion(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L475">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L476">            	discussionBoardMenu(scanner);</span>
+            	}
+<span class="fc" id="L478">                break;</span>
+            case 2:
+<span class="fc bfc" id="L480" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L482">            		viewDiscussions(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L485">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L486">            	discussionBoardMenu(scanner);</span>
+            	}
+                
+<span class="fc" id="L489">                break;</span>
+            case 3:
+<span class="fc bfc" id="L491" title="All 2 branches covered.">            	if(currentUser.getGroup()!= null)</span>
+            	{
+<span class="fc" id="L493">            		editDiscussionDetails(scanner);</span>
+            	}
+            	else {
+<span class="fc" id="L496">            	System.out.println(&quot;You dont have a group&quot;);</span>
+<span class="fc" id="L497">            	discussionBoardMenu(scanner);</span>
+            	}
+<span class="fc" id="L499">            	break;</span>
+            case 4:
+<span class="fc" id="L501">                mainMenu(scanner);</span>
+                break;
+        }
+<span class="fc" id="L504">    }</span>
+
+    /**
+     * Allows the user to create a new discussion by providing a topic.
+     * Adds the created discussion to the system and saves it to file.
+     * @param scanner Scanner object for user input
+     */
+    public static void createDiscussion(Scanner scanner) {
+<span class="fc" id="L512">        clearScreen();</span>
+<span class="fc" id="L513">        System.out.println(&quot;--- Create Discussion ---&quot;);</span>
+        // Implement discussion creation logic here
+<span class="fc" id="L515">        System.out.println(&quot;Enter discussion topic:&quot;);</span>
+<span class="fc" id="L516">        String topic = scanner.next();</span>
+<span class="fc" id="L517">        Discussion discussion = new Discussion(topic, currentUser.getGroup());</span>
+        //discussionManager.addDiscussion(discussion);
+<span class="fc" id="L519">        System.out.println(&quot;Discussion created successfully!&quot;);</span>
+<span class="fc" id="L520">        discussions.add(discussion);</span>
+<span class="fc" id="L521">        DiscussionManager.writeDiscussionsToFile(discussions);</span>
+        // After creating discussion, return to discussion board menu
+<span class="fc" id="L523">        discussionBoardMenu(scanner);</span>
+<span class="fc" id="L524">    }</span>
+
+    /**
+     * Allows the user to view details of discussions and add comments to them.
+     * @param scanner Scanner object for user input
+     */
+    public static void viewDiscussions(Scanner scanner) {
+<span class="fc" id="L531">        clearScreen();</span>
+<span class="fc" id="L532">        System.out.println(&quot;--- View Discussions ---&quot;);</span>
+        // Implement logic to view discussions here
+<span class="fc" id="L534">        discussionManager.displayDiscussionsForGroup(currentUser.getGroup()); // Display discussions for the current user's group</span>
+
+<span class="fc" id="L536">        System.out.println(&quot;Enter the topic of the discussion you want to comment on (or type 'cancel' to return to the menu):&quot;);</span>
+<span class="fc" id="L537">        String topicChoice = scanner.nextLine();</span>
+<span class="fc" id="L538">        topicChoice = scanner.nextLine();</span>
+<span class="fc bfc" id="L539" title="All 2 branches covered.">        if (topicChoice.equalsIgnoreCase(&quot;cancel&quot;)) {</span>
+<span class="fc" id="L540">            discussionBoardMenu(scanner); // Return to discussion board menu if user cancels</span>
+<span class="fc" id="L541">            return;</span>
+        }
+
+        // Search for the discussion with the specified topic
+<span class="fc" id="L545">        Discussion discussionToComment = null;</span>
+<span class="fc bfc" id="L546" title="All 2 branches covered.">        for (Discussion discussion : discussionManager.getDiscussions()) {</span>
+<span class="fc bfc" id="L547" title="All 2 branches covered.">            if (discussion.getTopic().equalsIgnoreCase(topicChoice)) {</span>
+<span class="fc" id="L548">                discussionToComment = discussion;</span>
+<span class="fc" id="L549">                break;</span>
+            }
+<span class="fc" id="L551">        }</span>
+
+        // If discussion is found, prompt for comment and add it
+<span class="fc bfc" id="L554" title="All 2 branches covered.">        if (discussionToComment != null) {</span>
+<span class="fc" id="L555">            System.out.println(&quot;Enter your comment:&quot;);</span>
+<span class="fc" id="L556">            String comment = scanner.nextLine();</span>
+<span class="fc" id="L557">            discussionToComment.addComment(comment);</span>
+<span class="fc" id="L558">            discussionManager.writeDiscussionsToFile(discussions);</span>
+<span class="fc" id="L559">            System.out.println(&quot;Comment added successfully!&quot;);</span>
+<span class="fc" id="L560">        } else {</span>
+<span class="fc" id="L561">            System.out.println(&quot;Discussion not found.&quot;);</span>
+        }
+
+        // After viewing discussions, return to discussion board menu
+<span class="fc" id="L565">        discussionBoardMenu(scanner);</span>
+<span class="fc" id="L566">    }</span>
+    
+    /**
+     * @brief Allows the user to edit details of a discussion.
+     * 
+     * This method displays the discussions for the current user's group and prompts the user to choose a discussion to edit.
+     * Users can edit the topic of the discussion if they have permission.
+     * 
+     * @param scanner The Scanner object used for input.
+     */
+    public static void editDiscussionDetails(Scanner scanner) {
+<span class="fc" id="L577">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L578">        clearScreen();</span>
+<span class="fc" id="L579">        System.out.println(&quot;--- Edit Discussion Details ---&quot;);</span>
+<span class="fc" id="L580">        discussionManager.displayDiscussionsForGroup(currentUser.getGroup());</span>
+<span class="fc" id="L581">        System.out.println(&quot;Enter the title of the discussion you want to edit details for (or type 'cancel' to return to the menu):&quot;);</span>
+<span class="fc" id="L582">        String titleChoice = scanner.nextLine();</span>
+<span class="fc bfc" id="L583" title="All 2 branches covered.">        if (titleChoice.equalsIgnoreCase(&quot;cancel&quot;)) {</span>
+<span class="fc" id="L584">            return;</span>
+        }
+
+        // Search for the discussion with the specified title and group
+<span class="fc" id="L588">        Discussion discussionToEdit = null;</span>
+<span class="fc bfc" id="L589" title="All 2 branches covered.">        for (Discussion discussion : discussionManager.getDiscussions()) {</span>
+<span class="pc bpc" id="L590" title="2 of 4 branches missed.">            if (discussion.getTopic().equalsIgnoreCase(titleChoice) &amp;&amp; discussion.getGroup().getName().equals(currentUser.getGroup().getName())) {</span>
+<span class="fc" id="L591">                discussionToEdit = discussion;</span>
+<span class="fc" id="L592">                break;</span>
+            }
+<span class="nc" id="L594">        }</span>
+
+        // If discussion is found, ask for new details and perform editing
+<span class="fc bfc" id="L597" title="All 2 branches covered.">        if (discussionToEdit != null) {</span>
+<span class="fc" id="L598">            System.out.println(&quot;Enter new topic:&quot;);</span>
+<span class="fc" id="L599">            String newTopic = scanner.nextLine();</span>
+
+            // Perform editing
+<span class="fc" id="L602">            discussionToEdit.setTopic(newTopic);</span>
+<span class="fc" id="L603">            DiscussionManager.writeDiscussionsToFile(discussionManager.getDiscussions());</span>
+<span class="fc" id="L604">            System.out.println(&quot;Discussion topic edited successfully!&quot;);</span>
+<span class="fc" id="L605">        } else {</span>
+<span class="fc" id="L606">            System.out.println(&quot;Discussion not found or you don't have access to edit this discussion.&quot;);</span>
+        }
+
+        // After editing resource details, return to main menu
+<span class="fc" id="L610">        scanner.nextLine(); // Consume newline character</span>
+<span class="fc" id="L611">    }</span>
+    
+    /**
+     * Main load point of the CoordinatorApp program.
+     * Initializes the application by loading data and starting the main menu.
+     * 
+     */
+    public static void loadAll(Scanner scanner) {
+        // Load initial data from files
+<span class="fc" id="L620">        account.loadUsersFromFile(&quot;users.bin&quot;);</span>
+<span class="fc" id="L621">        discussions = discussionManager.readDiscussionsFromFile();</span>
+<span class="fc" id="L622">        resources = resourceManager.readResourcesFromFile();</span>
+<span class="fc" id="L623">        sessions = sessionManager.readSessionsFromFile();</span>
+
+        // Add loaded data to respective managers
+<span class="pc bpc" id="L626" title="1 of 2 branches missed.">        if(discussions != null) {</span>
+<span class="fc bfc" id="L627" title="All 2 branches covered.">        for (Discussion discussion1 : discussions) {</span>
+<span class="fc" id="L628">            discussionManager.addDiscussion(discussion1);</span>
+<span class="fc" id="L629">        }</span>
+        }
+<span class="pc bpc" id="L631" title="1 of 2 branches missed.">        if(resources != null) {</span>
+<span class="fc bfc" id="L632" title="All 2 branches covered.">        for (Resource resource : resources) {</span>
+<span class="fc" id="L633">            resourceManager.addResource(resource);</span>
+<span class="fc" id="L634">        }</span>
+        }
+<span class="pc bpc" id="L636" title="1 of 2 branches missed.">        if(sessions != null) {</span>
+<span class="fc bfc" id="L637" title="All 2 branches covered.">        for (Session session : sessions) {</span>
+<span class="fc" id="L638">            sessionManager.addSession(session);</span>
+<span class="fc" id="L639">        }</span>
+        }
+
+        // Update lists with the added data
+<span class="fc" id="L643">        discussions = discussionManager.getDiscussions();</span>
+<span class="fc" id="L644">        resources = resourceManager.getResources();</span>
+<span class="fc" id="L645">        sessions = sessionManager.getSessions();</span>
+
+        // Perform user login and start the main menu
+<span class="fc" id="L648">        currentUser = account.loginMenu(scanner);</span>
+<span class="fc" id="L649">        mainMenu(scanner);</span>
+<span class="fc" id="L650">    }</span>
+
+    /**
+     * Main entry point of the CoordinatorApp program.
+     * Initializes the application by loading data and starting the main menu.
+     * 
+     * @param args Command line arguments (not used)
+     */
+    @SuppressWarnings(&quot;static-access&quot;)
+    public static void main(String[] args) {
+<span class="nc" id="L660">    	loadAll(scanner);</span>
+<span class="nc" id="L661">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

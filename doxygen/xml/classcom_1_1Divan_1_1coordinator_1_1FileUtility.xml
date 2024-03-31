@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1FileUtility" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::FileUtility</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a467b06bc77e88c83fcc322e553d23f06" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.Divan.coordinator.FileUtility.GROUPS_FILE</definition>
+        <argsstring></argsstring>
+        <name>GROUPS_FILE</name>
+        <initializer>= &quot;Studygroups.bin&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File path for storing and loading study groups. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" line="30" column="32" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1affc8f78d0d9a45d2026acfe154b7e400" compoundref="FileUtility_8java" startline="50" endline="59">com.Divan.coordinator.FileUtility.readGroupsFromFile</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a2d9a539dfb2118bd14d6b56a83296518" compoundref="FileUtility_8java" startline="37" endline="43">com.Divan.coordinator.FileUtility.writeGroupsToFile</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a2d9a539dfb2118bd14d6b56a83296518" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.FileUtility.writeGroupsToFile</definition>
+        <argsstring>(List&lt; StudyGroup &gt; groups)</argsstring>
+        <name>writeGroupsToFile</name>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref> &gt;</type>
+          <declname>groups</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the list of study groups to a binary file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groups</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of study groups to write to file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" line="37" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" bodystart="37" bodyend="43"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a467b06bc77e88c83fcc322e553d23f06" compoundref="FileUtility_8java" startline="30">com.Divan.coordinator.FileUtility.GROUPS_FILE</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1affc8f78d0d9a45d2026acfe154b7e400" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref> &gt;</type>
+        <definition>static List&lt;StudyGroup&gt; com.Divan.coordinator.FileUtility.readGroupsFromFile</definition>
+        <argsstring>()</argsstring>
+        <name>readGroupsFromFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads the list of study groups from a binary file.</para>
+<para><simplesect kind="return"><para>The list of study groups read from file, or null if an error occurs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" line="50" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" bodystart="50" bodyend="59"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a467b06bc77e88c83fcc322e553d23f06" compoundref="FileUtility_8java" startline="30">com.Divan.coordinator.FileUtility.GROUPS_FILE</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" compoundref="StudyGroup_8java" startline="169" endline="178">com.Divan.coordinator.StudyGroup.viewStudyGroup</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Utility class for handling file operations related to study groups. </para>
+    </detaileddescription>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" line="27" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/FileUtility.java" bodystart="27" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a467b06bc77e88c83fcc322e553d23f06" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::FileUtility</scope><name>GROUPS_FILE</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1affc8f78d0d9a45d2026acfe154b7e400" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::FileUtility</scope><name>readGroupsFromFile</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a2d9a539dfb2118bd14d6b56a83296518" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::FileUtility</scope><name>writeGroupsToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

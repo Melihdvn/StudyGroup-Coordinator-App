@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.Serializable;
+
+/**
+ * The User class represents a user in the system.
+ */
+public class User implements Serializable {
+    /** The serial version UID for serialization. */
+    private static final long serialVersionUID = 1L;
+
+    /** The user's first name. */
+    private String name;
+
+    /** The user's last name. */
+    private String surname;
+
+    /** The unique identifier for the user. */
+    private int id;
+
+    /** The username used for authentication. */
+    private String username;
+
+    /** The password used for authentication. */
+    private String password;
+
+    /** The study group associated with the user. */
+    private StudyGroup group;
+
+    /**
+     * Constructs a User object with the specified attributes.
+     *
+     * @param name     The user's name.
+     * @param surname  The user's surname.
+     * @param id       The user's ID.
+     * @param username The user's username.
+     * @param password The user's password.
+     */
+<span class="fc" id="L53">    public User(String name, String surname, int id, String username, String password) {</span>
+<span class="fc" id="L54">        this.name = name;</span>
+<span class="fc" id="L55">        this.surname = surname;</span>
+<span class="fc" id="L56">        this.id = id;</span>
+<span class="fc" id="L57">        this.username = username;</span>
+<span class="fc" id="L58">        this.password = password;</span>
+<span class="fc" id="L59">    }</span>
+
+    /**
+     * Gets the user's name.
+     *
+     * @return The user's name.
+     */
+    public String getName() {
+<span class="fc" id="L67">        return name;</span>
+    }
+
+    /**
+     * Gets the user's surname.
+     *
+     * @return The user's surname.
+     */
+    public String getSurname() {
+<span class="fc" id="L76">        return surname;</span>
+    }
+
+    /**
+     * Gets the user's ID.
+     *
+     * @return The user's ID.
+     */
+    public int getId() {
+<span class="fc" id="L85">        return id;</span>
+    }
+
+    /**
+     * Gets the user's username.
+     *
+     * @return The user's username.
+     */
+    public String getUsername() {
+<span class="fc" id="L94">        return username;</span>
+    }
+
+    /**
+     * Gets the user's password.
+     *
+     * @return The user's password.
+     */
+    public String getPassword() {
+<span class="fc" id="L103">        return password;</span>
+    }
+
+    /**
+     * Gets the study group the user belongs to.
+     *
+     * @return The study group the user belongs to.
+     */
+    public StudyGroup getGroup() {
+<span class="fc" id="L112">        return group;</span>
+    }
+
+    /**
+     * Sets the study group for the user.
+     *
+     * @param group The study group to set for the user.
+     */
+    public void setGroup(StudyGroup group) {
+<span class="fc" id="L121">        this.group = group;</span>
+<span class="fc" id="L122">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

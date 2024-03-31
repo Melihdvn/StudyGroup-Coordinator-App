@@ -1,0 +1,193 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1Discussion}{}\doxysection{com.\+Divan.\+coordinator.\+Discussion Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1Discussion}\index{com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}}
+Inheritance diagram for com.\+Divan.\+coordinator.\+Discussion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1Divan_1_1coordinator_1_1Discussion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion_a5b7632daa127caabaf655fbc56b9133b}{Discussion}} (String topic, \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} group)
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion_a46d3b10b7ef020b2fcd29b191e91f6c9}{get\+Topic}} ()
+\item 
+List$<$ String $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion_ad12eba6e5ed227757bf062260fa818cb}{get\+Comments}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion_a503a08c2c9a99500ef5864cd837d6282}{add\+Comment}} (String comment)
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion_ac5b4fc891f87ff84112c46a4fad86566}{get\+Group}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion_aa455b299ab9bc5fc13cbb0b6311ed4df}{set\+Topic}} (String topic)
+\begin{DoxyCompactList}\small\item\em Sets the topic of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a discussion topic along with comments and the associated study group. 
+
+Definition at line 24 of file Discussion.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Discussion_a5b7632daa127caabaf655fbc56b9133b}\label{classcom_1_1Divan_1_1coordinator_1_1Discussion_a5b7632daa127caabaf655fbc56b9133b}} 
+\index{com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}!Discussion@{Discussion}}
+\index{Discussion@{Discussion}!com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}}
+\doxysubsubsection{\texorpdfstring{Discussion()}{Discussion()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Discussion.\+Discussion (\begin{DoxyParamCaption}\item[{String}]{topic,  }\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}}]{group }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}} object with the specified topic and associated study group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the discussion \\
+\hline
+{\em group} & The study group associated with the discussion \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Discussion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                                       \{}
+\DoxyCodeLine{52         this.topic = topic;}
+\DoxyCodeLine{53         this.group = group;}
+\DoxyCodeLine{54         this.comments = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{55     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Discussion_a503a08c2c9a99500ef5864cd837d6282}\label{classcom_1_1Divan_1_1coordinator_1_1Discussion_a503a08c2c9a99500ef5864cd837d6282}} 
+\index{com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}!addComment@{addComment}}
+\index{addComment@{addComment}!com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}}
+\doxysubsubsection{\texorpdfstring{addComment()}{addComment()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Discussion.\+add\+Comment (\begin{DoxyParamCaption}\item[{String}]{comment }\end{DoxyParamCaption})}
+
+Adds a comment to the discussion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment} & The comment to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file Discussion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                            \{}
+\DoxyCodeLine{81         comments.add(comment);}
+\DoxyCodeLine{82     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Discussions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Discussion_ad12eba6e5ed227757bf062260fa818cb}\label{classcom_1_1Divan_1_1coordinator_1_1Discussion_ad12eba6e5ed227757bf062260fa818cb}} 
+\index{com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}!getComments@{getComments}}
+\index{getComments@{getComments}!com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}}
+\doxysubsubsection{\texorpdfstring{getComments()}{getComments()}}
+{\footnotesize\ttfamily List$<$String$>$ com.\+Divan.\+coordinator.\+Discussion.\+get\+Comments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the list of comments in the discussion.
+
+\begin{DoxyReturn}{Returns}
+The list of comments 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Discussion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71                                       \{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{return} comments;}
+\DoxyCodeLine{73     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Discussion_ac5b4fc891f87ff84112c46a4fad86566}\label{classcom_1_1Divan_1_1coordinator_1_1Discussion_ac5b4fc891f87ff84112c46a4fad86566}} 
+\index{com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}!getGroup@{getGroup}}
+\index{getGroup@{getGroup}!com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}}
+\doxysubsubsection{\texorpdfstring{getGroup()}{getGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} com.\+Divan.\+coordinator.\+Discussion.\+get\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the study group associated with the discussion.
+
+\begin{DoxyReturn}{Returns}
+The associated study group 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Discussion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                  \{}
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} group;}
+\DoxyCodeLine{91     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Discussion_a46d3b10b7ef020b2fcd29b191e91f6c9}\label{classcom_1_1Divan_1_1coordinator_1_1Discussion_a46d3b10b7ef020b2fcd29b191e91f6c9}} 
+\index{com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}!getTopic@{getTopic}}
+\index{getTopic@{getTopic}!com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}}
+\doxysubsubsection{\texorpdfstring{getTopic()}{getTopic()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Discussion.\+get\+Topic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the topic of the discussion.
+
+\begin{DoxyReturn}{Returns}
+The topic of the discussion 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Discussion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                              \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{return} topic;}
+\DoxyCodeLine{64     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Discussion_aa455b299ab9bc5fc13cbb0b6311ed4df}\label{classcom_1_1Divan_1_1coordinator_1_1Discussion_aa455b299ab9bc5fc13cbb0b6311ed4df}} 
+\index{com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}!setTopic@{setTopic}}
+\index{setTopic@{setTopic}!com.Divan.coordinator.Discussion@{com.Divan.coordinator.Discussion}}
+\doxysubsubsection{\texorpdfstring{setTopic()}{setTopic()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Discussion.\+set\+Topic (\begin{DoxyParamCaption}\item[{String}]{topic }\end{DoxyParamCaption})}
+
+
+
+Sets the topic of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The new topic to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file Discussion.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                                        \{}
+\DoxyCodeLine{99         this.topic = topic;}
+\DoxyCodeLine{100     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Discussion\+Details().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{Discussion_8java}{Discussion.\+java}}\end{DoxyCompactItemize}

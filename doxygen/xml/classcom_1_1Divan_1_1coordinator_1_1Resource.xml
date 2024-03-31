@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1Resource" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::Resource</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1ad8800c8ba2356a3cd15a5e5b19d78f2e" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.Divan.coordinator.Resource.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Serializable identifier for object persistence. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="28" column="27" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1aaf03d62322cd62d2eae3bc87f0459f65" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Resource.title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The title of the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="33" column="16" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a5b8b28d672c2963a074db8a353eb70e8" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Resource.description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A brief description of the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="38" column="16" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1aa0adf461e71254d7d45b7560bebf59e5" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Resource.link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The link associated with the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="43" column="16" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a987da8eae9c0e355dd33406f95dcd934" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+        <definition>StudyGroup com.Divan.coordinator.Resource.group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The study group associated with the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="48" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a991cdf82fb6bd347244354e02a41f8a1" prot="private" static="no" mutable="no">
+        <type>List&lt; String &gt;</type>
+        <definition>List&lt;String&gt; com.Divan.coordinator.Resource.resources</definition>
+        <argsstring></argsstring>
+        <name>resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A list of additional resources related to the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="53" column="14" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a2f3d6709030a6238fb801fc3dd7e7765" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.Divan.coordinator.Resource.Resource</definition>
+        <argsstring>(String title, String description, String link, StudyGroup group)</argsstring>
+        <name>Resource</name>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>link</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1Divan_1_1coordinator_1_1Resource" kindref="compound">Resource</ref> object with the specified details.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the resource </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description of the resource </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The link associated with the resource </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The study group associated with the resource </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="63" column="12" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a52370d3917efbe5f6a128ef177909698" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Resource.getTitle</definition>
+        <argsstring>()</argsstring>
+        <name>getTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the title of the resource.</para>
+<para><simplesect kind="return"><para>The title of the resource </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="76" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="76" bodyend="78"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a44b131cca615b7d1a19768a5a93b03d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Resource.getDescription</definition>
+        <argsstring>()</argsstring>
+        <name>getDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the description of the resource.</para>
+<para><simplesect kind="return"><para>The description of the resource </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="85" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="85" bodyend="87"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1af1fd76932d4dd082c7acf03143d71351" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Resource.getLink</definition>
+        <argsstring>()</argsstring>
+        <name>getLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the link associated with the resource.</para>
+<para><simplesect kind="return"><para>The link associated with the resource </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="94" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="94" bodyend="96"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1ae15936053f06daeecd3db1e3a3f8ac2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+        <definition>StudyGroup com.Divan.coordinator.Resource.getGroup</definition>
+        <argsstring>()</argsstring>
+        <name>getGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the study group associated with the resource.</para>
+<para><simplesect kind="return"><para>The study group associated with the resource </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="103" column="23" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a3d258c258a642908892cc547dfd82e3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.Resource.setTitle</definition>
+        <argsstring>(String title)</argsstring>
+        <name>setTitle</name>
+        <param>
+          <type>String</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Sets the title of the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new title to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="112" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="112" bodyend="114"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a34ea49d6001a491d7df24de80f87f708" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.Resource.setLink</definition>
+        <argsstring>(String link)</argsstring>
+        <name>setLink</name>
+        <param>
+          <type>String</type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Sets the link of the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new link to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="121" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="121" bodyend="123"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Resource_1a281e29903e96f8c35a83991f723d5545" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.Resource.setDescription</definition>
+        <argsstring>(String description)</argsstring>
+        <name>setDescription</name>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Sets the description of the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new description to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="130" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="130" bodyend="132"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1Divan_1_1coordinator_1_1Resource" kindref="compound">Resource</ref> class represents a resource item that can be shared within a study group. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>com.Divan.coordinator.Resource</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1Resource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>com.Divan.coordinator.Resource</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1Resource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" line="24" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Resource.java" bodystart="24" bodyend="133"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a5b8b28d672c2963a074db8a353eb70e8" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>description</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a44b131cca615b7d1a19768a5a93b03d3" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>getDescription</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1ae15936053f06daeecd3db1e3a3f8ac2a" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>getGroup</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1af1fd76932d4dd082c7acf03143d71351" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>getLink</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a52370d3917efbe5f6a128ef177909698" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>getTitle</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a987da8eae9c0e355dd33406f95dcd934" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>group</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1aa0adf461e71254d7d45b7560bebf59e5" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>link</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a2f3d6709030a6238fb801fc3dd7e7765" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>Resource</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a991cdf82fb6bd347244354e02a41f8a1" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>resources</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1ad8800c8ba2356a3cd15a5e5b19d78f2e" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a281e29903e96f8c35a83991f723d5545" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>setDescription</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a34ea49d6001a491d7df24de80f87f708" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>setLink</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a3d258c258a642908892cc547dfd82e3f" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>setTitle</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1aaf03d62322cd62d2eae3bc87f0459f65" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Resource</scope><name>title</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

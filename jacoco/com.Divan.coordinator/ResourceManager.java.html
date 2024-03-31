@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ResourceManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">ResourceManager.java</span></div><h1>ResourceManager.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * The ResourceManager class manages the resources in the system.
+ */
+public class ResourceManager {
+    /** The file path for saving and loading resources. */
+    public static final String RESOURCES_FILE = &quot;Resources.bin&quot;;
+    
+    /** The list of resources managed by this manager. */
+    private List&lt;Resource&gt; resources;
+    
+    /** The file object representing the resources file. */
+<span class="fc" id="L32">    private static File file = new File(RESOURCES_FILE);</span>
+
+    /**
+     * Constructs a new ResourceManager object.
+     */
+<span class="fc" id="L37">    public ResourceManager() {</span>
+<span class="fc" id="L38">        this.resources = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L39">    }</span>
+
+    /**
+     * Adds a resource to the resource list.
+     *
+     * @param resource The resource to add
+     */
+    public void addResource(Resource resource) {
+<span class="fc" id="L47">        resources.add(resource);</span>
+<span class="fc" id="L48">    }</span>
+
+    /**
+     * Retrieves the list of resources.
+     *
+     * @return The list of resources
+     */
+    public List&lt;Resource&gt; getResources() {
+<span class="fc" id="L56">        return resources;</span>
+    }
+
+    /**
+     * Displays the resources available for a specific study group.
+     *
+     * @param group The study group to display resources for
+     */
+    public void displayResourcesForGroup(StudyGroup group) {
+<span class="fc" id="L65">        System.out.println(&quot;Resources for group &quot; + group.getName() + &quot;:&quot;);</span>
+<span class="fc" id="L66">        boolean foundResources = false;</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        for (Resource resource : resources) {</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">            if (resource.getGroup().getName().equals(group.getName())) {</span>
+<span class="fc" id="L69">                foundResources = true;</span>
+<span class="fc" id="L70">                System.out.println(&quot;Title: &quot; + resource.getTitle());</span>
+            }
+<span class="fc" id="L72">        }</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (!foundResources) {</span>
+<span class="fc" id="L74">            System.out.println(&quot;Your group doesn't have any resources.&quot;);</span>
+        }
+<span class="fc" id="L76">    }</span>
+
+    /**
+     * Writes the resources to a file.
+     *
+     * @param resources The list of resources to write to the file
+     */
+    public static void writeResourcesToFile(List&lt;Resource&gt; resources) {
+<span class="fc" id="L84">        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))) {</span>
+<span class="fc" id="L85">            outputStream.writeObject(resources);</span>
+<span class="fc" id="L86">            System.out.println(&quot;Resources have been saved to &quot; + RESOURCES_FILE);</span>
+<span class="nc" id="L87">        } catch (Exception Ignored) {</span>
+<span class="fc" id="L88">        }</span>
+<span class="fc" id="L89">    }</span>
+
+    /**
+     * Reads resources from the file.
+     *
+     * @return The list of resources read from the file
+     */
+    public static List&lt;Resource&gt; readResourcesFromFile() {
+<span class="fc bfc" id="L97" title="All 2 branches covered.">        if (!file.exists()) {</span>
+<span class="fc" id="L98">            System.out.println(&quot;Resources file does not exist.&quot;);</span>
+<span class="fc" id="L99">            return new ArrayList&lt;&gt;();</span>
+        }
+
+<span class="fc" id="L102">        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {</span>
+            @SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L104">            List&lt;Resource&gt; resources = (List&lt;Resource&gt;) inputStream.readObject();</span>
+<span class="fc" id="L105">            System.out.println(&quot;Resources have been loaded from &quot; + RESOURCES_FILE);</span>
+<span class="fc" id="L106">            return resources;</span>
+<span class="nc" id="L107">        } catch (Exception Ignored) {</span>
+<span class="nc" id="L108">            return new ArrayList&lt;&gt;();</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

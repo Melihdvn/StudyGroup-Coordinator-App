@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_dacfc515112621cd982f43bb74284154" kind="dir">
+    <compoundname>coordinator-app/src/main/java/com</compoundname>
+    <innerdir refid="dir_eb439989fd6d4503ad7c906e38e073ec">coordinator-app/src/main/java/com/Divan</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="coordinator-app/src/main/java/com/"/>
+  </compounddef>
+</doxygen>

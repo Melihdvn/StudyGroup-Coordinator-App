@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1SessionManager" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::SessionManager</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a20742067ce48318397f0443fd04044fb" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.Divan.coordinator.SessionManager.SESSIONS_FILE</definition>
+        <argsstring></argsstring>
+        <name>SESSIONS_FILE</name>
+        <initializer>= &quot;Sessions.bin&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file path for sessions serialization. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="26" column="32" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a184cf7e68f3064a0733533f7571085fa" compoundref="SessionManager_8java" startline="97" endline="111">com.Divan.coordinator.SessionManager.readSessionsFromFile</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1abd536deed4c1f0a4591f5d5286ed1075" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1Session" kindref="compound">Session</ref> &gt;</type>
+        <definition>List&lt;Session&gt; com.Divan.coordinator.SessionManager.sessions</definition>
+        <argsstring></argsstring>
+        <name>sessions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of sessions managed by this manager. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="29" column="18" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a8bb95dd1c5296d50d24a492ecdc5298c" prot="private" static="yes" mutable="no">
+        <type>File</type>
+        <definition>File com.Divan.coordinator.SessionManager.file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <initializer>= new File(<ref refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a20742067ce48318397f0443fd04044fb" kindref="member">SESSIONS_FILE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file object representing the sessions file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="32" column="25" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a8ab122fa31a1773f9c0382f6b8242e1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.Divan.coordinator.SessionManager.SessionManager</definition>
+        <argsstring>()</argsstring>
+        <name>SessionManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new <ref refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager" kindref="compound">SessionManager</ref> object with an empty list of sessions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="37" column="12" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a05ffbc583a1495d8cb4f68f024f47c2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.SessionManager.addSession</definition>
+        <argsstring>(Session session)</argsstring>
+        <name>addSession</name>
+        <param>
+          <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1Session" kindref="compound">Session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a session to the list of sessions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session to be added. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="46" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="46" bodyend="48"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a30f149ade2fa7de0c294015dce54f4ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1Session" kindref="compound">Session</ref> &gt;</type>
+        <definition>List&lt;Session&gt; com.Divan.coordinator.SessionManager.getSessions</definition>
+        <argsstring>()</argsstring>
+        <name>getSessions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of sessions.</para>
+<para><simplesect kind="return"><para>The list of sessions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="55" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="55" bodyend="57"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a632885f4e0b3a29ccff786feb1cbbfd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.SessionManager.displaySessionsForGroup</definition>
+        <argsstring>(StudyGroup group)</argsstring>
+        <name>displaySessionsForGroup</name>
+        <param>
+          <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays sessions for a specific study group.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The study group for which sessions will be displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="64" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="64" bodyend="76"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" compoundref="StudyGroup_8java" startline="55" endline="57">com.Divan.coordinator.StudyGroup.getName</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1ae5fc2e2ab03e52867ac4bc09c7908f39" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.SessionManager.writeSessionsToFile</definition>
+        <argsstring>(List&lt; Session &gt; sessions)</argsstring>
+        <name>writeSessionsToFile</name>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1Session" kindref="compound">Session</ref> &gt;</type>
+          <declname>sessions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes sessions to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sessions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of sessions to be written to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="83" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="83" bodyend="90"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" compoundref="CoordinatorApp_8java" startline="177" endline="192">com.Divan.coordinator.CoordinatorApp.scheduleSession</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a184cf7e68f3064a0733533f7571085fa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1Session" kindref="compound">Session</ref> &gt;</type>
+        <definition>static List&lt;Session&gt; com.Divan.coordinator.SessionManager.readSessionsFromFile</definition>
+        <argsstring>()</argsstring>
+        <name>readSessionsFromFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads sessions from a file.</para>
+<para><simplesect kind="return"><para>The list of sessions read from the file. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="97" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="97" bodyend="111"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a20742067ce48318397f0443fd04044fb" compoundref="SessionManager_8java" startline="26">com.Divan.coordinator.SessionManager.SESSIONS_FILE</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager" kindref="compound">SessionManager</ref> class handles the management of sessions in the system. </para>
+    </detaileddescription>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" line="24" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/SessionManager.java" bodystart="24" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a05ffbc583a1495d8cb4f68f024f47c2b" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>addSession</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a632885f4e0b3a29ccff786feb1cbbfd1" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>displaySessionsForGroup</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a8bb95dd1c5296d50d24a492ecdc5298c" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>file</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a30f149ade2fa7de0c294015dce54f4ae" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>getSessions</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a184cf7e68f3064a0733533f7571085fa" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>readSessionsFromFile</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a8ab122fa31a1773f9c0382f6b8242e1c" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>SessionManager</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1abd536deed4c1f0a4591f5d5286ed1075" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>sessions</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a20742067ce48318397f0443fd04044fb" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>SESSIONS_FILE</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1ae5fc2e2ab03e52867ac4bc09c7908f39" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::SessionManager</scope><name>writeSessionsToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

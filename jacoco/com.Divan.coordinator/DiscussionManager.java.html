@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DiscussionManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">DiscussionManager.java</span></div><h1>DiscussionManager.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * The DiscussionManager class manages discussions, including adding discussions, displaying discussions for a group,
+ * and reading/writing discussions to/from a file.
+ */
+public class DiscussionManager {
+    /** The file path for storing discussions. */
+    public static final String DISCUSSIONS_FILE = &quot;Discussions.bin&quot;;
+    
+    /** The list of discussions managed by this manager. */
+    private List&lt;Discussion&gt; discussions;
+
+    /**
+     * Constructs a new DiscussionManager object with an empty list of discussions.
+     */
+<span class="fc" id="L39">    public DiscussionManager() {</span>
+<span class="fc" id="L40">        this.discussions = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L41">    }</span>
+
+    /**
+     * Adds a discussion to the list of discussions.
+     *
+     * @param discussion The discussion to be added
+     */
+    public void addDiscussion(Discussion discussion) {
+<span class="fc" id="L49">        discussions.add(discussion);</span>
+<span class="fc" id="L50">    }</span>
+
+    /**
+     * Retrieves the list of discussions.
+     *
+     * @return The list of discussions
+     */
+    public List&lt;Discussion&gt; getDiscussions() {
+<span class="fc" id="L58">        return discussions;</span>
+    }
+
+    /**
+     * Displays discussions belonging to a specific study group.
+     *
+     * @param group The study group for which discussions are to be displayed
+     */
+    public void displayDiscussionsForGroup(StudyGroup group) {
+<span class="fc" id="L67">        System.out.println(&quot;Discussions for group &quot; + group.getName() + &quot;:&quot;);</span>
+<span class="fc" id="L68">        boolean foundDiscussion = false;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        for (Discussion discussion : discussions) {</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">            if (discussion.getGroup().getName().equals(group.getName())) {</span>
+<span class="fc" id="L71">                System.out.println(&quot;Topic: &quot; + discussion.getTopic());</span>
+<span class="fc" id="L72">                System.out.println(&quot;Comments:&quot;);</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">                for (String comment : discussion.getComments()) {</span>
+<span class="fc" id="L74">                    System.out.println(&quot;- &quot; + CoordinatorApp.currentUser.getUsername() + &quot; : &quot; + comment);</span>
+<span class="fc" id="L75">                }</span>
+<span class="fc" id="L76">                foundDiscussion = true;</span>
+            }
+            
+            else {
+<span class="fc" id="L80">            	System.out.println(&quot;Your group doesn't have any discussions&quot;);</span>
+            	}
+<span class="fc" id="L82">        }</span>
+        
+        
+       
+    
+<span class="fc" id="L87">    }</span>
+
+    /**
+     * Writes the list of discussions to a file.
+     *
+     * @param discussions The list of discussions to be written to file
+     */
+    public static void writeDiscussionsToFile(List&lt;Discussion&gt; discussions) {
+<span class="fc" id="L95">        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(DISCUSSIONS_FILE))) {</span>
+<span class="fc" id="L96">            outputStream.writeObject(discussions);</span>
+<span class="fc" id="L97">            System.out.println(&quot;Discussions have been saved to &quot; + DISCUSSIONS_FILE);</span>
+<span class="nc" id="L98">        } catch (Exception Ignored) {</span>
+<span class="fc" id="L99">        }</span>
+<span class="fc" id="L100">    }</span>
+
+    /**
+     * Reads the list of discussions from a file.
+     *
+     * @return The list of discussions read from the file
+     */
+    public static List&lt;Discussion&gt; readDiscussionsFromFile() {
+<span class="fc" id="L108">        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(DISCUSSIONS_FILE))) {</span>
+            @SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L110">            List&lt;Discussion&gt; discussions = (List&lt;Discussion&gt;) inputStream.readObject();</span>
+<span class="fc" id="L111">            System.out.println(&quot;Discussions have been loaded from &quot; + DISCUSSIONS_FILE);</span>
+<span class="fc" id="L112">            return discussions;</span>
+<span class="fc" id="L113">        } catch (Exception Ignored) {</span>
+<span class="fc" id="L114">            return new ArrayList&lt;&gt;();</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

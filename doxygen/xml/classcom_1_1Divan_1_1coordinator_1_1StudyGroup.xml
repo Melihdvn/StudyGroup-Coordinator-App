@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::StudyGroup</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aaaeae4421312c8003c832e08fd48db5c" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.Divan.coordinator.StudyGroup.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The serial version UID for serialization. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="27" column="27" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1add0eb2185ec8706b4c9376397596587c" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.StudyGroup.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The name of the study group. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="30" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aaa946e14988b752dd04530e766d5ca30" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.StudyGroup.description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A brief description of the study group. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="33" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a636303767d71fcc3c1a45c045899745f" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref> &gt;</type>
+        <definition>List&lt;User&gt; com.Divan.coordinator.StudyGroup.members</definition>
+        <argsstring></argsstring>
+        <name>members</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of members in the study group. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="36" column="18" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a782873c0f4abeee89721bea8df5462d1" prot="package" static="yes" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref> &gt;</type>
+        <definition>List&lt;StudyGroup&gt; com.Divan.coordinator.StudyGroup.groups1</definition>
+        <argsstring></argsstring>
+        <name>groups1</name>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="89" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a370f499189e46cfff6568b7d113817df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.Divan.coordinator.StudyGroup.StudyGroup</definition>
+        <argsstring>(String name, String description)</argsstring>
+        <name>StudyGroup</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref> object with the specified name and description.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the study group. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description of the study group. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="44" column="12" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="44" bodyend="48"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.StudyGroup.getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the name of the study group.</para>
+<para><simplesect kind="return"><para>The name of the study group. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="55" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="55" bodyend="57"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a2379a7196dae0a83704c0e9a74c770bd" compoundref="DiscussionManager_8java" startline="66" endline="87">com.Divan.coordinator.DiscussionManager.displayDiscussionsForGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a296c74edbc13b9f86f585bcd3d3f438b" compoundref="ResourceManager_8java" startline="64" endline="76">com.Divan.coordinator.ResourceManager.displayResourcesForGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a632885f4e0b3a29ccff786feb1cbbfd1" compoundref="SessionManager_8java" startline="64" endline="76">com.Divan.coordinator.SessionManager.displaySessionsForGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" compoundref="CoordinatorApp_8java" startline="576" endline="611">com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a9c0a1e0f4b3283f8403b381cd8e3e717" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.StudyGroup.getDescription</definition>
+        <argsstring>()</argsstring>
+        <name>getDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the description of the study group.</para>
+<para><simplesect kind="return"><para>The description of the study group. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="64" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aebd4c862d69657338ab531222e1754d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref> &gt;</type>
+        <definition>List&lt;User&gt; com.Divan.coordinator.StudyGroup.getMembers</definition>
+        <argsstring>()</argsstring>
+        <name>getMembers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the list of members in the study group.</para>
+<para><simplesect kind="return"><para>The list of members in the study group. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="73" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1af2a2ffe75b7da8981f6b1a8e6ec8ade3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.StudyGroup.addMember</definition>
+        <argsstring>(User member)</argsstring>
+        <name>addMember</name>
+        <param>
+          <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref></type>
+          <declname>member</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a member to the study group.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>member</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user to add as a member of the study group. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="82" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="82" bodyend="84"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.StudyGroup.createStudyGroup</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>createStudyGroup</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new study group by taking input from the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="96" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="96" bodyend="162"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1af2a2ffe75b7da8981f6b1a8e6ec8ade3" compoundref="StudyGroup_8java" startline="82" endline="84">com.Divan.coordinator.StudyGroup.addMember</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Account_1aabb5835882120b2f6435b46c30eac53b" compoundref="Account_8java" startline="235" endline="240">com.Divan.coordinator.Account.displayUsernamesWithIDs</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a2c2f8fb5894956f7035c6871a3ef7f9e" compoundref="Account_8java" startline="248" endline="255">com.Divan.coordinator.Account.findUserById</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1aa7f7fe716ce11fe815fa71e3778cf60d" compoundref="User_8java" startline="93" endline="95">com.Divan.coordinator.User.getUsername</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Account_1aa7cb547fadc1780d90379e519cef06be" compoundref="Account_8java" startline="53" endline="76">com.Divan.coordinator.Account.saveUsersToFile</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a370f499189e46cfff6568b7d113817df" compoundref="StudyGroup_8java" startline="44" endline="48">com.Divan.coordinator.StudyGroup.StudyGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a2d9a539dfb2118bd14d6b56a83296518" compoundref="FileUtility_8java" startline="37" endline="43">com.Divan.coordinator.FileUtility.writeGroupsToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.StudyGroup.viewStudyGroup</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewStudyGroup</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the study groups for viewing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object for user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="169" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="169" bodyend="178"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1affc8f78d0d9a45d2026acfe154b7e400" compoundref="FileUtility_8java" startline="50" endline="59">com.Divan.coordinator.FileUtility.readGroupsFromFile</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a1fc5603b8e5fafe0beb531a70011d8d5" compoundref="ViewGroups_8java" startline="31" endline="49">com.Divan.coordinator.ViewGroups.viewGroups</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref> class represents a study group in the system. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.Divan.coordinator.StudyGroup</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="3">
+        <label>List&lt; com.Divan.coordinator.StudyGroup &gt;</label>
+      </node>
+      <node id="1">
+        <label>com.Divan.coordinator.StudyGroup</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>groups1</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" line="25" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/StudyGroup.java" bodystart="25" bodyend="180"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1af2a2ffe75b7da8981f6b1a8e6ec8ade3" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>addMember</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>createStudyGroup</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aaa946e14988b752dd04530e766d5ca30" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>description</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a9c0a1e0f4b3283f8403b381cd8e3e717" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>getDescription</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aebd4c862d69657338ab531222e1754d3" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>getMembers</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>getName</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a782873c0f4abeee89721bea8df5462d1" prot="package" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>groups1</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a636303767d71fcc3c1a45c045899745f" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>members</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1add0eb2185ec8706b4c9376397596587c" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>name</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aaaeae4421312c8003c832e08fd48db5c" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a370f499189e46cfff6568b7d113817df" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>StudyGroup</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::StudyGroup</scope><name>viewStudyGroup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,119 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1FileUtility}{}\doxysection{com.\+Divan.\+coordinator.\+File\+Utility Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1FileUtility}\index{com.Divan.coordinator.FileUtility@{com.Divan.coordinator.FileUtility}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a2d9a539dfb2118bd14d6b56a83296518}{write\+Groups\+To\+File}} (List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} $>$ groups)
+\item 
+static List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1FileUtility_affc8f78d0d9a45d2026acfe154b7e400}{read\+Groups\+From\+File}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a467b06bc77e88c83fcc322e553d23f06}{GROUPS\+\_\+\+FILE}} = \char`\"{}Studygroups.\+bin\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility class for handling file operations related to study groups. 
+
+Definition at line 27 of file File\+Utility.\+java.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1FileUtility_affc8f78d0d9a45d2026acfe154b7e400}\label{classcom_1_1Divan_1_1coordinator_1_1FileUtility_affc8f78d0d9a45d2026acfe154b7e400}} 
+\index{com.Divan.coordinator.FileUtility@{com.Divan.coordinator.FileUtility}!readGroupsFromFile@{readGroupsFromFile}}
+\index{readGroupsFromFile@{readGroupsFromFile}!com.Divan.coordinator.FileUtility@{com.Divan.coordinator.FileUtility}}
+\doxysubsubsection{\texorpdfstring{readGroupsFromFile()}{readGroupsFromFile()}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}$>$ com.\+Divan.\+coordinator.\+File\+Utility.\+read\+Groups\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reads the list of study groups from a binary file.
+
+\begin{DoxyReturn}{Returns}
+The list of study groups read from file, or null if an error occurs 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file File\+Utility.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                                         \{}
+\DoxyCodeLine{51         \textcolor{keywordflow}{try} (ObjectInputStream inputStream = \textcolor{keyword}{new} ObjectInputStream(\textcolor{keyword}{new} FileInputStream(\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a467b06bc77e88c83fcc322e553d23f06}{GROUPS\_FILE}}))) \{}
+\DoxyCodeLine{52             @SuppressWarnings(\textcolor{stringliteral}{"{}unchecked"{}})}
+\DoxyCodeLine{53             List<StudyGroup> groups = (List<StudyGroup>) inputStream.readObject();}
+\DoxyCodeLine{54             System.out.println("{}Study groups have been loaded from "{} + \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a467b06bc77e88c83fcc322e553d23f06}{GROUPS\_FILE}});}
+\DoxyCodeLine{55             return groups;}
+\DoxyCodeLine{56         \} catch (Exception Ignored) \{}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+File\+Utility.\+GROUPS\+\_\+\+FILE.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+view\+Study\+Group().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a2d9a539dfb2118bd14d6b56a83296518}\label{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a2d9a539dfb2118bd14d6b56a83296518}} 
+\index{com.Divan.coordinator.FileUtility@{com.Divan.coordinator.FileUtility}!writeGroupsToFile@{writeGroupsToFile}}
+\index{writeGroupsToFile@{writeGroupsToFile}!com.Divan.coordinator.FileUtility@{com.Divan.coordinator.FileUtility}}
+\doxysubsubsection{\texorpdfstring{writeGroupsToFile()}{writeGroupsToFile()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+File\+Utility.\+write\+Groups\+To\+File (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} $>$}]{groups }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Writes the list of study groups to a binary file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em groups} & The list of study groups to write to file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file File\+Utility.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                                   \{}
+\DoxyCodeLine{38         \textcolor{keywordflow}{try} (ObjectOutputStream outputStream = \textcolor{keyword}{new} ObjectOutputStream(\textcolor{keyword}{new} FileOutputStream(\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a467b06bc77e88c83fcc322e553d23f06}{GROUPS\_FILE}}))) \{}
+\DoxyCodeLine{39             outputStream.writeObject(groups);}
+\DoxyCodeLine{40             System.out.println(\textcolor{stringliteral}{"{}Study groups have been saved to "{}} + \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a467b06bc77e88c83fcc322e553d23f06}{GROUPS\_FILE}});}
+\DoxyCodeLine{41         \} \textcolor{keywordflow}{catch} (Exception Ignored) \{}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+File\+Utility.\+GROUPS\+\_\+\+FILE.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a467b06bc77e88c83fcc322e553d23f06}\label{classcom_1_1Divan_1_1coordinator_1_1FileUtility_a467b06bc77e88c83fcc322e553d23f06}} 
+\index{com.Divan.coordinator.FileUtility@{com.Divan.coordinator.FileUtility}!GROUPS\_FILE@{GROUPS\_FILE}}
+\index{GROUPS\_FILE@{GROUPS\_FILE}!com.Divan.coordinator.FileUtility@{com.Divan.coordinator.FileUtility}}
+\doxysubsubsection{\texorpdfstring{GROUPS\_FILE}{GROUPS\_FILE}}
+{\footnotesize\ttfamily final String com.\+Divan.\+coordinator.\+File\+Utility.\+GROUPS\+\_\+\+FILE = \char`\"{}Studygroups.\+bin\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+File path for storing and loading study groups. 
+
+Definition at line 30 of file File\+Utility.\+java.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+File\+Utility.\+read\+Groups\+From\+File(), and com.\+Divan.\+coordinator.\+File\+Utility.\+write\+Groups\+To\+File().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{FileUtility_8java}{File\+Utility.\+java}}\end{DoxyCompactItemize}

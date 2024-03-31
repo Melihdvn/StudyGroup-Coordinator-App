@@ -1,0 +1,248 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager}{}\doxysection{com.\+Divan.\+coordinator.\+Session\+Manager Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager}\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a8ab122fa31a1773f9c0382f6b8242e1c}{Session\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a05ffbc583a1495d8cb4f68f024f47c2b}{add\+Session}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}} session)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a30f149ade2fa7de0c294015dce54f4ae}{get\+Sessions}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a632885f4e0b3a29ccff786feb1cbbfd1}{display\+Sessions\+For\+Group}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} group)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_ae5fc2e2ab03e52867ac4bc09c7908f39}{write\+Sessions\+To\+File}} (List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}} $>$ sessions)
+\item 
+static List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a184cf7e68f3064a0733533f7571085fa}{read\+Sessions\+From\+File}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a20742067ce48318397f0443fd04044fb}{SESSIONS\+\_\+\+FILE}} = \char`\"{}Sessions.\+bin\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager}{Session\+Manager}} class handles the management of sessions in the system. 
+
+Definition at line 24 of file Session\+Manager.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a8ab122fa31a1773f9c0382f6b8242e1c}\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a8ab122fa31a1773f9c0382f6b8242e1c}} 
+\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}!SessionManager@{SessionManager}}
+\index{SessionManager@{SessionManager}!com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsubsection{\texorpdfstring{SessionManager()}{SessionManager()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Session\+Manager.\+Session\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a new \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager}{Session\+Manager}} object with an empty list of sessions. 
+
+Definition at line 37 of file Session\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                             \{}
+\DoxyCodeLine{38         this.sessions = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a05ffbc583a1495d8cb4f68f024f47c2b}\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a05ffbc583a1495d8cb4f68f024f47c2b}} 
+\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}!addSession@{addSession}}
+\index{addSession@{addSession}!com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsubsection{\texorpdfstring{addSession()}{addSession()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Session\+Manager.\+add\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}}}]{session }\end{DoxyParamCaption})}
+
+Adds a session to the list of sessions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & The session to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Session\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                             \{}
+\DoxyCodeLine{47         sessions.add(session);}
+\DoxyCodeLine{48     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a632885f4e0b3a29ccff786feb1cbbfd1}\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a632885f4e0b3a29ccff786feb1cbbfd1}} 
+\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}!displaySessionsForGroup@{displaySessionsForGroup}}
+\index{displaySessionsForGroup@{displaySessionsForGroup}!com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsubsection{\texorpdfstring{displaySessionsForGroup()}{displaySessionsForGroup()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Session\+Manager.\+display\+Sessions\+For\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}}]{group }\end{DoxyParamCaption})}
+
+Displays sessions for a specific study group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The study group for which sessions will be displayed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Session\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                           \{}
+\DoxyCodeLine{65         System.out.println(\textcolor{stringliteral}{"{}Sessions for group "{}} + group.getName() + \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{66         \textcolor{keywordtype}{boolean} foundSessions = \textcolor{keyword}{false};}
+\DoxyCodeLine{67         \textcolor{keywordflow}{for} (Session session : sessions) \{}
+\DoxyCodeLine{68             \textcolor{keywordflow}{if} (session.getGroup().getName().equals(group.getName())) \{}
+\DoxyCodeLine{69                 foundSessions = \textcolor{keyword}{true};}
+\DoxyCodeLine{70                 System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + session.getTitle());}
+\DoxyCodeLine{71             \}}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{if} (!foundSessions) \{}
+\DoxyCodeLine{74             System.out.println(\textcolor{stringliteral}{"{}Your group doesn't have any session."{}});}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Study\+Group.\+get\+Name().
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Sessions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a30f149ade2fa7de0c294015dce54f4ae}\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a30f149ade2fa7de0c294015dce54f4ae}} 
+\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}!getSessions@{getSessions}}
+\index{getSessions@{getSessions}!com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsubsection{\texorpdfstring{getSessions()}{getSessions()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}}$>$ com.\+Divan.\+coordinator.\+Session\+Manager.\+get\+Sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of sessions.
+
+\begin{DoxyReturn}{Returns}
+The list of sessions. 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Session\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                                        \{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} sessions;}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Sessions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a184cf7e68f3064a0733533f7571085fa}\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a184cf7e68f3064a0733533f7571085fa}} 
+\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}!readSessionsFromFile@{readSessionsFromFile}}
+\index{readSessionsFromFile@{readSessionsFromFile}!com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsubsection{\texorpdfstring{readSessionsFromFile()}{readSessionsFromFile()}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}}$>$ com.\+Divan.\+coordinator.\+Session\+Manager.\+read\+Sessions\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reads sessions from a file.
+
+\begin{DoxyReturn}{Returns}
+The list of sessions read from the file. 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Session\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                                        \{}
+\DoxyCodeLine{98         \textcolor{keywordflow}{if} (!file.exists()) \{}
+\DoxyCodeLine{99             System.out.println(\textcolor{stringliteral}{"{}Sessions file does not exist."{}});}
+\DoxyCodeLine{100             \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{101         \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         \textcolor{keywordflow}{try} (ObjectInputStream inputStream = \textcolor{keyword}{new} ObjectInputStream(\textcolor{keyword}{new} FileInputStream(file))) \{}
+\DoxyCodeLine{104             @SuppressWarnings(\textcolor{stringliteral}{"{}unchecked"{}})}
+\DoxyCodeLine{105             List<Session> sessions = (List<Session>) inputStream.readObject();}
+\DoxyCodeLine{106             System.out.println("{}Sessions have been loaded from "{} + \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a20742067ce48318397f0443fd04044fb}{SESSIONS\_FILE}});}
+\DoxyCodeLine{107             return sessions;}
+\DoxyCodeLine{108         \} catch (Exception ignored) \{}
+\DoxyCodeLine{109             \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Session\+Manager.\+SESSIONS\+\_\+\+FILE.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager_ae5fc2e2ab03e52867ac4bc09c7908f39}\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager_ae5fc2e2ab03e52867ac4bc09c7908f39}} 
+\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}!writeSessionsToFile@{writeSessionsToFile}}
+\index{writeSessionsToFile@{writeSessionsToFile}!com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsubsection{\texorpdfstring{writeSessionsToFile()}{writeSessionsToFile()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+Session\+Manager.\+write\+Sessions\+To\+File (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}} $>$}]{sessions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Writes sessions to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sessions} & The list of sessions to be written to the file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 83 of file Session\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                                    \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{85             ObjectOutputStream outputStream = \textcolor{keyword}{new} ObjectOutputStream(\textcolor{keyword}{new} FileOutputStream(file));}
+\DoxyCodeLine{86             outputStream.writeObject(sessions);}
+\DoxyCodeLine{87             outputStream.close();}
+\DoxyCodeLine{88         \} \textcolor{keywordflow}{catch} (Exception ignored) \{}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+schedule\+Session().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a20742067ce48318397f0443fd04044fb}\label{classcom_1_1Divan_1_1coordinator_1_1SessionManager_a20742067ce48318397f0443fd04044fb}} 
+\index{com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}!SESSIONS\_FILE@{SESSIONS\_FILE}}
+\index{SESSIONS\_FILE@{SESSIONS\_FILE}!com.Divan.coordinator.SessionManager@{com.Divan.coordinator.SessionManager}}
+\doxysubsubsection{\texorpdfstring{SESSIONS\_FILE}{SESSIONS\_FILE}}
+{\footnotesize\ttfamily final String com.\+Divan.\+coordinator.\+Session\+Manager.\+SESSIONS\+\_\+\+FILE = \char`\"{}Sessions.\+bin\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+The file path for sessions serialization. 
+
+Definition at line 26 of file Session\+Manager.\+java.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Session\+Manager.\+read\+Sessions\+From\+File().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{SessionManager_8java}{Session\+Manager.\+java}}\end{DoxyCompactItemize}

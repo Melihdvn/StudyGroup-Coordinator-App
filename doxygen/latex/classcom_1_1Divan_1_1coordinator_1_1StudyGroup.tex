@@ -1,0 +1,311 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{}\doxysection{com.\+Divan.\+coordinator.\+Study\+Group Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+Inheritance diagram for com.\+Divan.\+coordinator.\+Study\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a370f499189e46cfff6568b7d113817df}{Study\+Group}} (String name, String description)
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a599b1b7a96eca32afa9149b350abd373}{get\+Name}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a9c0a1e0f4b3283f8403b381cd8e3e717}{get\+Description}} ()
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_aebd4c862d69657338ab531222e1754d3}{get\+Members}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_af2a2ffe75b7da8981f6b1a8e6ec8ade3}{add\+Member}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} member)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a950023f9b3d3753d57cb840b54326761}{create\+Study\+Group}} (Scanner scanner)
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a210699ebd13392bd9e09d478960b8958}{view\+Study\+Group}} (Scanner scanner)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} class represents a study group in the system. 
+
+Definition at line 25 of file Study\+Group.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a370f499189e46cfff6568b7d113817df}\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a370f499189e46cfff6568b7d113817df}} 
+\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}!StudyGroup@{StudyGroup}}
+\index{StudyGroup@{StudyGroup}!com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+\doxysubsubsection{\texorpdfstring{StudyGroup()}{StudyGroup()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Study\+Group.\+Study\+Group (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{String}]{description }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} object with the specified name and description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the study group. \\
+\hline
+{\em description} & The description of the study group. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file Study\+Group.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                        \{}
+\DoxyCodeLine{45         this.name = name;}
+\DoxyCodeLine{46         this.description = description;}
+\DoxyCodeLine{47         this.members = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{48     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_af2a2ffe75b7da8981f6b1a8e6ec8ade3}\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_af2a2ffe75b7da8981f6b1a8e6ec8ade3}} 
+\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}!addMember@{addMember}}
+\index{addMember@{addMember}!com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+\doxysubsubsection{\texorpdfstring{addMember()}{addMember()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Study\+Group.\+add\+Member (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}}}]{member }\end{DoxyParamCaption})}
+
+Adds a member to the study group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em member} & The user to add as a member of the study group. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 82 of file Study\+Group.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                        \{}
+\DoxyCodeLine{83         members.add(member);}
+\DoxyCodeLine{84     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a950023f9b3d3753d57cb840b54326761}\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a950023f9b3d3753d57cb840b54326761}} 
+\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}!createStudyGroup@{createStudyGroup}}
+\index{createStudyGroup@{createStudyGroup}!com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+\doxysubsubsection{\texorpdfstring{createStudyGroup()}{createStudyGroup()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group (\begin{DoxyParamCaption}\item[{Scanner}]{scanner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new study group by taking input from the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scanner} & The Scanner object for user input. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file Study\+Group.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                          \{}
+\DoxyCodeLine{97         CoordinatorApp.clearScreen();}
+\DoxyCodeLine{98         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/ Study Group -\/-\/-\/-\/"{}});}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         scanner.nextLine();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102         \textcolor{comment}{// Input group details}}
+\DoxyCodeLine{103         System.out.print(\textcolor{stringliteral}{"{}Enter Group Name: "{}});}
+\DoxyCodeLine{104         String groupName = scanner.nextLine();}
+\DoxyCodeLine{105         System.out.print(\textcolor{stringliteral}{"{}Enter Group Description: "{}});}
+\DoxyCodeLine{106         String groupDescription = scanner.nextLine();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108         \textcolor{comment}{// Display user IDs and usernames}}
+\DoxyCodeLine{109         Account.displayUsernamesWithIDs();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111         List<User> groupMembers = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113         \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{114             \textcolor{comment}{// Select users to add to the group}}
+\DoxyCodeLine{115             System.out.println(\textcolor{stringliteral}{"{}Enter user ID to add (or type 'exit' to finish adding users):"{}});}
+\DoxyCodeLine{116             String input = scanner.nextLine().trim();}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118             \textcolor{keywordflow}{if} (input.equalsIgnoreCase(\textcolor{stringliteral}{"{}exit"{}})) \{}
+\DoxyCodeLine{119                 \textcolor{keywordflow}{break}; \textcolor{comment}{// Exit the loop if user types 'exit'}}
+\DoxyCodeLine{120             \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{123                 \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = Integer.parseInt(input);}
+\DoxyCodeLine{124                 User user = Account.findUserById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{125                 \textcolor{keywordflow}{if} (user != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{126                     \textcolor{keywordflow}{if} (!groupMembers.contains(user)) \{}
+\DoxyCodeLine{127                         \textcolor{comment}{// Add user to the group members list}}
+\DoxyCodeLine{128                         groupMembers.add(user);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130                         System.out.println(\textcolor{stringliteral}{"{}Added user: "{}} + user.getUsername() + \textcolor{stringliteral}{"{} to the group."{}});}
+\DoxyCodeLine{131                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{132                         System.out.println(\textcolor{stringliteral}{"{}User with ID "{}} + \textcolor{keywordtype}{id} + \textcolor{stringliteral}{"{} is already in the group."{}});}
+\DoxyCodeLine{133                     \}}
+\DoxyCodeLine{134                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{135                     System.out.println(\textcolor{stringliteral}{"{}User with ID "{}} + \textcolor{keywordtype}{id} + \textcolor{stringliteral}{"{} not found."{}});}
+\DoxyCodeLine{136                 \}}
+\DoxyCodeLine{137             \} \textcolor{keywordflow}{catch} (NumberFormatException e) \{}
+\DoxyCodeLine{138                 System.out.println(\textcolor{stringliteral}{"{}Invalid user ID format: "{}} + input);}
+\DoxyCodeLine{139             \}}
+\DoxyCodeLine{140         \}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142         \textcolor{comment}{// Create the study group with the provided details and members}}
+\DoxyCodeLine{143         \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a370f499189e46cfff6568b7d113817df}{StudyGroup}} studyGroup = \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a370f499189e46cfff6568b7d113817df}{StudyGroup}}(groupName, groupDescription);}
+\DoxyCodeLine{144         \textcolor{keywordflow}{for} (User member : groupMembers) \{}
+\DoxyCodeLine{145             studyGroup.addMember(member);}
+\DoxyCodeLine{146             member.setGroup(studyGroup);}
+\DoxyCodeLine{147             Account.saveUsersToFile(\textcolor{stringliteral}{"{}users.bin"{}});}
+\DoxyCodeLine{148         \}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150         groups1.add(studyGroup);}
+\DoxyCodeLine{151         FileUtility.writeGroupsToFile(groups1);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153         System.out.println(\textcolor{stringliteral}{"{}Study group created successfully!"{}});}
+\DoxyCodeLine{154         System.out.println(\textcolor{stringliteral}{"{}1. Create another study group"{}});}
+\DoxyCodeLine{155         System.out.println(\textcolor{stringliteral}{"{}2. Back to menu"{}});}
+\DoxyCodeLine{156         \textcolor{keywordtype}{int} choice = scanner.nextInt(); \textcolor{comment}{// Assuming getValidChoice is defined elsewhere}}
+\DoxyCodeLine{157         \textcolor{keywordflow}{if} (choice == 1) \{}
+\DoxyCodeLine{158             \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a950023f9b3d3753d57cb840b54326761}{createStudyGroup}}(scanner);}
+\DoxyCodeLine{159         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{160             CoordinatorApp.groupManagementMenu(scanner); \textcolor{comment}{// Assuming groupManagementMenu is defined elsewhere}}
+\DoxyCodeLine{161         \}}
+\DoxyCodeLine{162     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Study\+Group.\+add\+Member(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+clear\+Screen(), com.\+Divan.\+coordinator.\+Account.\+display\+Usernames\+With\+IDs(), com.\+Divan.\+coordinator.\+Account.\+find\+User\+By\+Id(), com.\+Divan.\+coordinator.\+User.\+get\+Username(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+group\+Management\+Menu(), com.\+Divan.\+coordinator.\+Account.\+save\+Users\+To\+File(), com.\+Divan.\+coordinator.\+Study\+Group.\+Study\+Group(), and com.\+Divan.\+coordinator.\+File\+Utility.\+write\+Groups\+To\+File().
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+group\+Management\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a9c0a1e0f4b3283f8403b381cd8e3e717}\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a9c0a1e0f4b3283f8403b381cd8e3e717}} 
+\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Study\+Group.\+get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the description of the study group.
+
+\begin{DoxyReturn}{Returns}
+The description of the study group. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Study\+Group.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                    \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} description;}
+\DoxyCodeLine{66     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_aebd4c862d69657338ab531222e1754d3}\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_aebd4c862d69657338ab531222e1754d3}} 
+\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}!getMembers@{getMembers}}
+\index{getMembers@{getMembers}!com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+\doxysubsubsection{\texorpdfstring{getMembers()}{getMembers()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}}$>$ com.\+Divan.\+coordinator.\+Study\+Group.\+get\+Members (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the list of members in the study group.
+
+\begin{DoxyReturn}{Returns}
+The list of members in the study group. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Study\+Group.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                    \{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{return} members;}
+\DoxyCodeLine{75     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a599b1b7a96eca32afa9149b350abd373}\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a599b1b7a96eca32afa9149b350abd373}} 
+\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}!getName@{getName}}
+\index{getName@{getName}!com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Study\+Group.\+get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the name of the study group.
+
+\begin{DoxyReturn}{Returns}
+The name of the study group. 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Study\+Group.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                             \{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} name;}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Discussion\+Manager.\+display\+Discussions\+For\+Group(), com.\+Divan.\+coordinator.\+Resource\+Manager.\+display\+Resources\+For\+Group(), com.\+Divan.\+coordinator.\+Session\+Manager.\+display\+Sessions\+For\+Group(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Discussion\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Resource\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Sessions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a210699ebd13392bd9e09d478960b8958}\label{classcom_1_1Divan_1_1coordinator_1_1StudyGroup_a210699ebd13392bd9e09d478960b8958}} 
+\index{com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}!viewStudyGroup@{viewStudyGroup}}
+\index{viewStudyGroup@{viewStudyGroup}!com.Divan.coordinator.StudyGroup@{com.Divan.coordinator.StudyGroup}}
+\doxysubsubsection{\texorpdfstring{viewStudyGroup()}{viewStudyGroup()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+Study\+Group.\+view\+Study\+Group (\begin{DoxyParamCaption}\item[{Scanner}]{scanner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Displays the study groups for viewing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scanner} & The Scanner object for user input. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file Study\+Group.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169                                                        \{}
+\DoxyCodeLine{170         List<StudyGroup> loadedGroups = FileUtility.readGroupsFromFile();}
+\DoxyCodeLine{171         \textcolor{keywordflow}{if} (loadedGroups != \textcolor{keyword}{null} \&\& !loadedGroups.isEmpty()) \{}
+\DoxyCodeLine{172             CoordinatorApp.clearScreen();}
+\DoxyCodeLine{173             ViewGroups.viewGroups(loadedGroups, scanner);}
+\DoxyCodeLine{174         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{175             System.out.println(\textcolor{stringliteral}{"{}No study groups found."{}});}
+\DoxyCodeLine{176             CoordinatorApp.groupManagementMenu(scanner);}
+\DoxyCodeLine{177         \}}
+\DoxyCodeLine{178     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Coordinator\+App.\+clear\+Screen(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+group\+Management\+Menu(), com.\+Divan.\+coordinator.\+File\+Utility.\+read\+Groups\+From\+File(), and com.\+Divan.\+coordinator.\+View\+Groups.\+view\+Groups().
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+group\+Management\+Menu().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{StudyGroup_8java}{Study\+Group.\+java}}\end{DoxyCompactItemize}

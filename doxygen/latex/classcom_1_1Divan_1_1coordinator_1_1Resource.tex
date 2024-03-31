@@ -1,0 +1,269 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource}{}\doxysection{com.\+Divan.\+coordinator.\+Resource Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1Resource}\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+Inheritance diagram for com.\+Divan.\+coordinator.\+Resource\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1Divan_1_1coordinator_1_1Resource}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_a2f3d6709030a6238fb801fc3dd7e7765}{Resource}} (String title, String description, String link, \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} group)
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_a52370d3917efbe5f6a128ef177909698}{get\+Title}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_a44b131cca615b7d1a19768a5a93b03d3}{get\+Description}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_af1fd76932d4dd082c7acf03143d71351}{get\+Link}} ()
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_ae15936053f06daeecd3db1e3a3f8ac2a}{get\+Group}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_a3d258c258a642908892cc547dfd82e3f}{set\+Title}} (String title)
+\begin{DoxyCompactList}\small\item\em Sets the title of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_a34ea49d6001a491d7df24de80f87f708}{set\+Link}} (String link)
+\begin{DoxyCompactList}\small\item\em Sets the link of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource_a281e29903e96f8c35a83991f723d5545}{set\+Description}} (String description)
+\begin{DoxyCompactList}\small\item\em Sets the description of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}} class represents a resource item that can be shared within a study group. 
+
+Definition at line 24 of file Resource.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_a2f3d6709030a6238fb801fc3dd7e7765}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_a2f3d6709030a6238fb801fc3dd7e7765}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!Resource@{Resource}}
+\index{Resource@{Resource}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{Resource()}{Resource()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Resource.\+Resource (\begin{DoxyParamCaption}\item[{String}]{title,  }\item[{String}]{description,  }\item[{String}]{link,  }\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}}]{group }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}} object with the specified details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title of the resource \\
+\hline
+{\em description} & The description of the resource \\
+\hline
+{\em link} & The link associated with the resource \\
+\hline
+{\em group} & The study group associated with the resource \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                                                      \{}
+\DoxyCodeLine{64         this.title = title;}
+\DoxyCodeLine{65         this.description = description;}
+\DoxyCodeLine{66         this.link = link;}
+\DoxyCodeLine{67         this.group = group;}
+\DoxyCodeLine{68         this.resources = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{69     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_a44b131cca615b7d1a19768a5a93b03d3}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_a44b131cca615b7d1a19768a5a93b03d3}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Resource.\+get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the description of the resource.
+
+\begin{DoxyReturn}{Returns}
+The description of the resource 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                    \{}
+\DoxyCodeLine{86         \textcolor{keywordflow}{return} description;}
+\DoxyCodeLine{87     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Resource\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_ae15936053f06daeecd3db1e3a3f8ac2a}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_ae15936053f06daeecd3db1e3a3f8ac2a}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!getGroup@{getGroup}}
+\index{getGroup@{getGroup}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{getGroup()}{getGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} com.\+Divan.\+coordinator.\+Resource.\+get\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the study group associated with the resource.
+
+\begin{DoxyReturn}{Returns}
+The study group associated with the resource 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                  \{}
+\DoxyCodeLine{104         \textcolor{keywordflow}{return} group;}
+\DoxyCodeLine{105     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_af1fd76932d4dd082c7acf03143d71351}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_af1fd76932d4dd082c7acf03143d71351}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!getLink@{getLink}}
+\index{getLink@{getLink}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{getLink()}{getLink()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Resource.\+get\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the link associated with the resource.
+
+\begin{DoxyReturn}{Returns}
+The link associated with the resource 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94                             \{}
+\DoxyCodeLine{95         \textcolor{keywordflow}{return} link;}
+\DoxyCodeLine{96     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Resource\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_a52370d3917efbe5f6a128ef177909698}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_a52370d3917efbe5f6a128ef177909698}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Resource.\+get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the title of the resource.
+
+\begin{DoxyReturn}{Returns}
+The title of the resource 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                              \{}
+\DoxyCodeLine{77         \textcolor{keywordflow}{return} title;}
+\DoxyCodeLine{78     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Resource\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_a281e29903e96f8c35a83991f723d5545}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_a281e29903e96f8c35a83991f723d5545}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Resource.\+set\+Description (\begin{DoxyParamCaption}\item[{String}]{description }\end{DoxyParamCaption})}
+
+
+
+Sets the description of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & The new description to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130                                                    \{}
+\DoxyCodeLine{131         this.description = description;}
+\DoxyCodeLine{132     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_a34ea49d6001a491d7df24de80f87f708}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_a34ea49d6001a491d7df24de80f87f708}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!setLink@{setLink}}
+\index{setLink@{setLink}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{setLink()}{setLink()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Resource.\+set\+Link (\begin{DoxyParamCaption}\item[{String}]{link }\end{DoxyParamCaption})}
+
+
+
+Sets the link of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & The new link to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 121 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121                                      \{}
+\DoxyCodeLine{122         this.link = link;}
+\DoxyCodeLine{123     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Resource_a3d258c258a642908892cc547dfd82e3f}\label{classcom_1_1Divan_1_1coordinator_1_1Resource_a3d258c258a642908892cc547dfd82e3f}} 
+\index{com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!com.Divan.coordinator.Resource@{com.Divan.coordinator.Resource}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Resource.\+set\+Title (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets the title of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The new title to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file Resource.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112                                        \{}
+\DoxyCodeLine{113         this.title = title;}
+\DoxyCodeLine{114     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{Resource_8java}{Resource.\+java}}\end{DoxyCompactItemize}

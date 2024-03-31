@@ -1,0 +1,245 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1User}{}\doxysection{com.\+Divan.\+coordinator.\+User Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1User}\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+Inheritance diagram for com.\+Divan.\+coordinator.\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1Divan_1_1coordinator_1_1User}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_a9e9728c6b0e5d061f0481ddbb9a909c1}{User}} (String name, String surname, int id, String username, String password)
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_ad05a002d8a017ad161aa8938cf5b8477}{get\+Name}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_a161485bc704bf0c318f18b6b10ab1494}{get\+Surname}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_aa5bc274c81b9045eb26196a5338b32bd}{get\+Id}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_aa7f7fe716ce11fe815fa71e3778cf60d}{get\+Username}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_a9b3d84b00b814f767cdfbdc511ef2811}{get\+Password}} ()
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_a0a84ada8bbaa8a8b47cc2ff02f279485}{get\+Group}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User_a754ceb766bc067607a89721217914fc5}{set\+Group}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} group)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} class represents a user in the system. 
+
+Definition at line 22 of file User.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_a9e9728c6b0e5d061f0481ddbb9a909c1}\label{classcom_1_1Divan_1_1coordinator_1_1User_a9e9728c6b0e5d061f0481ddbb9a909c1}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!User@{User}}
+\index{User@{User}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+User.\+User (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{String}]{surname,  }\item[{int}]{id,  }\item[{String}]{username,  }\item[{String}]{password }\end{DoxyParamCaption})}
+
+Constructs a \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} object with the specified attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The user\textquotesingle{}s name. \\
+\hline
+{\em surname} & The user\textquotesingle{}s surname. \\
+\hline
+{\em id} & The user\textquotesingle{}s ID. \\
+\hline
+{\em username} & The user\textquotesingle{}s username. \\
+\hline
+{\em password} & The user\textquotesingle{}s password. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                                                                        \{}
+\DoxyCodeLine{54         this.name = name;}
+\DoxyCodeLine{55         this.surname = surname;}
+\DoxyCodeLine{56         this.\textcolor{keywordtype}{id} = id;}
+\DoxyCodeLine{57         this.username = username;}
+\DoxyCodeLine{58         this.password = password;}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_a0a84ada8bbaa8a8b47cc2ff02f279485}\label{classcom_1_1Divan_1_1coordinator_1_1User_a0a84ada8bbaa8a8b47cc2ff02f279485}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!getGroup@{getGroup}}
+\index{getGroup@{getGroup}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{getGroup()}{getGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} com.\+Divan.\+coordinator.\+User.\+get\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the study group the user belongs to.
+
+\begin{DoxyReturn}{Returns}
+The study group the user belongs to. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                  \{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} group;}
+\DoxyCodeLine{113     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+create\+Discussion(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+discussion\+Board\+Menu(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Discussion\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+resource\+Sharing\+Menu(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+schedule\+Session(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+session\+Scheduling\+Menu(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+share\+Resource(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Discussions(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Resource\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Sessions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_aa5bc274c81b9045eb26196a5338b32bd}\label{classcom_1_1Divan_1_1coordinator_1_1User_aa5bc274c81b9045eb26196a5338b32bd}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!getId@{getId}}
+\index{getId@{getId}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int com.\+Divan.\+coordinator.\+User.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user\textquotesingle{}s ID.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s ID. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                        \{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{86     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_ad05a002d8a017ad161aa8938cf5b8477}\label{classcom_1_1Divan_1_1coordinator_1_1User_ad05a002d8a017ad161aa8938cf5b8477}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!getName@{getName}}
+\index{getName@{getName}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+User.\+get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user\textquotesingle{}s name.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s name. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                             \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{return} name;}
+\DoxyCodeLine{68     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_a9b3d84b00b814f767cdfbdc511ef2811}\label{classcom_1_1Divan_1_1coordinator_1_1User_a9b3d84b00b814f767cdfbdc511ef2811}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+User.\+get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user\textquotesingle{}s password.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s password. 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                 \{}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} password;}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_a161485bc704bf0c318f18b6b10ab1494}\label{classcom_1_1Divan_1_1coordinator_1_1User_a161485bc704bf0c318f18b6b10ab1494}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!getSurname@{getSurname}}
+\index{getSurname@{getSurname}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{getSurname()}{getSurname()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+User.\+get\+Surname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user\textquotesingle{}s surname.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s surname. 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                \{}
+\DoxyCodeLine{76         \textcolor{keywordflow}{return} surname;}
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_aa7f7fe716ce11fe815fa71e3778cf60d}\label{classcom_1_1Divan_1_1coordinator_1_1User_aa7f7fe716ce11fe815fa71e3778cf60d}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+User.\+get\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user\textquotesingle{}s username.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s username. 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                 \{}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} username;}
+\DoxyCodeLine{95     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group(), com.\+Divan.\+coordinator.\+Discussion\+Manager.\+display\+Discussions\+For\+Group(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+main\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1User_a754ceb766bc067607a89721217914fc5}\label{classcom_1_1Divan_1_1coordinator_1_1User_a754ceb766bc067607a89721217914fc5}} 
+\index{com.Divan.coordinator.User@{com.Divan.coordinator.User}!setGroup@{setGroup}}
+\index{setGroup@{setGroup}!com.Divan.coordinator.User@{com.Divan.coordinator.User}}
+\doxysubsubsection{\texorpdfstring{setGroup()}{setGroup()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+User.\+set\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}}]{group }\end{DoxyParamCaption})}
+
+Sets the study group for the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The study group to set for the user. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file User.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{120                                            \{}
+\DoxyCodeLine{121         this.group = group;}
+\DoxyCodeLine{122     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{User_8java}{User.\+java}}\end{DoxyCompactItemize}

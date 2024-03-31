@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileUtility.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">FileUtility.java</span></div><h1>FileUtility.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.List;
+
+/**
+ * Utility class for handling file operations related to study groups.
+ */
+<span class="nc" id="L27">public class FileUtility {</span>
+    
+    /** File path for storing and loading study groups. */
+    public static final String GROUPS_FILE = &quot;Studygroups.bin&quot;;
+
+    /**
+     * Writes the list of study groups to a binary file.
+     *
+     * @param groups The list of study groups to write to file
+     */
+    public static void writeGroupsToFile(List&lt;StudyGroup&gt; groups) {
+<span class="fc" id="L38">        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(GROUPS_FILE))) {</span>
+<span class="fc" id="L39">            outputStream.writeObject(groups);</span>
+<span class="fc" id="L40">            System.out.println(&quot;Study groups have been saved to &quot; + GROUPS_FILE);</span>
+<span class="nc" id="L41">        } catch (Exception Ignored) {</span>
+<span class="fc" id="L42">        }</span>
+<span class="fc" id="L43">    }</span>
+
+    /**
+     * Reads the list of study groups from a binary file.
+     *
+     * @return The list of study groups read from file, or null if an error occurs
+     */
+    public static List&lt;StudyGroup&gt; readGroupsFromFile() {
+<span class="fc" id="L51">        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(GROUPS_FILE))) {</span>
+            @SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L53">			List&lt;StudyGroup&gt; groups = (List&lt;StudyGroup&gt;) inputStream.readObject();</span>
+<span class="fc" id="L54">            System.out.println(&quot;Study groups have been loaded from &quot; + GROUPS_FILE);</span>
+<span class="fc" id="L55">            return groups;</span>
+<span class="fc" id="L56">        } catch (Exception Ignored) {</span>
+<span class="fc" id="L57">            return null;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

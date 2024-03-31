@@ -1,0 +1,269 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session}{}\doxysection{com.\+Divan.\+coordinator.\+Session Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1Session}\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+Inheritance diagram for com.\+Divan.\+coordinator.\+Session\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1Divan_1_1coordinator_1_1Session}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_acb06e011ca7b53c796028d79e54ee7d3}{Session}} (String title, String date, \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} group, String description)
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_a676724b0751a5fa35ed754b99a0ae415}{get\+Title}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_a6e7b0a2be150dc4de733605da96e4ff1}{get\+Date}} ()
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_af36d5369eace50b788228c15db5d17c3}{get\+Group}} ()
+\item 
+String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_a2ccf57d8a13b173ab289a3138c8fbfd1}{get\+Description}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_a8ac678e4569d78afbf73c177aa1d4039}{set\+Title}} (String title)
+\begin{DoxyCompactList}\small\item\em Sets the title of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_a5e4b9cc35f36b379d506414519c79d95}{set\+Date}} (String date)
+\begin{DoxyCompactList}\small\item\em Sets the date of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session_ada738496321d00132ae62ae50b73e0b2}{set\+Description}} (String description)
+\begin{DoxyCompactList}\small\item\em Sets the description of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}} class represents a session in the system. 
+
+Definition at line 24 of file Session.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_acb06e011ca7b53c796028d79e54ee7d3}\label{classcom_1_1Divan_1_1coordinator_1_1Session_acb06e011ca7b53c796028d79e54ee7d3}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!Session@{Session}}
+\index{Session@{Session}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{Session()}{Session()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Session.\+Session (\begin{DoxyParamCaption}\item[{String}]{title,  }\item[{String}]{date,  }\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}}]{group,  }\item[{String}]{description }\end{DoxyParamCaption})}
+
+Constructs a new \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Session}{Session}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title of the session \\
+\hline
+{\em date} & The date of the session \\
+\hline
+{\em group} & The study group associated with the session \\
+\hline
+{\em description} & The description of the session \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                                                                     \{}
+\DoxyCodeLine{52         this.title = title;}
+\DoxyCodeLine{53         this.date = date;}
+\DoxyCodeLine{54         this.group = group;}
+\DoxyCodeLine{55         this.description = description;}
+\DoxyCodeLine{56         this.sessions = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_a6e7b0a2be150dc4de733605da96e4ff1}\label{classcom_1_1Divan_1_1coordinator_1_1Session_a6e7b0a2be150dc4de733605da96e4ff1}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!getDate@{getDate}}
+\index{getDate@{getDate}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Session.\+get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the date of the session.
+
+\begin{DoxyReturn}{Returns}
+The date of the session 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                             \{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{return} date;}
+\DoxyCodeLine{75     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Sessions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_a2ccf57d8a13b173ab289a3138c8fbfd1}\label{classcom_1_1Divan_1_1coordinator_1_1Session_a2ccf57d8a13b173ab289a3138c8fbfd1}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Session.\+get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the description of the session.
+
+\begin{DoxyReturn}{Returns}
+The description of the session 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                    \{}
+\DoxyCodeLine{92         \textcolor{keywordflow}{return} description;}
+\DoxyCodeLine{93     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Sessions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_af36d5369eace50b788228c15db5d17c3}\label{classcom_1_1Divan_1_1coordinator_1_1Session_af36d5369eace50b788228c15db5d17c3}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!getGroup@{getGroup}}
+\index{getGroup@{getGroup}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{getGroup()}{getGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} com.\+Divan.\+coordinator.\+Session.\+get\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the study group associated with the session.
+
+\begin{DoxyReturn}{Returns}
+The study group associated with the session 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                  \{}
+\DoxyCodeLine{83         \textcolor{keywordflow}{return} group;}
+\DoxyCodeLine{84     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_a676724b0751a5fa35ed754b99a0ae415}\label{classcom_1_1Divan_1_1coordinator_1_1Session_a676724b0751a5fa35ed754b99a0ae415}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily String com.\+Divan.\+coordinator.\+Session.\+get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the title of the session.
+
+\begin{DoxyReturn}{Returns}
+The title of the session 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                              \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} title;}
+\DoxyCodeLine{66     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Sessions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_a5e4b9cc35f36b379d506414519c79d95}\label{classcom_1_1Divan_1_1coordinator_1_1Session_a5e4b9cc35f36b379d506414519c79d95}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!setDate@{setDate}}
+\index{setDate@{setDate}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Session.\+set\+Date (\begin{DoxyParamCaption}\item[{String}]{date }\end{DoxyParamCaption})}
+
+
+
+Sets the date of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & The new date to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                                      \{}
+\DoxyCodeLine{110         this.date = date;}
+\DoxyCodeLine{111     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_ada738496321d00132ae62ae50b73e0b2}\label{classcom_1_1Divan_1_1coordinator_1_1Session_ada738496321d00132ae62ae50b73e0b2}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Session.\+set\+Description (\begin{DoxyParamCaption}\item[{String}]{description }\end{DoxyParamCaption})}
+
+
+
+Sets the description of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & The new description to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 118 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118                                                    \{}
+\DoxyCodeLine{119         this.description = description;}
+\DoxyCodeLine{120     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Session_a8ac678e4569d78afbf73c177aa1d4039}\label{classcom_1_1Divan_1_1coordinator_1_1Session_a8ac678e4569d78afbf73c177aa1d4039}} 
+\index{com.Divan.coordinator.Session@{com.Divan.coordinator.Session}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!com.Divan.coordinator.Session@{com.Divan.coordinator.Session}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Session.\+set\+Title (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets the title of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The new title to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file Session.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100                                        \{}
+\DoxyCodeLine{101         this.title = title;}
+\DoxyCodeLine{102     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Session\+Details().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{Session_8java}{Session.\+java}}\end{DoxyCompactItemize}

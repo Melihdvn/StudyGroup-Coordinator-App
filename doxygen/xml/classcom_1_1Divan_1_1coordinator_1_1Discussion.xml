@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1Discussion" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::Discussion</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a45aec485f191f3a57878e3e88f59ab7c" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.Divan.coordinator.Discussion.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Serializable identifier for object persistence. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="28" column="27" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1af1eacdd61a71e7f1883992d5cf00b8fe" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Discussion.topic</definition>
+        <argsstring></argsstring>
+        <name>topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The topic of discussion or coordination handled by the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="33" column="16" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a029fbe0d3c2157b462f15c9f23068ab8" prot="private" static="no" mutable="no">
+        <type>List&lt; String &gt;</type>
+        <definition>List&lt;String&gt; com.Divan.coordinator.Discussion.comments</definition>
+        <argsstring></argsstring>
+        <name>comments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A list of comments or remarks related to the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="38" column="14" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a04acb9c893aa57e26b86d17fcdced67d" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+        <definition>StudyGroup com.Divan.coordinator.Discussion.group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The study group associated with the coordinator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="43" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a5b7632daa127caabaf655fbc56b9133b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.Divan.coordinator.Discussion.Discussion</definition>
+        <argsstring>(String topic, StudyGroup group)</argsstring>
+        <name>Discussion</name>
+        <param>
+          <type>String</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1Divan_1_1coordinator_1_1Discussion" kindref="compound">Discussion</ref> object with the specified topic and associated study group.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the discussion </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The study group associated with the discussion </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="51" column="12" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a46d3b10b7ef020b2fcd29b191e91f6c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Discussion.getTopic</definition>
+        <argsstring>()</argsstring>
+        <name>getTopic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the topic of the discussion.</para>
+<para><simplesect kind="return"><para>The topic of the discussion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="62" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1ad12eba6e5ed227757bf062260fa818cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; String &gt;</type>
+        <definition>List&lt;String&gt; com.Divan.coordinator.Discussion.getComments</definition>
+        <argsstring>()</argsstring>
+        <name>getComments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the list of comments in the discussion.</para>
+<para><simplesect kind="return"><para>The list of comments </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="71" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a503a08c2c9a99500ef5864cd837d6282" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.Discussion.addComment</definition>
+        <argsstring>(String comment)</argsstring>
+        <name>addComment</name>
+        <param>
+          <type>String</type>
+          <declname>comment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a comment to the discussion.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>comment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The comment to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="80" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="80" bodyend="82"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1ac5b4fc891f87ff84112c46a4fad86566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+        <definition>StudyGroup com.Divan.coordinator.Discussion.getGroup</definition>
+        <argsstring>()</argsstring>
+        <name>getGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the study group associated with the discussion.</para>
+<para><simplesect kind="return"><para>The associated study group </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="89" column="23" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Discussion_1aa455b299ab9bc5fc13cbb0b6311ed4df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.Discussion.setTopic</definition>
+        <argsstring>(String topic)</argsstring>
+        <name>setTopic</name>
+        <param>
+          <type>String</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Sets the topic of the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new topic to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="98" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="98" bodyend="100"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" compoundref="CoordinatorApp_8java" startline="576" endline="611">com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a discussion topic along with comments and the associated study group. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>com.Divan.coordinator.Discussion</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1Discussion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>com.Divan.coordinator.Discussion</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1Discussion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" line="24" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Discussion.java" bodystart="24" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a503a08c2c9a99500ef5864cd837d6282" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>addComment</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a029fbe0d3c2157b462f15c9f23068ab8" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>comments</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a5b7632daa127caabaf655fbc56b9133b" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>Discussion</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1ad12eba6e5ed227757bf062260fa818cb" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>getComments</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1ac5b4fc891f87ff84112c46a4fad86566" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>getGroup</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a46d3b10b7ef020b2fcd29b191e91f6c9" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>getTopic</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a04acb9c893aa57e26b86d17fcdced67d" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>group</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a45aec485f191f3a57878e3e88f59ab7c" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1aa455b299ab9bc5fc13cbb0b6311ed4df" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>setTopic</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1af1eacdd61a71e7f1883992d5cf00b8fe" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Discussion</scope><name>topic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_ecbb0511686a8197b8eb5eb73b17fcbb" kind="dir">
+    <compoundname>coordinator-app/src/main/java/com/Divan/coordinator</compoundname>
+    <innerfile refid="Account_8java">Account.java</innerfile>
+    <innerfile refid="CoordinatorApp_8java">CoordinatorApp.java</innerfile>
+    <innerfile refid="Discussion_8java">Discussion.java</innerfile>
+    <innerfile refid="DiscussionManager_8java">DiscussionManager.java</innerfile>
+    <innerfile refid="FileUtility_8java">FileUtility.java</innerfile>
+    <innerfile refid="Resource_8java">Resource.java</innerfile>
+    <innerfile refid="ResourceManager_8java">ResourceManager.java</innerfile>
+    <innerfile refid="Session_8java">Session.java</innerfile>
+    <innerfile refid="SessionManager_8java">SessionManager.java</innerfile>
+    <innerfile refid="StudyGroup_8java">StudyGroup.java</innerfile>
+    <innerfile refid="User_8java">User.java</innerfile>
+    <innerfile refid="ViewGroups_8java">ViewGroups.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/"/>
+  </compounddef>
+</doxygen>

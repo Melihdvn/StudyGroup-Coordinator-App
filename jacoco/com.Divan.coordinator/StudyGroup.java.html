@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudyGroup.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">StudyGroup.java</span></div><h1>StudyGroup.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * The StudyGroup class represents a study group in the system.
+ */
+public class StudyGroup implements Serializable {
+    /** The serial version UID for serialization. */
+	private static final long serialVersionUID = 1L;
+
+    /** The name of the study group. */
+    private String name;
+
+    /** A brief description of the study group. */
+    private String description;
+
+    /** The list of members in the study group. */
+    private List&lt;User&gt; members;
+
+    /**
+     * Constructs a StudyGroup object with the specified name and description.
+     *
+     * @param name        The name of the study group.
+     * @param description The description of the study group.
+     */
+<span class="fc" id="L44">    public StudyGroup(String name, String description) {</span>
+<span class="fc" id="L45">        this.name = name;</span>
+<span class="fc" id="L46">        this.description = description;</span>
+<span class="fc" id="L47">        this.members = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L48">    }</span>
+
+    /**
+     * Gets the name of the study group.
+     *
+     * @return The name of the study group.
+     */
+    public String getName() {
+<span class="fc" id="L56">        return name;</span>
+    }
+
+    /**
+     * Gets the description of the study group.
+     *
+     * @return The description of the study group.
+     */
+    public String getDescription() {
+<span class="fc" id="L65">        return description;</span>
+    }
+
+    /**
+     * Gets the list of members in the study group.
+     *
+     * @return The list of members in the study group.
+     */
+    public List&lt;User&gt; getMembers() {
+<span class="fc" id="L74">        return members;</span>
+    }
+
+    /**
+     * Adds a member to the study group.
+     *
+     * @param member The user to add as a member of the study group.
+     */
+    public void addMember(User member) {
+<span class="fc" id="L83">        members.add(member);</span>
+<span class="fc" id="L84">    }</span>
+
+    // Methods for managing study groups
+
+    // Define static list of study groups
+<span class="fc" id="L89">    static List&lt;StudyGroup&gt; groups1 = new ArrayList&lt;&gt;();</span>
+
+    /**
+     * Creates a new study group by taking input from the user.
+     *
+     * @param scanner The Scanner object for user input.
+     */
+    public static void createStudyGroup(Scanner scanner) {
+<span class="fc" id="L97">        CoordinatorApp.clearScreen();</span>
+<span class="fc" id="L98">        System.out.println(&quot;---- Study Group ----&quot;);</span>
+
+<span class="fc" id="L100">        scanner.nextLine();</span>
+
+        // Input group details
+<span class="fc" id="L103">        System.out.print(&quot;Enter Group Name: &quot;);</span>
+<span class="fc" id="L104">        String groupName = scanner.nextLine();</span>
+<span class="fc" id="L105">        System.out.print(&quot;Enter Group Description: &quot;);</span>
+<span class="fc" id="L106">        String groupDescription = scanner.nextLine();</span>
+
+        // Display user IDs and usernames
+<span class="fc" id="L109">        Account.displayUsernamesWithIDs();</span>
+
+<span class="fc" id="L111">        List&lt;User&gt; groupMembers = new ArrayList&lt;&gt;();</span>
+
+        while (true) {
+            // Select users to add to the group
+<span class="fc" id="L115">            System.out.println(&quot;Enter user ID to add (or type 'exit' to finish adding users):&quot;);</span>
+<span class="fc" id="L116">            String input = scanner.nextLine().trim();</span>
+
+<span class="fc bfc" id="L118" title="All 2 branches covered.">            if (input.equalsIgnoreCase(&quot;exit&quot;)) {</span>
+<span class="fc" id="L119">                break; // Exit the loop if user types 'exit'</span>
+            }
+
+            try {
+<span class="fc" id="L123">                int id = Integer.parseInt(input);</span>
+<span class="fc" id="L124">                User user = Account.findUserById(id);</span>
+<span class="fc bfc" id="L125" title="All 2 branches covered.">                if (user != null) {</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">                    if (!groupMembers.contains(user)) {</span>
+                        // Add user to the group members list
+<span class="fc" id="L128">                        groupMembers.add(user);</span>
+
+<span class="fc" id="L130">                        System.out.println(&quot;Added user: &quot; + user.getUsername() + &quot; to the group.&quot;);</span>
+                    } else {
+<span class="fc" id="L132">                        System.out.println(&quot;User with ID &quot; + id + &quot; is already in the group.&quot;);</span>
+                    }
+                } else {
+<span class="fc" id="L135">                    System.out.println(&quot;User with ID &quot; + id + &quot; not found.&quot;);</span>
+                }
+<span class="fc" id="L137">            } catch (NumberFormatException e) {</span>
+<span class="fc" id="L138">                System.out.println(&quot;Invalid user ID format: &quot; + input);</span>
+<span class="fc" id="L139">            }</span>
+<span class="fc" id="L140">        }</span>
+
+        // Create the study group with the provided details and members
+<span class="fc" id="L143">        StudyGroup studyGroup = new StudyGroup(groupName, groupDescription);</span>
+<span class="fc bfc" id="L144" title="All 2 branches covered.">        for (User member : groupMembers) {</span>
+<span class="fc" id="L145">            studyGroup.addMember(member);</span>
+<span class="fc" id="L146">            member.setGroup(studyGroup);</span>
+<span class="fc" id="L147">            Account.saveUsersToFile(&quot;users.bin&quot;);</span>
+<span class="fc" id="L148">        }</span>
+
+<span class="fc" id="L150">        groups1.add(studyGroup);</span>
+<span class="fc" id="L151">        FileUtility.writeGroupsToFile(groups1);</span>
+
+<span class="fc" id="L153">        System.out.println(&quot;Study group created successfully!&quot;);</span>
+<span class="fc" id="L154">        System.out.println(&quot;1. Create another study group&quot;);</span>
+<span class="fc" id="L155">        System.out.println(&quot;2. Back to menu&quot;);</span>
+<span class="fc" id="L156">        int choice = scanner.nextInt(); // Assuming getValidChoice is defined elsewhere</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">        if (choice == 1) {</span>
+<span class="fc" id="L158">            createStudyGroup(scanner);</span>
+        } else {
+<span class="fc" id="L160">            CoordinatorApp.groupManagementMenu(scanner); // Assuming groupManagementMenu is defined elsewhere</span>
+        }
+<span class="fc" id="L162">    }</span>
+
+    /**
+     * Displays the study groups for viewing.
+     *
+     * @param scanner The Scanner object for user input.
+     */
+    public static void viewStudyGroup(Scanner scanner) {
+<span class="fc" id="L170">        List&lt;StudyGroup&gt; loadedGroups = FileUtility.readGroupsFromFile();</span>
+<span class="pc bpc" id="L171" title="1 of 4 branches missed.">        if (loadedGroups != null &amp;&amp; !loadedGroups.isEmpty()) {</span>
+<span class="fc" id="L172">            CoordinatorApp.clearScreen();</span>
+<span class="fc" id="L173">            ViewGroups.viewGroups(loadedGroups, scanner);</span>
+        } else {
+<span class="fc" id="L175">            System.out.println(&quot;No study groups found.&quot;);</span>
+<span class="fc" id="L176">            CoordinatorApp.groupManagementMenu(scanner);</span>
+        }
+<span class="fc" id="L178">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

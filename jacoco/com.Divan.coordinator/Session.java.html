@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Session.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">Session.java</span></div><h1>Session.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * The Session class represents a session in the system.
+ */
+public class Session implements Serializable {
+    /** The serial version UID for serialization. */
+    private static final long serialVersionUID = 1L;
+
+    /** The title of the session. */
+    private String title;
+
+    /** The date of the session. */
+    private String date;
+
+    /** The study group associated with the session. */
+    private StudyGroup group;
+
+    /** A description of the session. */
+    private String description;
+
+    /** A list of sessions related to this session. */
+    private List&lt;String&gt; sessions;
+
+    /**
+     * Constructs a new Session object.
+     *
+     * @param title       The title of the session
+     * @param date        The date of the session
+     * @param group       The study group associated with the session
+     * @param description The description of the session
+     */
+<span class="fc" id="L51">    public Session(String title, String date, StudyGroup group, String description) {</span>
+<span class="fc" id="L52">        this.title = title;</span>
+<span class="fc" id="L53">        this.date = date;</span>
+<span class="fc" id="L54">        this.group = group;</span>
+<span class="fc" id="L55">        this.description = description;</span>
+<span class="fc" id="L56">        this.sessions = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L57">    }</span>
+
+    /**
+     * Retrieves the title of the session.
+     *
+     * @return The title of the session
+     */
+    public String getTitle() {
+<span class="fc" id="L65">        return title;</span>
+    }
+
+    /**
+     * Retrieves the date of the session.
+     *
+     * @return The date of the session
+     */
+    public String getDate() {
+<span class="fc" id="L74">        return date;</span>
+    }
+
+    /**
+     * Retrieves the study group associated with the session.
+     *
+     * @return The study group associated with the session
+     */
+    public StudyGroup getGroup() {
+<span class="fc" id="L83">        return group;</span>
+    }
+
+    /**
+     * Retrieves the description of the session.
+     *
+     * @return The description of the session
+     */
+    public String getDescription() {
+<span class="fc" id="L92">        return description;</span>
+    }
+
+    /**
+     * @brief Sets the title of the object.
+     * 
+     * @param title The new title to be set.
+     */
+    public void setTitle(String title) {
+<span class="fc" id="L101">        this.title = title;</span>
+<span class="fc" id="L102">    }</span>
+
+    /**
+     * @brief Sets the date of the object.
+     * 
+     * @param date The new date to be set.
+     */
+    public void setDate(String date) {
+<span class="fc" id="L110">        this.date = date;</span>
+<span class="fc" id="L111">    }</span>
+
+    /**
+     * @brief Sets the description of the object.
+     * 
+     * @param description The new description to be set.
+     */
+    public void setDescription(String description) {
+<span class="fc" id="L119">        this.description = description;</span>
+<span class="fc" id="L120">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

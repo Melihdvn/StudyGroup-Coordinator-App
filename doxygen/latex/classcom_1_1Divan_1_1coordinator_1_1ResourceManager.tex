@@ -1,0 +1,251 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager}{}\doxysection{com.\+Divan.\+coordinator.\+Resource\+Manager Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager}\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a4c87ae0d38a2c8a7f1a3e815daf9057d}{Resource\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a6ea9db95697f10a3ea5c77a0137026f9}{add\+Resource}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}} resource)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a2eab337c909973723fff30b3799f4385}{get\+Resources}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a296c74edbc13b9f86f585bcd3d3f438b}{display\+Resources\+For\+Group}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} group)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a6c93b0595574fa774b5231073242a1e6}{write\+Resources\+To\+File}} (List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}} $>$ resources)
+\item 
+static List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a33c7443854437ffb5bbe125a37ccdb53}{read\+Resources\+From\+File}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a911edf577fa3708fa6e695d762aa4225}{RESOURCES\+\_\+\+FILE}} = \char`\"{}Resources.\+bin\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager}{Resource\+Manager}} class manages the resources in the system. 
+
+Definition at line 24 of file Resource\+Manager.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a4c87ae0d38a2c8a7f1a3e815daf9057d}\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a4c87ae0d38a2c8a7f1a3e815daf9057d}} 
+\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}!ResourceManager@{ResourceManager}}
+\index{ResourceManager@{ResourceManager}!com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ResourceManager()}{ResourceManager()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Resource\+Manager.\+Resource\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a new \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager}{Resource\+Manager}} object. 
+
+Definition at line 37 of file Resource\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                              \{}
+\DoxyCodeLine{38         this.resources = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a6ea9db95697f10a3ea5c77a0137026f9}\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a6ea9db95697f10a3ea5c77a0137026f9}} 
+\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}!addResource@{addResource}}
+\index{addResource@{addResource}!com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsubsection{\texorpdfstring{addResource()}{addResource()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Resource\+Manager.\+add\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}}}]{resource }\end{DoxyParamCaption})}
+
+Adds a resource to the resource list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & The resource to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Resource\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                                \{}
+\DoxyCodeLine{47         resources.add(resource);}
+\DoxyCodeLine{48     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a296c74edbc13b9f86f585bcd3d3f438b}\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a296c74edbc13b9f86f585bcd3d3f438b}} 
+\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}!displayResourcesForGroup@{displayResourcesForGroup}}
+\index{displayResourcesForGroup@{displayResourcesForGroup}!com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsubsection{\texorpdfstring{displayResourcesForGroup()}{displayResourcesForGroup()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Resource\+Manager.\+display\+Resources\+For\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}}]{group }\end{DoxyParamCaption})}
+
+Displays the resources available for a specific study group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The study group to display resources for \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Resource\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                            \{}
+\DoxyCodeLine{65         System.out.println(\textcolor{stringliteral}{"{}Resources for group "{}} + group.getName() + \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{66         \textcolor{keywordtype}{boolean} foundResources = \textcolor{keyword}{false};}
+\DoxyCodeLine{67         \textcolor{keywordflow}{for} (Resource resource : resources) \{}
+\DoxyCodeLine{68             \textcolor{keywordflow}{if} (resource.getGroup().getName().equals(group.getName())) \{}
+\DoxyCodeLine{69                 foundResources = \textcolor{keyword}{true};}
+\DoxyCodeLine{70                 System.out.println(\textcolor{stringliteral}{"{}Title: "{}} + resource.getTitle());}
+\DoxyCodeLine{71             \}}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{if} (!foundResources) \{}
+\DoxyCodeLine{74             System.out.println(\textcolor{stringliteral}{"{}Your group doesn't have any resources."{}});}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Study\+Group.\+get\+Name().
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Resource\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a2eab337c909973723fff30b3799f4385}\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a2eab337c909973723fff30b3799f4385}} 
+\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}!getResources@{getResources}}
+\index{getResources@{getResources}!com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getResources()}{getResources()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}}$>$ com.\+Divan.\+coordinator.\+Resource\+Manager.\+get\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of resources.
+
+\begin{DoxyReturn}{Returns}
+The list of resources 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Resource\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                                          \{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} resources;}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Resource\+Details().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a33c7443854437ffb5bbe125a37ccdb53}\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a33c7443854437ffb5bbe125a37ccdb53}} 
+\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}!readResourcesFromFile@{readResourcesFromFile}}
+\index{readResourcesFromFile@{readResourcesFromFile}!com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsubsection{\texorpdfstring{readResourcesFromFile()}{readResourcesFromFile()}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}}$>$ com.\+Divan.\+coordinator.\+Resource\+Manager.\+read\+Resources\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reads resources from the file.
+
+\begin{DoxyReturn}{Returns}
+The list of resources read from the file 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Resource\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                          \{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (!file.exists()) \{}
+\DoxyCodeLine{98             System.out.println(\textcolor{stringliteral}{"{}Resources file does not exist."{}});}
+\DoxyCodeLine{99             \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{100         \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102         \textcolor{keywordflow}{try} (ObjectInputStream inputStream = \textcolor{keyword}{new} ObjectInputStream(\textcolor{keyword}{new} FileInputStream(file))) \{}
+\DoxyCodeLine{103             @SuppressWarnings(\textcolor{stringliteral}{"{}unchecked"{}})}
+\DoxyCodeLine{104             List<Resource> resources = (List<Resource>) inputStream.readObject();}
+\DoxyCodeLine{105             System.out.println("{}Resources have been loaded from "{} + \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a911edf577fa3708fa6e695d762aa4225}{RESOURCES\_FILE}});}
+\DoxyCodeLine{106             return resources;}
+\DoxyCodeLine{107         \} catch (Exception Ignored) \{}
+\DoxyCodeLine{108             \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{109         \}}
+\DoxyCodeLine{110     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Resource\+Manager.\+RESOURCES\+\_\+\+FILE.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a6c93b0595574fa774b5231073242a1e6}\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a6c93b0595574fa774b5231073242a1e6}} 
+\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}!writeResourcesToFile@{writeResourcesToFile}}
+\index{writeResourcesToFile@{writeResourcesToFile}!com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsubsection{\texorpdfstring{writeResourcesToFile()}{writeResourcesToFile()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+Resource\+Manager.\+write\+Resources\+To\+File (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Resource}{Resource}} $>$}]{resources }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Writes the resources to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em resources} & The list of resources to write to the file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 83 of file Resource\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                                       \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{try} (ObjectOutputStream outputStream = \textcolor{keyword}{new} ObjectOutputStream(\textcolor{keyword}{new} FileOutputStream(file))) \{}
+\DoxyCodeLine{85             outputStream.writeObject(resources);}
+\DoxyCodeLine{86             System.out.println(\textcolor{stringliteral}{"{}Resources have been saved to "{}} + \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a911edf577fa3708fa6e695d762aa4225}{RESOURCES\_FILE}});}
+\DoxyCodeLine{87         \} \textcolor{keywordflow}{catch} (Exception Ignored) \{}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Resource\+Manager.\+RESOURCES\+\_\+\+FILE.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Resource\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+share\+Resource().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a911edf577fa3708fa6e695d762aa4225}\label{classcom_1_1Divan_1_1coordinator_1_1ResourceManager_a911edf577fa3708fa6e695d762aa4225}} 
+\index{com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}!RESOURCES\_FILE@{RESOURCES\_FILE}}
+\index{RESOURCES\_FILE@{RESOURCES\_FILE}!com.Divan.coordinator.ResourceManager@{com.Divan.coordinator.ResourceManager}}
+\doxysubsubsection{\texorpdfstring{RESOURCES\_FILE}{RESOURCES\_FILE}}
+{\footnotesize\ttfamily final String com.\+Divan.\+coordinator.\+Resource\+Manager.\+RESOURCES\+\_\+\+FILE = \char`\"{}Resources.\+bin\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+The file path for saving and loading resources. 
+
+Definition at line 26 of file Resource\+Manager.\+java.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Resource\+Manager.\+read\+Resources\+From\+File(), and com.\+Divan.\+coordinator.\+Resource\+Manager.\+write\+Resources\+To\+File().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{ResourceManager_8java}{Resource\+Manager.\+java}}\end{DoxyCompactItemize}

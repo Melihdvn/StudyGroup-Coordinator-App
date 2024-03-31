@@ -1,0 +1,401 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account}{}\doxysection{com.\+Divan.\+coordinator.\+Account Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1Account}\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_ac40f1165e80128b4f864879d1796f445}{Account}} ()
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_a8386adc86577026e7ca8ca35a4381954}{get\+User\+List}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_a978f4ca6a9b672fdc4a3d9980bf5108c}{load\+Users\+From\+File}} (String file\+Name)
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_a8e0fad675192d53023a422906012b25b}{register}} (Scanner scanner)
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_a7d6d334c31d75201a0dbc40c5d6501ac}{login}} (Scanner scanner)
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_a353af174f4589fb23caeda677562eb30}{login\+Menu}} (Scanner scanner)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_aa7cb547fadc1780d90379e519cef06be}{save\+Users\+To\+File}} (String file\+Name)
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_aabb5835882120b2f6435b46c30eac53b}{display\+Usernames\+With\+IDs}} ()
+\item 
+static \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_a2c2f8fb5894956f7035c6871a3ef7f9e}{find\+User\+By\+Id}} (int id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account}{Account}} class represents user account management and authentication. 
+
+Definition at line 25 of file Account.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_ac40f1165e80128b4f864879d1796f445}\label{classcom_1_1Divan_1_1coordinator_1_1Account_ac40f1165e80128b4f864879d1796f445}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!Account@{Account}}
+\index{Account@{Account}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{Account()}{Account()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Account.\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs an \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account}{Account}} object with an empty list of users. 
+
+Definition at line 35 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                      \{}
+\DoxyCodeLine{36         this.userList = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{37     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_aabb5835882120b2f6435b46c30eac53b}\label{classcom_1_1Divan_1_1coordinator_1_1Account_aabb5835882120b2f6435b46c30eac53b}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!displayUsernamesWithIDs@{displayUsernamesWithIDs}}
+\index{displayUsernamesWithIDs@{displayUsernamesWithIDs}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{displayUsernamesWithIDs()}{displayUsernamesWithIDs()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+Account.\+display\+Usernames\+With\+IDs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Displays the usernames and IDs of all users in the user list. 
+
+Definition at line 235 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{235                                                  \{}
+\DoxyCodeLine{236         System.out.println(\textcolor{stringliteral}{"{}User IDs and Usernames:"{}});}
+\DoxyCodeLine{237         \textcolor{keywordflow}{for} (User user : userList) \{}
+\DoxyCodeLine{238             System.out.println(\textcolor{stringliteral}{"{}ID: "{}} + user.getId() + \textcolor{stringliteral}{"{} -\/ Username: "{}} + user.getUsername());}
+\DoxyCodeLine{239         \}}
+\DoxyCodeLine{240     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_a2c2f8fb5894956f7035c6871a3ef7f9e}\label{classcom_1_1Divan_1_1coordinator_1_1Account_a2c2f8fb5894956f7035c6871a3ef7f9e}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!findUserById@{findUserById}}
+\index{findUserById@{findUserById}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{findUserById()}{findUserById()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} com.\+Divan.\+coordinator.\+Account.\+find\+User\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Finds a user in the user list by their ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the user to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The user object if found, or null if not found 
+\end{DoxyReturn}
+
+
+Definition at line 248 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{248                                             \{}
+\DoxyCodeLine{249         \textcolor{keywordflow}{for} (User user : userList) \{}
+\DoxyCodeLine{250             \textcolor{keywordflow}{if} (user.getId() == \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{251                 \textcolor{keywordflow}{return} user; \textcolor{comment}{// Found the user with the given ID}}
+\DoxyCodeLine{252             \}}
+\DoxyCodeLine{253         \}}
+\DoxyCodeLine{254         \textcolor{keywordflow}{return} \textcolor{keyword}{null}; \textcolor{comment}{// User with the given ID not found}}
+\DoxyCodeLine{255     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_a8386adc86577026e7ca8ca35a4381954}\label{classcom_1_1Divan_1_1coordinator_1_1Account_a8386adc86577026e7ca8ca35a4381954}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!getUserList@{getUserList}}
+\index{getUserList@{getUserList}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{getUserList()}{getUserList()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}}$>$ com.\+Divan.\+coordinator.\+Account.\+get\+User\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the list of users stored in this account.
+
+\begin{DoxyReturn}{Returns}
+The list of users 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                     \{}
+\DoxyCodeLine{45         \textcolor{keywordflow}{return} userList;}
+\DoxyCodeLine{46     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_a978f4ca6a9b672fdc4a3d9980bf5108c}\label{classcom_1_1Divan_1_1coordinator_1_1Account_a978f4ca6a9b672fdc4a3d9980bf5108c}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!loadUsersFromFile@{loadUsersFromFile}}
+\index{loadUsersFromFile@{loadUsersFromFile}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{loadUsersFromFile()}{loadUsersFromFile()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Account.\+load\+Users\+From\+File (\begin{DoxyParamCaption}\item[{String}]{file\+Name }\end{DoxyParamCaption})}
+
+Loads the list of users from a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to load users from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                                    \{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{86             File file = \textcolor{keyword}{new} File(fileName);}
+\DoxyCodeLine{87             \textcolor{keywordflow}{if} (!file.exists()) \{}
+\DoxyCodeLine{88                 System.err.println(\textcolor{stringliteral}{"{}Error: File not found -\/ "{}} + fileName);}
+\DoxyCodeLine{89                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{90             \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92             \textcolor{comment}{// Read users from file using object deserialization}}
+\DoxyCodeLine{93             \textcolor{keywordflow}{try} (ObjectInputStream ois = \textcolor{keyword}{new} ObjectInputStream(\textcolor{keyword}{new} FileInputStream(file))) \{}
+\DoxyCodeLine{94                 Object obj = ois.readObject();}
+\DoxyCodeLine{95                 \textcolor{keywordflow}{if} (obj instanceof List) \{}
+\DoxyCodeLine{96                     userList = (List<User>) obj;}
+\DoxyCodeLine{97                     System.out.println(\textcolor{stringliteral}{"{}Users loaded from file: "{}} + fileName);}
+\DoxyCodeLine{98                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{99                     System.err.println(\textcolor{stringliteral}{"{}Error: Invalid data format in file -\/ "{}} + fileName);}
+\DoxyCodeLine{100                 \}}
+\DoxyCodeLine{101             \}}
+\DoxyCodeLine{102         \} \textcolor{keywordflow}{catch} (Exception Ignored) \{}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_a7d6d334c31d75201a0dbc40c5d6501ac}\label{classcom_1_1Divan_1_1coordinator_1_1Account_a7d6d334c31d75201a0dbc40c5d6501ac}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!login@{login}}
+\index{login@{login}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} com.\+Divan.\+coordinator.\+Account.\+login (\begin{DoxyParamCaption}\item[{Scanner}]{scanner }\end{DoxyParamCaption})}
+
+Performs user login by verifying username and password.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scanner} & The scanner object for input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The logged-\/in user or null if login fails 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{184                                        \{}
+\DoxyCodeLine{185         scanner.nextLine();}
+\DoxyCodeLine{186         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/ Login -\/-\/-\/-\/"{}});}
+\DoxyCodeLine{187         System.out.print(\textcolor{stringliteral}{"{}Username: "{}});}
+\DoxyCodeLine{188         String username = scanner.nextLine();}
+\DoxyCodeLine{189         System.out.print(\textcolor{stringliteral}{"{}Password: "{}});}
+\DoxyCodeLine{190         String password = scanner.nextLine();}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192         \textcolor{keywordflow}{for} (User user : userList) \{}
+\DoxyCodeLine{193             \textcolor{keywordflow}{if} (user.getUsername().equals(username) \&\& user.getPassword().equals(password)) \{}
+\DoxyCodeLine{194                 \textcolor{keywordflow}{return} user;}
+\DoxyCodeLine{195             \}}
+\DoxyCodeLine{196         \}}
+\DoxyCodeLine{197         \textcolor{keywordflow}{return} \textcolor{keyword}{null}; \textcolor{comment}{// Login failed}}
+\DoxyCodeLine{198     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Account.\+login\+Menu().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_a353af174f4589fb23caeda677562eb30}\label{classcom_1_1Divan_1_1coordinator_1_1Account_a353af174f4589fb23caeda677562eb30}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!loginMenu@{loginMenu}}
+\index{loginMenu@{loginMenu}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{loginMenu()}{loginMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1User}{User}} com.\+Divan.\+coordinator.\+Account.\+login\+Menu (\begin{DoxyParamCaption}\item[{Scanner}]{scanner }\end{DoxyParamCaption})}
+
+Displays the menu for user registration or login, and handles user input accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scanner} & The scanner object for input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The logged-\/in user 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{206                                            \{}
+\DoxyCodeLine{207         \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{208             CoordinatorApp.clearScreen();}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210             System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/ Authentication -\/-\/-\/-\/"{}});}
+\DoxyCodeLine{211             System.out.println(\textcolor{stringliteral}{"{}1. Register"{}});}
+\DoxyCodeLine{212             System.out.println(\textcolor{stringliteral}{"{}2. Login"{}});}
+\DoxyCodeLine{213             \textcolor{keywordtype}{int} choice = scanner.nextInt();}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215             \textcolor{keywordflow}{switch} (choice) \{}
+\DoxyCodeLine{216                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{217                     \textcolor{keyword}{register}(scanner);}
+\DoxyCodeLine{218                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{219                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{220                     User loggedInUser = \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_a7d6d334c31d75201a0dbc40c5d6501ac}{login}}(scanner);}
+\DoxyCodeLine{221                     \textcolor{keywordflow}{if} (loggedInUser != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{222                         System.out.println(\textcolor{stringliteral}{"{}Login successful."{}});}
+\DoxyCodeLine{223                         \textcolor{keywordflow}{return} loggedInUser;}
+\DoxyCodeLine{224                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{225                         System.out.println(\textcolor{stringliteral}{"{}Login failed. Please try again."{}});}
+\DoxyCodeLine{226                     \}}
+\DoxyCodeLine{227                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{228             \}}
+\DoxyCodeLine{229         \}}
+\DoxyCodeLine{230     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Coordinator\+App.\+clear\+Screen(), and com.\+Divan.\+coordinator.\+Account.\+login().
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_a8e0fad675192d53023a422906012b25b}\label{classcom_1_1Divan_1_1coordinator_1_1Account_a8e0fad675192d53023a422906012b25b}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!register@{register}}
+\index{register@{register}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Account.\+register (\begin{DoxyParamCaption}\item[{Scanner}]{scanner }\end{DoxyParamCaption})}
+
+Registers a new user by obtaining user information from the user via console input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scanner} & The scanner object for input \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                           \{}
+\DoxyCodeLine{112         CoordinatorApp.clearScreen();}
+\DoxyCodeLine{113         scanner.nextLine();}
+\DoxyCodeLine{114         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/ Register -\/-\/-\/-\/"{}});}
+\DoxyCodeLine{115         System.out.print(\textcolor{stringliteral}{"{}Name: "{}});}
+\DoxyCodeLine{116         String name = scanner.nextLine();}
+\DoxyCodeLine{117         System.out.print(\textcolor{stringliteral}{"{}Surname: "{}});}
+\DoxyCodeLine{118         String surname = scanner.nextLine();}
+\DoxyCodeLine{119         \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{120         String username;}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122         \textcolor{comment}{// Check for unique ID}}
+\DoxyCodeLine{123         \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{124             System.out.print(\textcolor{stringliteral}{"{}ID: "{}});}
+\DoxyCodeLine{125             \textcolor{keywordtype}{id} = scanner.nextInt();}
+\DoxyCodeLine{126             scanner.nextLine(); \textcolor{comment}{// Consume newline character}}
+\DoxyCodeLine{127             \textcolor{keywordflow}{if} (!isIdUnique(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{128                 System.out.println(\textcolor{stringliteral}{"{}ID already exists. Please choose another one."{}});}
+\DoxyCodeLine{129             \}}
+\DoxyCodeLine{130         \} \textcolor{keywordflow}{while} (!isIdUnique(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132         \textcolor{comment}{// Check for unique username}}
+\DoxyCodeLine{133         \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{134             System.out.print(\textcolor{stringliteral}{"{}Username: "{}});}
+\DoxyCodeLine{135             username = scanner.nextLine();}
+\DoxyCodeLine{136             \textcolor{keywordflow}{if} (!isUsernameUnique(username)) \{}
+\DoxyCodeLine{137                 System.out.println(\textcolor{stringliteral}{"{}Username already exists. Please choose another one."{}});}
+\DoxyCodeLine{138             \}}
+\DoxyCodeLine{139         \} \textcolor{keywordflow}{while} (!isUsernameUnique(username));}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141         System.out.print(\textcolor{stringliteral}{"{}Password: "{}});}
+\DoxyCodeLine{142         String password = scanner.nextLine();}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144         User account = \textcolor{keyword}{new} User(name, surname, \textcolor{keywordtype}{id}, username, password);}
+\DoxyCodeLine{145         userList.add(account); \textcolor{comment}{// Add the user to the list}}
+\DoxyCodeLine{146         \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Account_aa7cb547fadc1780d90379e519cef06be}{saveUsersToFile}}(FILE\_PATH); \textcolor{comment}{// Save the list to file}}
+\DoxyCodeLine{147         System.out.println(\textcolor{stringliteral}{"{}Registration successful!"{}});}
+\DoxyCodeLine{148     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Coordinator\+App.\+clear\+Screen(), and com.\+Divan.\+coordinator.\+Account.\+save\+Users\+To\+File().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1Account_aa7cb547fadc1780d90379e519cef06be}\label{classcom_1_1Divan_1_1coordinator_1_1Account_aa7cb547fadc1780d90379e519cef06be}} 
+\index{com.Divan.coordinator.Account@{com.Divan.coordinator.Account}!saveUsersToFile@{saveUsersToFile}}
+\index{saveUsersToFile@{saveUsersToFile}!com.Divan.coordinator.Account@{com.Divan.coordinator.Account}}
+\doxysubsubsection{\texorpdfstring{saveUsersToFile()}{saveUsersToFile()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+Account.\+save\+Users\+To\+File (\begin{DoxyParamCaption}\item[{String}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Saves the list of users to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to save the users to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file Account.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                                         \{}
+\DoxyCodeLine{54         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{55             \textcolor{comment}{// Create or overwrite the file}}
+\DoxyCodeLine{56             File file = \textcolor{keyword}{new} File(fileName);}
+\DoxyCodeLine{57             \textcolor{keywordflow}{if} (!file.exists()) \{}
+\DoxyCodeLine{58                 \textcolor{keywordflow}{if} (!file.createNewFile()) \{}
+\DoxyCodeLine{59                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{60                 \}}
+\DoxyCodeLine{61             \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63             \textcolor{comment}{// Update group references if needed}}
+\DoxyCodeLine{64             \textcolor{keywordflow}{for} (User user : userList) \{}
+\DoxyCodeLine{65                 \textcolor{keywordflow}{if} (user.getGroup() != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{66                     user.setGroup(user.getGroup());}
+\DoxyCodeLine{67                 \}}
+\DoxyCodeLine{68             \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70             \textcolor{comment}{// Write users to file using object serialization}}
+\DoxyCodeLine{71             \textcolor{keywordflow}{try} (ObjectOutputStream oos = \textcolor{keyword}{new} ObjectOutputStream(\textcolor{keyword}{new} FileOutputStream(file))) \{}
+\DoxyCodeLine{72                 oos.writeObject(userList);}
+\DoxyCodeLine{73             \}}
+\DoxyCodeLine{74         \} \textcolor{keywordflow}{catch} (Exception Ignored) \{}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+create\+Study\+Group(), and com.\+Divan.\+coordinator.\+Account.\+register().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{Account_8java}{Account.\+java}}\end{DoxyCompactItemize}

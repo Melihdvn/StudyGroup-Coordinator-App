@@ -1,0 +1,72 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1ViewGroups}{}\doxysection{com.\+Divan.\+coordinator.\+View\+Groups Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1ViewGroups}\index{com.Divan.coordinator.ViewGroups@{com.Divan.coordinator.ViewGroups}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ViewGroups_a1fc5603b8e5fafe0beb531a70011d8d5}{view\+Groups}} (List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} $>$ groups, Scanner scanner)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1ViewGroups}{View\+Groups}} class provides methods to view study groups and their details. 
+
+Definition at line 23 of file View\+Groups.\+java.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1ViewGroups_a1fc5603b8e5fafe0beb531a70011d8d5}\label{classcom_1_1Divan_1_1coordinator_1_1ViewGroups_a1fc5603b8e5fafe0beb531a70011d8d5}} 
+\index{com.Divan.coordinator.ViewGroups@{com.Divan.coordinator.ViewGroups}!viewGroups@{viewGroups}}
+\index{viewGroups@{viewGroups}!com.Divan.coordinator.ViewGroups@{com.Divan.coordinator.ViewGroups}}
+\doxysubsubsection{\texorpdfstring{viewGroups()}{viewGroups()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+View\+Groups.\+view\+Groups (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} $>$}]{groups,  }\item[{Scanner}]{scanner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Displays a list of study groups and allows the user to view group details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em groups} & The list of study groups to display. \\
+\hline
+{\em scanner} & The Scanner object for user input. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file View\+Groups.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                                                             \{}
+\DoxyCodeLine{32         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/ Study Groups -\/-\/-\/-\/"{}});}
+\DoxyCodeLine{33             \textcolor{keywordtype}{int} index = 1;}
+\DoxyCodeLine{34             \textcolor{keywordflow}{for} (StudyGroup group : groups) \{}
+\DoxyCodeLine{35                 System.out.println(index + \textcolor{stringliteral}{"{}. "{}} + group.getName());}
+\DoxyCodeLine{36                 index++;}
+\DoxyCodeLine{37             \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39             \textcolor{comment}{// Allow user to view group details}}
+\DoxyCodeLine{40             scanner.nextLine();}
+\DoxyCodeLine{41             System.out.println(\textcolor{stringliteral}{"{}Enter the number of the group to view details (or 0 to go back):"{}});}
+\DoxyCodeLine{42             \textcolor{keywordtype}{int} choice = scanner.nextInt();}
+\DoxyCodeLine{43             \textcolor{keywordflow}{if} (choice == 0) \{}
+\DoxyCodeLine{44                 CoordinatorApp.groupManagementMenu(scanner);}
+\DoxyCodeLine{45             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (choice > 0 \&\& choice <= groups.size()) \{}
+\DoxyCodeLine{46                 StudyGroup selectedGroup = groups.get(choice -\/ 1);}
+\DoxyCodeLine{47                 viewGroupDetails(selectedGroup, scanner);}
+\DoxyCodeLine{48             \}}
+\DoxyCodeLine{49         \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Coordinator\+App.\+group\+Management\+Menu().
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Study\+Group.\+view\+Study\+Group().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{ViewGroups_8java}{View\+Groups.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1Account" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::Account</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Account_1a9f241ed2458e7e96aeb6c5f24e274b47" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.Account.FILE_PATH</definition>
+        <argsstring></argsstring>
+        <name>FILE_PATH</name>
+        <initializer>= &quot;users.bin&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File path for user data storage. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="27" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1Account_1ab789be8c55e424c11bc5d0e05cad8da6" prot="private" static="yes" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref> &gt;</type>
+        <definition>List&lt;User&gt; com.Divan.coordinator.Account.userList</definition>
+        <argsstring></argsstring>
+        <name>userList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of users registered in the system. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="30" column="25" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1ac40f1165e80128b4f864879d1796f445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.Divan.coordinator.Account.Account</definition>
+        <argsstring>()</argsstring>
+        <name>Account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an <ref refid="classcom_1_1Divan_1_1coordinator_1_1Account" kindref="compound">Account</ref> object with an empty list of users. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="35" column="12" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1a8386adc86577026e7ca8ca35a4381954" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref> &gt;</type>
+        <definition>List&lt;User&gt; com.Divan.coordinator.Account.getUserList</definition>
+        <argsstring>()</argsstring>
+        <name>getUserList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the list of users stored in this account.</para>
+<para><simplesect kind="return"><para>The list of users </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="44" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1a978f4ca6a9b672fdc4a3d9980bf5108c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.Account.loadUsersFromFile</definition>
+        <argsstring>(String fileName)</argsstring>
+        <name>loadUsersFromFile</name>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads the list of users from a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to load users from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="84" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="84" bodyend="104"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1a8e0fad675192d53023a422906012b25b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.Account.register</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>register</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a new user by obtaining user information from the user via console input.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scanner object for input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="111" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="111" bodyend="148"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Account_1aa7cb547fadc1780d90379e519cef06be" compoundref="Account_8java" startline="53" endline="76">com.Divan.coordinator.Account.saveUsersToFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1a7d6d334c31d75201a0dbc40c5d6501ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref></type>
+        <definition>User com.Divan.coordinator.Account.login</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>login</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs user login by verifying username and password.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scanner object for input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The logged-in user or null if login fails </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="184" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="184" bodyend="198"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a353af174f4589fb23caeda677562eb30" compoundref="Account_8java" startline="206" endline="230">com.Divan.coordinator.Account.loginMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1a353af174f4589fb23caeda677562eb30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref></type>
+        <definition>User com.Divan.coordinator.Account.loginMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>loginMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the menu for user registration or login, and handles user input accordingly.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scanner object for input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The logged-in user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="206" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="206" bodyend="230"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a7d6d334c31d75201a0dbc40c5d6501ac" compoundref="Account_8java" startline="184" endline="198">com.Divan.coordinator.Account.login</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1aa7cb547fadc1780d90379e519cef06be" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.Account.saveUsersToFile</definition>
+        <argsstring>(String fileName)</argsstring>
+        <name>saveUsersToFile</name>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves the list of users to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to save the users to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="53" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="53" bodyend="76"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a8e0fad675192d53023a422906012b25b" compoundref="Account_8java" startline="111" endline="148">com.Divan.coordinator.Account.register</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1aabb5835882120b2f6435b46c30eac53b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.Account.displayUsernamesWithIDs</definition>
+        <argsstring>()</argsstring>
+        <name>displayUsernamesWithIDs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the usernames and IDs of all users in the user list. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="235" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="235" bodyend="240"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1a2c2f8fb5894956f7035c6871a3ef7f9e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref></type>
+        <definition>static User com.Divan.coordinator.Account.findUserById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>findUserById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds a user in the user list by their ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the user to find </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The user object if found, or null if not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="248" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="248" bodyend="255"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1ab92510e1b1babd63c4504de25c017eb9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.Divan.coordinator.Account.isIdUnique</definition>
+        <argsstring>(int id)</argsstring>
+        <name>isIdUnique</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the given ID is unique among users. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the ID is unique, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="155" column="21" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="155" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1Account_1ababee4279eacd85e01b9000bcf4e01e8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.Divan.coordinator.Account.isUsernameUnique</definition>
+        <argsstring>(String username)</argsstring>
+        <name>isUsernameUnique</name>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the given username is unique among users. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the username is unique, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="169" column="21" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="169" bodyend="176"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1Divan_1_1coordinator_1_1Account" kindref="compound">Account</ref> class represents user account management and authentication. </para>
+    </detaileddescription>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="25" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" bodystart="25" bodyend="256"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ac40f1165e80128b4f864879d1796f445" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>Account</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1aabb5835882120b2f6435b46c30eac53b" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>displayUsernamesWithIDs</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a9f241ed2458e7e96aeb6c5f24e274b47" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>FILE_PATH</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a2c2f8fb5894956f7035c6871a3ef7f9e" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>findUserById</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a8386adc86577026e7ca8ca35a4381954" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>getUserList</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ab92510e1b1babd63c4504de25c017eb9" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>isIdUnique</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ababee4279eacd85e01b9000bcf4e01e8" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>isUsernameUnique</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a978f4ca6a9b672fdc4a3d9980bf5108c" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>loadUsersFromFile</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a7d6d334c31d75201a0dbc40c5d6501ac" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>login</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a353af174f4589fb23caeda677562eb30" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>loginMenu</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a8e0fad675192d53023a422906012b25b" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>register</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1aa7cb547fadc1780d90379e519cef06be" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>saveUsersToFile</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ab789be8c55e424c11bc5d0e05cad8da6" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::Account</scope><name>userList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

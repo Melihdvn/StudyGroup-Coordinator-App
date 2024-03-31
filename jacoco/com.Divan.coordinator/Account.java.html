@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Account.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">Account.java</span></div><h1>Account.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * The Account class represents user account management and authentication.
+ */
+public class Account {
+    /** File path for user data storage. */
+<span class="fc" id="L27">    private String FILE_PATH = &quot;users.bin&quot;;</span>
+    
+    /** List of users registered in the system. */
+    private static List&lt;User&gt; userList;
+
+    /**
+     * Constructs an Account object with an empty list of users.
+     */
+<span class="fc" id="L35">    public Account() {</span>
+<span class="fc" id="L36">        this.userList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L37">    }</span>
+
+    /**
+     * Gets the list of users stored in this account.
+     *
+     * @return The list of users
+     */
+    public List&lt;User&gt; getUserList() {
+<span class="fc" id="L45">        return userList;</span>
+    }
+
+    /**
+     * Saves the list of users to a file.
+     *
+     * @param fileName The name of the file to save the users to
+     */
+    public static void saveUsersToFile(String fileName) {
+        try {
+            // Create or overwrite the file
+<span class="fc" id="L56">            File file = new File(fileName);</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">            if (!file.exists()) {</span>
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">                if (!file.createNewFile()) {</span>
+<span class="nc" id="L59">                    return;</span>
+                }
+            }
+
+            // Update group references if needed
+<span class="fc bfc" id="L64" title="All 2 branches covered.">            for (User user : userList) {</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">                if (user.getGroup() != null) {</span>
+<span class="fc" id="L66">                    user.setGroup(user.getGroup());</span>
+                }
+<span class="fc" id="L68">            }</span>
+
+            // Write users to file using object serialization
+<span class="fc" id="L71">            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {</span>
+<span class="fc" id="L72">                oos.writeObject(userList);</span>
+            }
+<span class="fc" id="L74">        } catch (Exception Ignored) {</span>
+<span class="fc" id="L75">        }</span>
+<span class="fc" id="L76">    }</span>
+
+    /**
+     * Loads the list of users from a file.
+     *
+     * @param fileName The name of the file to load users from
+     */
+    @SuppressWarnings(&quot;unchecked&quot;)
+    public void loadUsersFromFile(String fileName) {
+        try {
+<span class="fc" id="L86">            File file = new File(fileName);</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">            if (!file.exists()) {</span>
+<span class="fc" id="L88">                System.err.println(&quot;Error: File not found - &quot; + fileName);</span>
+<span class="fc" id="L89">                return;</span>
+            }
+
+            // Read users from file using object deserialization
+<span class="fc" id="L93">            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {</span>
+<span class="fc" id="L94">                Object obj = ois.readObject();</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">                if (obj instanceof List) {</span>
+<span class="fc" id="L96">                    userList = (List&lt;User&gt;) obj;</span>
+<span class="fc" id="L97">                    System.out.println(&quot;Users loaded from file: &quot; + fileName);</span>
+                } else {
+<span class="fc" id="L99">                    System.err.println(&quot;Error: Invalid data format in file - &quot; + fileName);</span>
+                }
+            }
+<span class="nc" id="L102">        } catch (Exception Ignored) {</span>
+<span class="fc" id="L103">        }</span>
+<span class="fc" id="L104">    }</span>
+
+    /**
+     * Registers a new user by obtaining user information from the user via console input.
+     *
+     * @param scanner The scanner object for input
+     */
+    public void register(Scanner scanner) {
+<span class="fc" id="L112">        CoordinatorApp.clearScreen();</span>
+<span class="fc" id="L113">        scanner.nextLine();</span>
+<span class="fc" id="L114">        System.out.println(&quot;---- Register ----&quot;);</span>
+<span class="fc" id="L115">        System.out.print(&quot;Name: &quot;);</span>
+<span class="fc" id="L116">        String name = scanner.nextLine();</span>
+<span class="fc" id="L117">        System.out.print(&quot;Surname: &quot;);</span>
+<span class="fc" id="L118">        String surname = scanner.nextLine();</span>
+        int id;
+        String username;
+
+        // Check for unique ID
+        do {
+<span class="fc" id="L124">            System.out.print(&quot;ID: &quot;);</span>
+<span class="fc" id="L125">            id = scanner.nextInt();</span>
+<span class="fc" id="L126">            scanner.nextLine(); // Consume newline character</span>
+<span class="fc bfc" id="L127" title="All 2 branches covered.">            if (!isIdUnique(id)) {</span>
+<span class="fc" id="L128">                System.out.println(&quot;ID already exists. Please choose another one.&quot;);</span>
+            }
+<span class="fc bfc" id="L130" title="All 2 branches covered.">        } while (!isIdUnique(id));</span>
+
+        // Check for unique username
+        do {
+<span class="fc" id="L134">            System.out.print(&quot;Username: &quot;);</span>
+<span class="fc" id="L135">            username = scanner.nextLine();</span>
+<span class="fc bfc" id="L136" title="All 2 branches covered.">            if (!isUsernameUnique(username)) {</span>
+<span class="fc" id="L137">                System.out.println(&quot;Username already exists. Please choose another one.&quot;);</span>
+            }
+<span class="fc bfc" id="L139" title="All 2 branches covered.">        } while (!isUsernameUnique(username));</span>
+
+<span class="fc" id="L141">        System.out.print(&quot;Password: &quot;);</span>
+<span class="fc" id="L142">        String password = scanner.nextLine();</span>
+
+<span class="fc" id="L144">        User account = new User(name, surname, id, username, password);</span>
+<span class="fc" id="L145">        userList.add(account); // Add the user to the list</span>
+<span class="fc" id="L146">        saveUsersToFile(FILE_PATH); // Save the list to file</span>
+<span class="fc" id="L147">        System.out.println(&quot;Registration successful!&quot;);</span>
+<span class="fc" id="L148">    }</span>
+
+    /**
+     * Checks if the given ID is unique among users.
+     * @param id The ID to check.
+     * @return true if the ID is unique, false otherwise.
+     */
+    private boolean isIdUnique(int id) {
+<span class="fc bfc" id="L156" title="All 2 branches covered.">        for (User user : userList) {</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">            if (user.getId() == id) {</span>
+<span class="fc" id="L158">                return false;</span>
+            }
+<span class="fc" id="L160">        }</span>
+<span class="fc" id="L161">        return true;</span>
+    }
+
+    /**
+     * Checks if the given username is unique among users.
+     * @param username The username to check.
+     * @return true if the username is unique, false otherwise.
+     */
+    private boolean isUsernameUnique(String username) {
+<span class="fc bfc" id="L170" title="All 2 branches covered.">        for (User user : userList) {</span>
+<span class="fc bfc" id="L171" title="All 2 branches covered.">            if (user.getUsername().equals(username)) {</span>
+<span class="fc" id="L172">                return false;</span>
+            }
+<span class="fc" id="L174">        }</span>
+<span class="fc" id="L175">        return true;</span>
+    }
+
+    /**
+     * Performs user login by verifying username and password.
+     *
+     * @param scanner The scanner object for input
+     * @return The logged-in user or null if login fails
+     */
+    public User login(Scanner scanner) {
+<span class="fc" id="L185">        scanner.nextLine();</span>
+<span class="fc" id="L186">        System.out.println(&quot;---- Login ----&quot;);</span>
+<span class="fc" id="L187">        System.out.print(&quot;Username: &quot;);</span>
+<span class="fc" id="L188">        String username = scanner.nextLine();</span>
+<span class="fc" id="L189">        System.out.print(&quot;Password: &quot;);</span>
+<span class="fc" id="L190">        String password = scanner.nextLine();</span>
+
+<span class="fc bfc" id="L192" title="All 2 branches covered.">        for (User user : userList) {</span>
+<span class="fc bfc" id="L193" title="All 4 branches covered.">            if (user.getUsername().equals(username) &amp;&amp; user.getPassword().equals(password)) {</span>
+<span class="fc" id="L194">                return user;</span>
+            }
+<span class="fc" id="L196">        }</span>
+<span class="fc" id="L197">        return null; // Login failed</span>
+    }
+
+    /**
+     * Displays the menu for user registration or login, and handles user input accordingly.
+     *
+     * @param scanner The scanner object for input
+     * @return The logged-in user
+     */
+    public User loginMenu(Scanner scanner) {
+        while (true) {
+<span class="fc" id="L208">            CoordinatorApp.clearScreen();</span>
+
+<span class="fc" id="L210">            System.out.println(&quot;---- Authentication ----&quot;);</span>
+<span class="fc" id="L211">            System.out.println(&quot;1. Register&quot;);</span>
+<span class="fc" id="L212">            System.out.println(&quot;2. Login&quot;);</span>
+<span class="fc" id="L213">            int choice = scanner.nextInt();</span>
+
+<span class="pc bpc" id="L215" title="1 of 3 branches missed.">            switch (choice) {</span>
+                case 1:
+<span class="fc" id="L217">                    register(scanner);</span>
+<span class="fc" id="L218">                    break;</span>
+                case 2:
+<span class="fc" id="L220">                    User loggedInUser = login(scanner);</span>
+<span class="fc bfc" id="L221" title="All 2 branches covered.">                    if (loggedInUser != null) {</span>
+<span class="fc" id="L222">                        System.out.println(&quot;Login successful.&quot;);</span>
+<span class="fc" id="L223">                        return loggedInUser;</span>
+                    } else {
+<span class="fc" id="L225">                        System.out.println(&quot;Login failed. Please try again.&quot;);</span>
+                    }
+                    break;
+            }
+<span class="fc" id="L229">        }</span>
+    }
+
+    /**
+     * Displays the usernames and IDs of all users in the user list.
+     */
+    public static void displayUsernamesWithIDs() {
+<span class="fc" id="L236">        System.out.println(&quot;User IDs and Usernames:&quot;);</span>
+<span class="fc bfc" id="L237" title="All 2 branches covered.">        for (User user : userList) {</span>
+<span class="fc" id="L238">            System.out.println(&quot;ID: &quot; + user.getId() + &quot; - Username: &quot; + user.getUsername());</span>
+<span class="fc" id="L239">        }</span>
+<span class="fc" id="L240">    }</span>
+
+    /**
+     * Finds a user in the user list by their ID.
+     *
+     * @param id The ID of the user to find
+     * @return The user object if found, or null if not found
+     */
+    public static User findUserById(int id) {
+<span class="fc bfc" id="L249" title="All 2 branches covered.">        for (User user : userList) {</span>
+<span class="fc bfc" id="L250" title="All 2 branches covered.">            if (user.getId() == id) {</span>
+<span class="fc" id="L251">                return user; // Found the user with the given ID</span>
+            }
+<span class="fc" id="L253">        }</span>
+<span class="fc" id="L254">        return null; // User with the given ID not found</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

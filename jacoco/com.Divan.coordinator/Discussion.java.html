@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Discussion.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">Discussion.java</span></div><h1>Discussion.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Represents a discussion topic along with comments and the associated study group.
+ */
+public class Discussion implements Serializable {
+	/**
+	 * Serializable identifier for object persistence.
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * The topic of discussion or coordination handled by the coordinator.
+	 */
+	private String topic;
+
+	/**
+	 * A list of comments or remarks related to the coordinator.
+	 */
+	private List&lt;String&gt; comments;
+
+	/**
+	 * The study group associated with the coordinator.
+	 */
+	private StudyGroup group;
+
+    /**
+     * Constructs a Discussion object with the specified topic and associated study group.
+     *
+     * @param topic The topic of the discussion
+     * @param group The study group associated with the discussion
+     */
+<span class="fc" id="L51">    public Discussion(String topic, StudyGroup group) {</span>
+<span class="fc" id="L52">        this.topic = topic;</span>
+<span class="fc" id="L53">        this.group = group;</span>
+<span class="fc" id="L54">        this.comments = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L55">    }</span>
+
+    /**
+     * Gets the topic of the discussion.
+     *
+     * @return The topic of the discussion
+     */
+    public String getTopic() {
+<span class="fc" id="L63">        return topic;</span>
+    }
+
+    /**
+     * Gets the list of comments in the discussion.
+     *
+     * @return The list of comments
+     */
+    public List&lt;String&gt; getComments() {
+<span class="fc" id="L72">        return comments;</span>
+    }
+
+    /**
+     * Adds a comment to the discussion.
+     *
+     * @param comment The comment to add
+     */
+    public void addComment(String comment) {
+<span class="fc" id="L81">        comments.add(comment);</span>
+<span class="fc" id="L82">    }</span>
+
+    /**
+     * Gets the study group associated with the discussion.
+     *
+     * @return The associated study group
+     */
+    public StudyGroup getGroup() {
+<span class="fc" id="L90">        return group;</span>
+    }
+
+	 /**
+     * @brief Sets the topic of the object.
+     * 
+     * @param title The new topic to be set.
+     */
+    public void setTopic(String topic) {
+<span class="fc" id="L99">        this.topic = topic;</span>
+<span class="fc" id="L100">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

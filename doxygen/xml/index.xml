@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1Account" kind="class"><name>com::Divan::coordinator::Account</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a9f241ed2458e7e96aeb6c5f24e274b47" kind="variable"><name>FILE_PATH</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ab789be8c55e424c11bc5d0e05cad8da6" kind="variable"><name>userList</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ac40f1165e80128b4f864879d1796f445" kind="function"><name>Account</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a8386adc86577026e7ca8ca35a4381954" kind="function"><name>getUserList</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a978f4ca6a9b672fdc4a3d9980bf5108c" kind="function"><name>loadUsersFromFile</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a8e0fad675192d53023a422906012b25b" kind="function"><name>register</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a7d6d334c31d75201a0dbc40c5d6501ac" kind="function"><name>login</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a353af174f4589fb23caeda677562eb30" kind="function"><name>loginMenu</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1aa7cb547fadc1780d90379e519cef06be" kind="function"><name>saveUsersToFile</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1aabb5835882120b2f6435b46c30eac53b" kind="function"><name>displayUsernamesWithIDs</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a2c2f8fb5894956f7035c6871a3ef7f9e" kind="function"><name>findUserById</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ab92510e1b1babd63c4504de25c017eb9" kind="function"><name>isIdUnique</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Account_1ababee4279eacd85e01b9000bcf4e01e8" kind="function"><name>isUsernameUnique</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp" kind="class"><name>com::Divan::coordinator::CoordinatorApp</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a6c0e29be455b084548604f4eb52173e2" kind="variable"><name>account</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ac776ba5a9a17072479704e015f62ee0e" kind="variable"><name>scanner</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" kind="variable"><name>currentUser</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a26f3dc1cf8e39d1e920ccfd0f35ad0da" kind="variable"><name>sessionManager</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a2ed7027a62a429af7a1b8e0f3701fa42" kind="variable"><name>resourceManager</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afabd6e460b7a645c840e97a285833edb" kind="variable"><name>discussionManager</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8c9e3ff6f235cc1dcaf5bed4b8f5e745" kind="variable"><name>discussions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a7e2cf59bf3dca144d02f38f12624731b" kind="variable"><name>resources</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3cc39bcbad1155d948e33a2657b323ff" kind="variable"><name>sessions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" kind="function"><name>clearScreen</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" kind="function"><name>mainMenu</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" kind="function"><name>groupManagementMenu</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" kind="function"><name>sessionSchedulingMenu</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" kind="function"><name>scheduleSession</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" kind="function"><name>viewSessions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" kind="function"><name>editSessionDetails</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" kind="function"><name>resourceSharingMenu</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" kind="function"><name>shareResource</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" kind="function"><name>viewResourceDetails</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" kind="function"><name>editResourceDetails</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" kind="function"><name>discussionBoardMenu</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" kind="function"><name>createDiscussion</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" kind="function"><name>viewDiscussions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" kind="function"><name>editDiscussionDetails</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" kind="function"><name>loadAll</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abdf4d2cf05bd70d189d53cae258cb792" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1Discussion" kind="class"><name>com::Divan::coordinator::Discussion</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a45aec485f191f3a57878e3e88f59ab7c" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1af1eacdd61a71e7f1883992d5cf00b8fe" kind="variable"><name>topic</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a029fbe0d3c2157b462f15c9f23068ab8" kind="variable"><name>comments</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a04acb9c893aa57e26b86d17fcdced67d" kind="variable"><name>group</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a5b7632daa127caabaf655fbc56b9133b" kind="function"><name>Discussion</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a46d3b10b7ef020b2fcd29b191e91f6c9" kind="function"><name>getTopic</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1ad12eba6e5ed227757bf062260fa818cb" kind="function"><name>getComments</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a503a08c2c9a99500ef5864cd837d6282" kind="function"><name>addComment</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1ac5b4fc891f87ff84112c46a4fad86566" kind="function"><name>getGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1aa455b299ab9bc5fc13cbb0b6311ed4df" kind="function"><name>setTopic</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager" kind="class"><name>com::Divan::coordinator::DiscussionManager</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a0881cbc4b34c9c7b3970b56bf9bc35af" kind="variable"><name>DISCUSSIONS_FILE</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a9104cd042065e9f8f91a9299c7576f01" kind="variable"><name>discussions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a61cc5b201a3b7ef923482550858e7d8b" kind="function"><name>DiscussionManager</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a9d7328220cd978acf2698e14b7c6f397" kind="function"><name>addDiscussion</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1aafbdf6c508faf557ec3777b15afb6f11" kind="function"><name>getDiscussions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a2379a7196dae0a83704c0e9a74c770bd" kind="function"><name>displayDiscussionsForGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a195c251589a45ceeddafb4dfc3ec6c32" kind="function"><name>writeDiscussionsToFile</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a39d9df1905ba74311b59c8cc94c90ec1" kind="function"><name>readDiscussionsFromFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility" kind="class"><name>com::Divan::coordinator::FileUtility</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a467b06bc77e88c83fcc322e553d23f06" kind="variable"><name>GROUPS_FILE</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1a2d9a539dfb2118bd14d6b56a83296518" kind="function"><name>writeGroupsToFile</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility_1affc8f78d0d9a45d2026acfe154b7e400" kind="function"><name>readGroupsFromFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1Resource" kind="class"><name>com::Divan::coordinator::Resource</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1ad8800c8ba2356a3cd15a5e5b19d78f2e" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1aaf03d62322cd62d2eae3bc87f0459f65" kind="variable"><name>title</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a5b8b28d672c2963a074db8a353eb70e8" kind="variable"><name>description</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1aa0adf461e71254d7d45b7560bebf59e5" kind="variable"><name>link</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a987da8eae9c0e355dd33406f95dcd934" kind="variable"><name>group</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a991cdf82fb6bd347244354e02a41f8a1" kind="variable"><name>resources</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a2f3d6709030a6238fb801fc3dd7e7765" kind="function"><name>Resource</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a52370d3917efbe5f6a128ef177909698" kind="function"><name>getTitle</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a44b131cca615b7d1a19768a5a93b03d3" kind="function"><name>getDescription</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1af1fd76932d4dd082c7acf03143d71351" kind="function"><name>getLink</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1ae15936053f06daeecd3db1e3a3f8ac2a" kind="function"><name>getGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a3d258c258a642908892cc547dfd82e3f" kind="function"><name>setTitle</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a34ea49d6001a491d7df24de80f87f708" kind="function"><name>setLink</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a281e29903e96f8c35a83991f723d5545" kind="function"><name>setDescription</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager" kind="class"><name>com::Divan::coordinator::ResourceManager</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a911edf577fa3708fa6e695d762aa4225" kind="variable"><name>RESOURCES_FILE</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1ae38af341de5ec253763a69f2a9ef3d9e" kind="variable"><name>resources</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a46b736a0179e2e4f449d7c6e9fc3db14" kind="variable"><name>file</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a4c87ae0d38a2c8a7f1a3e815daf9057d" kind="function"><name>ResourceManager</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a6ea9db95697f10a3ea5c77a0137026f9" kind="function"><name>addResource</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a2eab337c909973723fff30b3799f4385" kind="function"><name>getResources</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a296c74edbc13b9f86f585bcd3d3f438b" kind="function"><name>displayResourcesForGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a6c93b0595574fa774b5231073242a1e6" kind="function"><name>writeResourcesToFile</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a33c7443854437ffb5bbe125a37ccdb53" kind="function"><name>readResourcesFromFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1Session" kind="class"><name>com::Divan::coordinator::Session</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a5d9dfc875838e7e6e02bb86ccce2fdc4" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a64e37c1bfee6b5be5f765bb0a52cadb8" kind="variable"><name>title</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1aebbc00ee28ffb619e5645e48c96208a4" kind="variable"><name>date</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a7964099d263399bc5139db3518705968" kind="variable"><name>group</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a15138bd0b338ecacf5d9518621b0faf0" kind="variable"><name>description</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a3f55a94dd321ebd0c4ed66abba238518" kind="variable"><name>sessions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1acb06e011ca7b53c796028d79e54ee7d3" kind="function"><name>Session</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a676724b0751a5fa35ed754b99a0ae415" kind="function"><name>getTitle</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a6e7b0a2be150dc4de733605da96e4ff1" kind="function"><name>getDate</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1af36d5369eace50b788228c15db5d17c3" kind="function"><name>getGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a2ccf57d8a13b173ab289a3138c8fbfd1" kind="function"><name>getDescription</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a8ac678e4569d78afbf73c177aa1d4039" kind="function"><name>setTitle</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a5e4b9cc35f36b379d506414519c79d95" kind="function"><name>setDate</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1Session_1ada738496321d00132ae62ae50b73e0b2" kind="function"><name>setDescription</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager" kind="class"><name>com::Divan::coordinator::SessionManager</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a20742067ce48318397f0443fd04044fb" kind="variable"><name>SESSIONS_FILE</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1abd536deed4c1f0a4591f5d5286ed1075" kind="variable"><name>sessions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a8bb95dd1c5296d50d24a492ecdc5298c" kind="variable"><name>file</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a8ab122fa31a1773f9c0382f6b8242e1c" kind="function"><name>SessionManager</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a05ffbc583a1495d8cb4f68f024f47c2b" kind="function"><name>addSession</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a30f149ade2fa7de0c294015dce54f4ae" kind="function"><name>getSessions</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a632885f4e0b3a29ccff786feb1cbbfd1" kind="function"><name>displaySessionsForGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1ae5fc2e2ab03e52867ac4bc09c7908f39" kind="function"><name>writeSessionsToFile</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a184cf7e68f3064a0733533f7571085fa" kind="function"><name>readSessionsFromFile</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kind="class"><name>com::Divan::coordinator::StudyGroup</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aaaeae4421312c8003c832e08fd48db5c" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1add0eb2185ec8706b4c9376397596587c" kind="variable"><name>name</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aaa946e14988b752dd04530e766d5ca30" kind="variable"><name>description</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a636303767d71fcc3c1a45c045899745f" kind="variable"><name>members</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a782873c0f4abeee89721bea8df5462d1" kind="variable"><name>groups1</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a370f499189e46cfff6568b7d113817df" kind="function"><name>StudyGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" kind="function"><name>getName</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a9c0a1e0f4b3283f8403b381cd8e3e717" kind="function"><name>getDescription</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1aebd4c862d69657338ab531222e1754d3" kind="function"><name>getMembers</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1af2a2ffe75b7da8981f6b1a8e6ec8ade3" kind="function"><name>addMember</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" kind="function"><name>createStudyGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" kind="function"><name>viewStudyGroup</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1User" kind="class"><name>com::Divan::coordinator::User</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1ad8dc65fc6d82d051bc671142b24791e2" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1aeb5810757b56145c6a1f76522019bf74" kind="variable"><name>name</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1afd3b8b1bfd869ae1e3caf2d7a54f5949" kind="variable"><name>surname</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a3a4410b47c1788af0ef619e7efb8a342" kind="variable"><name>id</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a723da7057e5c10c78ef28a5c06f953a0" kind="variable"><name>username</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a38bc49bb13e566b45acebb1ca96768cc" kind="variable"><name>password</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a49272847c54a72654fbe4fafe72b28d1" kind="variable"><name>group</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a9e9728c6b0e5d061f0481ddbb9a909c1" kind="function"><name>User</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1ad05a002d8a017ad161aa8938cf5b8477" kind="function"><name>getName</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a161485bc704bf0c318f18b6b10ab1494" kind="function"><name>getSurname</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1aa5bc274c81b9045eb26196a5338b32bd" kind="function"><name>getId</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1aa7f7fe716ce11fe815fa71e3778cf60d" kind="function"><name>getUsername</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a9b3d84b00b814f767cdfbdc511ef2811" kind="function"><name>getPassword</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" kind="function"><name>getGroup</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a754ceb766bc067607a89721217914fc5" kind="function"><name>setGroup</name></member>
+  </compound>
+  <compound refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups" kind="class"><name>com::Divan::coordinator::ViewGroups</name>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a1fc5603b8e5fafe0beb531a70011d8d5" kind="function"><name>viewGroups</name></member>
+    <member refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a492ee82eee05a39792763781c0f28477" kind="function"><name>viewGroupDetails</name></member>
+  </compound>
+  <compound refid="namespacecom" kind="namespace"><name>com</name>
+  </compound>
+  <compound refid="namespacecom_1_1Divan" kind="namespace"><name>com::Divan</name>
+  </compound>
+  <compound refid="namespacecom_1_1Divan_1_1coordinator" kind="namespace"><name>com::Divan::coordinator</name>
+  </compound>
+  <compound refid="namespacejava_1_1io" kind="namespace"><name>java::io</name>
+  </compound>
+  <compound refid="Account_8java" kind="file"><name>Account.java</name>
+  </compound>
+  <compound refid="CoordinatorApp_8java" kind="file"><name>CoordinatorApp.java</name>
+  </compound>
+  <compound refid="Discussion_8java" kind="file"><name>Discussion.java</name>
+  </compound>
+  <compound refid="DiscussionManager_8java" kind="file"><name>DiscussionManager.java</name>
+  </compound>
+  <compound refid="FileUtility_8java" kind="file"><name>FileUtility.java</name>
+  </compound>
+  <compound refid="Resource_8java" kind="file"><name>Resource.java</name>
+  </compound>
+  <compound refid="ResourceManager_8java" kind="file"><name>ResourceManager.java</name>
+  </compound>
+  <compound refid="Session_8java" kind="file"><name>Session.java</name>
+  </compound>
+  <compound refid="SessionManager_8java" kind="file"><name>SessionManager.java</name>
+  </compound>
+  <compound refid="StudyGroup_8java" kind="file"><name>StudyGroup.java</name>
+  </compound>
+  <compound refid="User_8java" kind="file"><name>User.java</name>
+  </compound>
+  <compound refid="ViewGroups_8java" kind="file"><name>ViewGroups.java</name>
+  </compound>
+  <compound refid="dir_dacfc515112621cd982f43bb74284154" kind="dir"><name>coordinator-app/src/main/java/com</name>
+  </compound>
+  <compound refid="dir_ecbb0511686a8197b8eb5eb73b17fcbb" kind="dir"><name>coordinator-app/src/main/java/com/Divan/coordinator</name>
+  </compound>
+  <compound refid="dir_2a367ba0d774948e6d441d3bfdf78090" kind="dir"><name>coordinator-app</name>
+  </compound>
+  <compound refid="dir_eb439989fd6d4503ad7c906e38e073ec" kind="dir"><name>coordinator-app/src/main/java/com/Divan</name>
+  </compound>
+  <compound refid="dir_2950c945dd47a93d72d7d92c724591df" kind="dir"><name>coordinator-app/src/main/java</name>
+  </compound>
+  <compound refid="dir_ce8f229b413bbd593d6cb670ddad41a3" kind="dir"><name>coordinator-app/src/main</name>
+  </compound>
+  <compound refid="dir_6529485d5c4eab55e82f315deac56ec2" kind="dir"><name>coordinator-app/src</name>
+  </compound>
+</doxygenindex>

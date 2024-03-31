@@ -1,0 +1,255 @@
+\hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager}{}\doxysection{com.\+Divan.\+coordinator.\+Discussion\+Manager Class Reference}
+\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager}\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a61cc5b201a3b7ef923482550858e7d8b}{Discussion\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a9d7328220cd978acf2698e14b7c6f397}{add\+Discussion}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}} discussion)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_aafbdf6c508faf557ec3777b15afb6f11}{get\+Discussions}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a2379a7196dae0a83704c0e9a74c770bd}{display\+Discussions\+For\+Group}} (\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}} group)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a195c251589a45ceeddafb4dfc3ec6c32}{write\+Discussions\+To\+File}} (List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}} $>$ discussions)
+\item 
+static List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}} $>$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a39d9df1905ba74311b59c8cc94c90ec1}{read\+Discussions\+From\+File}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a0881cbc4b34c9c7b3970b56bf9bc35af}{DISCUSSIONS\+\_\+\+FILE}} = \char`\"{}Discussions.\+bin\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager}{Discussion\+Manager}} class manages discussions, including adding discussions, displaying discussions for a group, and reading/writing discussions to/from a file. 
+
+Definition at line 29 of file Discussion\+Manager.\+java.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a61cc5b201a3b7ef923482550858e7d8b}\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a61cc5b201a3b7ef923482550858e7d8b}} 
+\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}!DiscussionManager@{DiscussionManager}}
+\index{DiscussionManager@{DiscussionManager}!com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsubsection{\texorpdfstring{DiscussionManager()}{DiscussionManager()}}
+{\footnotesize\ttfamily com.\+Divan.\+coordinator.\+Discussion\+Manager.\+Discussion\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a new \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager}{Discussion\+Manager}} object with an empty list of discussions. 
+
+Definition at line 39 of file Discussion\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                \{}
+\DoxyCodeLine{40         this.discussions = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a9d7328220cd978acf2698e14b7c6f397}\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a9d7328220cd978acf2698e14b7c6f397}} 
+\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}!addDiscussion@{addDiscussion}}
+\index{addDiscussion@{addDiscussion}!com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsubsection{\texorpdfstring{addDiscussion()}{addDiscussion()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Discussion\+Manager.\+add\+Discussion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}}}]{discussion }\end{DoxyParamCaption})}
+
+Adds a discussion to the list of discussions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em discussion} & The discussion to be added \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file Discussion\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                      \{}
+\DoxyCodeLine{49         discussions.add(discussion);}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a2379a7196dae0a83704c0e9a74c770bd}\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a2379a7196dae0a83704c0e9a74c770bd}} 
+\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}!displayDiscussionsForGroup@{displayDiscussionsForGroup}}
+\index{displayDiscussionsForGroup@{displayDiscussionsForGroup}!com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsubsection{\texorpdfstring{displayDiscussionsForGroup()}{displayDiscussionsForGroup()}}
+{\footnotesize\ttfamily void com.\+Divan.\+coordinator.\+Discussion\+Manager.\+display\+Discussions\+For\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1StudyGroup}{Study\+Group}}}]{group }\end{DoxyParamCaption})}
+
+Displays discussions belonging to a specific study group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The study group for which discussions are to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file Discussion\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                                              \{}
+\DoxyCodeLine{67         System.out.println(\textcolor{stringliteral}{"{}Discussions for group "{}} + group.getName() + \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{68         \textcolor{keywordtype}{boolean} foundDiscussion = \textcolor{keyword}{false};}
+\DoxyCodeLine{69         \textcolor{keywordflow}{for} (Discussion discussion : discussions) \{}
+\DoxyCodeLine{70             \textcolor{keywordflow}{if} (discussion.getGroup().getName().equals(group.getName())) \{}
+\DoxyCodeLine{71                 System.out.println(\textcolor{stringliteral}{"{}Topic: "{}} + discussion.getTopic());}
+\DoxyCodeLine{72                 System.out.println(\textcolor{stringliteral}{"{}Comments:"{}});}
+\DoxyCodeLine{73                 \textcolor{keywordflow}{for} (String comment : discussion.getComments()) \{}
+\DoxyCodeLine{74                     System.out.println(\textcolor{stringliteral}{"{}-\/ "{}} + CoordinatorApp.currentUser.getUsername() + \textcolor{stringliteral}{"{} : "{}} + comment);}
+\DoxyCodeLine{75                 \}}
+\DoxyCodeLine{76                 foundDiscussion = \textcolor{keyword}{true};}
+\DoxyCodeLine{77             \}}
+\DoxyCodeLine{78             }
+\DoxyCodeLine{79             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{80                 System.out.println(\textcolor{stringliteral}{"{}Your group doesn't have any discussions"{}});}
+\DoxyCodeLine{81                 \}}
+\DoxyCodeLine{82         \}}
+\DoxyCodeLine{83         }
+\DoxyCodeLine{84         }
+\DoxyCodeLine{85        }
+\DoxyCodeLine{86     }
+\DoxyCodeLine{87     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Coordinator\+App.\+current\+User, com.\+Divan.\+coordinator.\+Study\+Group.\+get\+Name(), and com.\+Divan.\+coordinator.\+User.\+get\+Username().
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Discussion\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Discussions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_aafbdf6c508faf557ec3777b15afb6f11}\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_aafbdf6c508faf557ec3777b15afb6f11}} 
+\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}!getDiscussions@{getDiscussions}}
+\index{getDiscussions@{getDiscussions}!com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsubsection{\texorpdfstring{getDiscussions()}{getDiscussions()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}}$>$ com.\+Divan.\+coordinator.\+Discussion\+Manager.\+get\+Discussions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of discussions.
+
+\begin{DoxyReturn}{Returns}
+The list of discussions 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Discussion\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                              \{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} discussions;}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Discussion\+Details(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Discussions().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a39d9df1905ba74311b59c8cc94c90ec1}\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a39d9df1905ba74311b59c8cc94c90ec1}} 
+\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}!readDiscussionsFromFile@{readDiscussionsFromFile}}
+\index{readDiscussionsFromFile@{readDiscussionsFromFile}!com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsubsection{\texorpdfstring{readDiscussionsFromFile()}{readDiscussionsFromFile()}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}}$>$ com.\+Divan.\+coordinator.\+Discussion\+Manager.\+read\+Discussions\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Reads the list of discussions from a file.
+
+\begin{DoxyReturn}{Returns}
+The list of discussions read from the file 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Discussion\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107                                                              \{}
+\DoxyCodeLine{108         \textcolor{keywordflow}{try} (ObjectInputStream inputStream = \textcolor{keyword}{new} ObjectInputStream(\textcolor{keyword}{new} FileInputStream(\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a0881cbc4b34c9c7b3970b56bf9bc35af}{DISCUSSIONS\_FILE}}))) \{}
+\DoxyCodeLine{109             @SuppressWarnings(\textcolor{stringliteral}{"{}unchecked"{}})}
+\DoxyCodeLine{110             List<Discussion> discussions = (List<Discussion>) inputStream.readObject();}
+\DoxyCodeLine{111             System.out.println("{}Discussions have been loaded from "{} + \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a0881cbc4b34c9c7b3970b56bf9bc35af}{DISCUSSIONS\_FILE}});}
+\DoxyCodeLine{112             return discussions;}
+\DoxyCodeLine{113         \} catch (Exception Ignored) \{}
+\DoxyCodeLine{114             \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Discussion\+Manager.\+DISCUSSIONS\+\_\+\+FILE.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+load\+All().
+
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a195c251589a45ceeddafb4dfc3ec6c32}\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a195c251589a45ceeddafb4dfc3ec6c32}} 
+\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}!writeDiscussionsToFile@{writeDiscussionsToFile}}
+\index{writeDiscussionsToFile@{writeDiscussionsToFile}!com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsubsection{\texorpdfstring{writeDiscussionsToFile()}{writeDiscussionsToFile()}}
+{\footnotesize\ttfamily static void com.\+Divan.\+coordinator.\+Discussion\+Manager.\+write\+Discussions\+To\+File (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1Discussion}{Discussion}} $>$}]{discussions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Writes the list of discussions to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em discussions} & The list of discussions to be written to file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Discussion\+Manager.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94                                                                             \{}
+\DoxyCodeLine{95         \textcolor{keywordflow}{try} (ObjectOutputStream outputStream = \textcolor{keyword}{new} ObjectOutputStream(\textcolor{keyword}{new} FileOutputStream(\mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a0881cbc4b34c9c7b3970b56bf9bc35af}{DISCUSSIONS\_FILE}}))) \{}
+\DoxyCodeLine{96             outputStream.writeObject(discussions);}
+\DoxyCodeLine{97             System.out.println(\textcolor{stringliteral}{"{}Discussions have been saved to "{}} + \mbox{\hyperlink{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a0881cbc4b34c9c7b3970b56bf9bc35af}{DISCUSSIONS\_FILE}});}
+\DoxyCodeLine{98         \} \textcolor{keywordflow}{catch} (Exception Ignored) \{}
+\DoxyCodeLine{99         \}}
+\DoxyCodeLine{100     \}}
+
+\end{DoxyCode}
+
+
+References com.\+Divan.\+coordinator.\+Discussion\+Manager.\+DISCUSSIONS\+\_\+\+FILE.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Coordinator\+App.\+create\+Discussion(), com.\+Divan.\+coordinator.\+Coordinator\+App.\+edit\+Discussion\+Details(), and com.\+Divan.\+coordinator.\+Coordinator\+App.\+view\+Discussions().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a0881cbc4b34c9c7b3970b56bf9bc35af}\label{classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_a0881cbc4b34c9c7b3970b56bf9bc35af}} 
+\index{com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}!DISCUSSIONS\_FILE@{DISCUSSIONS\_FILE}}
+\index{DISCUSSIONS\_FILE@{DISCUSSIONS\_FILE}!com.Divan.coordinator.DiscussionManager@{com.Divan.coordinator.DiscussionManager}}
+\doxysubsubsection{\texorpdfstring{DISCUSSIONS\_FILE}{DISCUSSIONS\_FILE}}
+{\footnotesize\ttfamily final String com.\+Divan.\+coordinator.\+Discussion\+Manager.\+DISCUSSIONS\+\_\+\+FILE = \char`\"{}Discussions.\+bin\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+The file path for storing discussions. 
+
+Definition at line 31 of file Discussion\+Manager.\+java.
+
+
+
+Referenced by com.\+Divan.\+coordinator.\+Discussion\+Manager.\+read\+Discussions\+From\+File(), and com.\+Divan.\+coordinator.\+Discussion\+Manager.\+write\+Discussions\+To\+File().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+coordinator-\/app/src/main/java/com/\+Divan/coordinator/\mbox{\hyperlink{DiscussionManager_8java}{Discussion\+Manager.\+java}}\end{DoxyCompactItemize}

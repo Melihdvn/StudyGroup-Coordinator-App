@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1User" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::User</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1User_1ad8dc65fc6d82d051bc671142b24791e2" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.Divan.coordinator.User.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The serial version UID for serialization. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="24" column="31" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1User_1aeb5810757b56145c6a1f76522019bf74" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The user&apos;s first name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="27" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1User_1afd3b8b1bfd869ae1e3caf2d7a54f5949" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.surname</definition>
+        <argsstring></argsstring>
+        <name>surname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The user&apos;s last name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="30" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1User_1a3a4410b47c1788af0ef619e7efb8a342" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.Divan.coordinator.User.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The unique identifier for the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="33" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1User_1a723da7057e5c10c78ef28a5c06f953a0" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The username used for authentication. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="36" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1User_1a38bc49bb13e566b45acebb1ca96768cc" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The password used for authentication. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="39" column="20" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1User_1a49272847c54a72654fbe4fafe72b28d1" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+        <definition>StudyGroup com.Divan.coordinator.User.group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The study group associated with the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="42" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1a9e9728c6b0e5d061f0481ddbb9a909c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.Divan.coordinator.User.User</definition>
+        <argsstring>(String name, String surname, int id, String username, String password)</argsstring>
+        <name>User</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>surname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref> object with the specified attributes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s surname. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s username. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s password. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="53" column="12" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="53" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1ad05a002d8a017ad161aa8938cf5b8477" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the user&apos;s name.</para>
+<para><simplesect kind="return"><para>The user&apos;s name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="66" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1a161485bc704bf0c318f18b6b10ab1494" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.getSurname</definition>
+        <argsstring>()</argsstring>
+        <name>getSurname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the user&apos;s surname.</para>
+<para><simplesect kind="return"><para>The user&apos;s surname. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="75" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1aa5bc274c81b9045eb26196a5338b32bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.Divan.coordinator.User.getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the user&apos;s ID.</para>
+<para><simplesect kind="return"><para>The user&apos;s ID. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="84" column="16" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1aa7f7fe716ce11fe815fa71e3778cf60d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.getUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the user&apos;s username.</para>
+<para><simplesect kind="return"><para>The user&apos;s username. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="93" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="93" bodyend="95"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a2379a7196dae0a83704c0e9a74c770bd" compoundref="DiscussionManager_8java" startline="66" endline="87">com.Divan.coordinator.DiscussionManager.displayDiscussionsForGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1a9b3d84b00b814f767cdfbdc511ef2811" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.Divan.coordinator.User.getPassword</definition>
+        <argsstring>()</argsstring>
+        <name>getPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the user&apos;s password.</para>
+<para><simplesect kind="return"><para>The user&apos;s password. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="102" column="19" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+        <definition>StudyGroup com.Divan.coordinator.User.getGroup</definition>
+        <argsstring>()</argsstring>
+        <name>getGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the study group the user belongs to.</para>
+<para><simplesect kind="return"><para>The study group the user belongs to. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="111" column="23" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="111" bodyend="113"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" compoundref="CoordinatorApp_8java" startline="511" endline="524">com.Divan.coordinator.CoordinatorApp.createDiscussion</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" compoundref="CoordinatorApp_8java" startline="576" endline="611">com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" compoundref="CoordinatorApp_8java" startline="177" endline="192">com.Divan.coordinator.CoordinatorApp.scheduleSession</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" compoundref="CoordinatorApp_8java" startline="345" endline="360">com.Divan.coordinator.CoordinatorApp.shareResource</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1User_1a754ceb766bc067607a89721217914fc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.Divan.coordinator.User.setGroup</definition>
+        <argsstring>(StudyGroup group)</argsstring>
+        <name>setGroup</name>
+        <param>
+          <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" kindref="compound">StudyGroup</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the study group for the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The study group to set for the user. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="120" column="17" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="120" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref> class represents a user in the system. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.Divan.coordinator.User</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1User"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.Divan.coordinator.User</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1User"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/User.java" line="22" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/User.java" bodystart="22" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>getGroup</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1aa5bc274c81b9045eb26196a5338b32bd" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>getId</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1ad05a002d8a017ad161aa8938cf5b8477" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>getName</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a9b3d84b00b814f767cdfbdc511ef2811" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>getPassword</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a161485bc704bf0c318f18b6b10ab1494" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>getSurname</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1aa7f7fe716ce11fe815fa71e3778cf60d" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>getUsername</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a49272847c54a72654fbe4fafe72b28d1" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>group</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a3a4410b47c1788af0ef619e7efb8a342" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>id</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1aeb5810757b56145c6a1f76522019bf74" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>name</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a38bc49bb13e566b45acebb1ca96768cc" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>password</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1ad8dc65fc6d82d051bc671142b24791e2" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a754ceb766bc067607a89721217914fc5" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>setGroup</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1afd3b8b1bfd869ae1e3caf2d7a54f5949" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>surname</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a9e9728c6b0e5d061f0481ddbb9a909c1" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>User</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1User_1a723da7057e5c10c78ef28a5c06f953a0" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::User</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

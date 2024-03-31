@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacecom_1_1Divan_1_1coordinator" kind="namespace" language="Java">
+    <compoundname>com::Divan::coordinator</compoundname>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1Account" prot="public">com::Divan::coordinator::Account</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp" prot="public">com::Divan::coordinator::CoordinatorApp</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1Discussion" prot="public">com::Divan::coordinator::Discussion</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager" prot="public">com::Divan::coordinator::DiscussionManager</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1FileUtility" prot="public">com::Divan::coordinator::FileUtility</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1Resource" prot="public">com::Divan::coordinator::Resource</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager" prot="public">com::Divan::coordinator::ResourceManager</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1Session" prot="public">com::Divan::coordinator::Session</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager" prot="public">com::Divan::coordinator::SessionManager</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup" prot="public">com::Divan::coordinator::StudyGroup</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1User" prot="public">com::Divan::coordinator::User</innerclass>
+    <innerclass refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups" prot="public">com::Divan::coordinator::ViewGroups</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="namespacecom_1_1Divan_1_1coordinator" kindref="compound">com.Divan.coordinator</ref> package contains classes and interfaces related to coordination tasks in the application developed by Rana Melih.</para>
+<para>This package serves as a coordination module facilitating communication and orchestration among different components of the application.</para>
+<para>Classes within this package might include implementations of coordinator patterns, such as the mediator pattern, or other coordination strategies.</para>
+<para><simplesect kind="author"><para>Rana Melih </para>
+</simplesect>
+<simplesect kind="version"><para>1.0.3 </para>
+</simplesect>
+<simplesect kind="since"><para>2024-03-28 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/Account.java" line="15" column="15"/>
+  </compounddef>
+</doxygen>

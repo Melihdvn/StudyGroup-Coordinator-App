@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SessionManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coordinator-app</a> &gt; <a href="index.source.html" class="el_package">com.Divan.coordinator</a> &gt; <span class="el_source">SessionManager.java</span></div><h1>SessionManager.java</h1><pre class="source lang-java linenums">/**
+ * The com.Divan.coordinator package contains classes and interfaces related to coordination tasks
+ * in the application developed by Rana Melih.
+ * 
+ * This package serves as a coordination module facilitating communication and orchestration
+ * among different components of the application.
+ * 
+ * Classes within this package might include implementations of coordinator patterns,
+ * such as the mediator pattern, or other coordination strategies.
+ * 
+ * @author Rana Melih
+ * @version 1.0.3
+ * @since 2024-03-28
+ */
+package com.Divan.coordinator;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * The SessionManager class handles the management of sessions in the system.
+ */
+public class SessionManager {
+    /** The file path for sessions serialization. */
+    public static final String SESSIONS_FILE = &quot;Sessions.bin&quot;;
+    
+    /** The list of sessions managed by this manager. */
+    private List&lt;Session&gt; sessions;
+
+    /** The file object representing the sessions file. */
+<span class="fc" id="L32">    private static File file = new File(SESSIONS_FILE);</span>
+
+    /**
+     * Constructs a new SessionManager object with an empty list of sessions.
+     */
+<span class="fc" id="L37">    public SessionManager() {</span>
+<span class="fc" id="L38">        this.sessions = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L39">    }</span>
+
+    /**
+     * Adds a session to the list of sessions.
+     *
+     * @param session The session to be added.
+     */
+    public void addSession(Session session) {
+<span class="fc" id="L47">        sessions.add(session);</span>
+<span class="fc" id="L48">    }</span>
+
+    /**
+     * Retrieves the list of sessions.
+     *
+     * @return The list of sessions.
+     */
+    public List&lt;Session&gt; getSessions() {
+<span class="fc" id="L56">        return sessions;</span>
+    }
+
+    /**
+     * Displays sessions for a specific study group.
+     *
+     * @param group The study group for which sessions will be displayed.
+     */
+    public void displaySessionsForGroup(StudyGroup group) {
+<span class="fc" id="L65">        System.out.println(&quot;Sessions for group &quot; + group.getName() + &quot;:&quot;);</span>
+<span class="fc" id="L66">        boolean foundSessions = false;</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        for (Session session : sessions) {</span>
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">            if (session.getGroup().getName().equals(group.getName())) {</span>
+<span class="fc" id="L69">                foundSessions = true;</span>
+<span class="fc" id="L70">                System.out.println(&quot;Title: &quot; + session.getTitle());</span>
+            }
+<span class="fc" id="L72">        }</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (!foundSessions) {</span>
+<span class="fc" id="L74">            System.out.println(&quot;Your group doesn't have any session.&quot;);</span>
+        }
+<span class="fc" id="L76">    }</span>
+
+    /**
+     * Writes sessions to a file.
+     *
+     * @param sessions The list of sessions to be written to the file.
+     */
+    public static void writeSessionsToFile(List&lt;Session&gt; sessions) {
+        try {
+<span class="fc" id="L85">            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file));</span>
+<span class="fc" id="L86">            outputStream.writeObject(sessions);</span>
+<span class="fc" id="L87">            outputStream.close();</span>
+<span class="nc" id="L88">        } catch (Exception ignored) {</span>
+<span class="fc" id="L89">        }</span>
+<span class="fc" id="L90">    }</span>
+
+    /**
+     * Reads sessions from a file.
+     *
+     * @return The list of sessions read from the file.
+     */
+    public static List&lt;Session&gt; readSessionsFromFile() {
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        if (!file.exists()) {</span>
+<span class="fc" id="L99">            System.out.println(&quot;Sessions file does not exist.&quot;);</span>
+<span class="fc" id="L100">            return new ArrayList&lt;&gt;();</span>
+        }
+
+<span class="fc" id="L103">        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file))) {</span>
+            @SuppressWarnings(&quot;unchecked&quot;)
+<span class="fc" id="L105">            List&lt;Session&gt; sessions = (List&lt;Session&gt;) inputStream.readObject();</span>
+<span class="fc" id="L106">            System.out.println(&quot;Sessions have been loaded from &quot; + SESSIONS_FILE);</span>
+<span class="fc" id="L107">            return sessions;</span>
+<span class="nc" id="L108">        } catch (Exception ignored) {</span>
+<span class="nc" id="L109">            return new ArrayList&lt;&gt;();</span>
+        }
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

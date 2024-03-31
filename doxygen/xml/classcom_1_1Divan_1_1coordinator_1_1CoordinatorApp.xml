@@ -1,0 +1,891 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp" kind="class" language="Java" prot="public">
+    <compoundname>com::Divan::coordinator::CoordinatorApp</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a6c0e29be455b084548604f4eb52173e2" prot="private" static="yes" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1Account" kindref="compound">Account</ref></type>
+        <definition>Account com.Divan.coordinator.CoordinatorApp.account</definition>
+        <argsstring></argsstring>
+        <name>account</name>
+        <initializer>= new <ref refid="classcom_1_1Divan_1_1coordinator_1_1Account" kindref="compound">Account</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The account associated with the application. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="29" column="28" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ac776ba5a9a17072479704e015f62ee0e" prot="private" static="yes" mutable="no">
+        <type>Scanner</type>
+        <definition>Scanner com.Divan.coordinator.CoordinatorApp.scanner</definition>
+        <argsstring></argsstring>
+        <name>scanner</name>
+        <initializer>= new Scanner(System.in)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Scanner object for user input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="32" column="28" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1User" kindref="compound">User</ref></type>
+        <definition>User com.Divan.coordinator.CoordinatorApp.currentUser</definition>
+        <argsstring></argsstring>
+        <name>currentUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The currently logged-in user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="35" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" compoundref="CoordinatorApp_8java" startline="511" endline="524">com.Divan.coordinator.CoordinatorApp.createDiscussion</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a2379a7196dae0a83704c0e9a74c770bd" compoundref="DiscussionManager_8java" startline="66" endline="87">com.Divan.coordinator.DiscussionManager.displayDiscussionsForGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" compoundref="CoordinatorApp_8java" startline="576" endline="611">com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" compoundref="CoordinatorApp_8java" startline="177" endline="192">com.Divan.coordinator.CoordinatorApp.scheduleSession</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" compoundref="CoordinatorApp_8java" startline="345" endline="360">com.Divan.coordinator.CoordinatorApp.shareResource</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a26f3dc1cf8e39d1e920ccfd0f35ad0da" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager" kindref="compound">SessionManager</ref></type>
+        <definition>SessionManager com.Divan.coordinator.CoordinatorApp.sessionManager</definition>
+        <argsstring></argsstring>
+        <name>sessionManager</name>
+        <initializer>= new <ref refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager" kindref="compound">SessionManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The session manager for managing sessions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="38" column="34" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a2ed7027a62a429af7a1b8e0f3701fa42" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager" kindref="compound">ResourceManager</ref></type>
+        <definition>ResourceManager com.Divan.coordinator.CoordinatorApp.resourceManager</definition>
+        <argsstring></argsstring>
+        <name>resourceManager</name>
+        <initializer>= new <ref refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager" kindref="compound">ResourceManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The resource manager for managing resources. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="41" column="35" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afabd6e460b7a645c840e97a285833edb" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager" kindref="compound">DiscussionManager</ref></type>
+        <definition>DiscussionManager com.Divan.coordinator.CoordinatorApp.discussionManager</definition>
+        <argsstring></argsstring>
+        <name>discussionManager</name>
+        <initializer>= new <ref refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager" kindref="compound">DiscussionManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The discussion manager for managing discussions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="44" column="37" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" compoundref="CoordinatorApp_8java" startline="576" endline="611">com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8c9e3ff6f235cc1dcaf5bed4b8f5e745" prot="public" static="yes" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1Discussion" kindref="compound">Discussion</ref> &gt;</type>
+        <definition>List&lt;Discussion&gt; com.Divan.coordinator.CoordinatorApp.discussions</definition>
+        <argsstring></argsstring>
+        <name>discussions</name>
+        <initializer>= new ArrayList&lt;<ref refid="classcom_1_1Divan_1_1coordinator_1_1Discussion" kindref="compound">Discussion</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of discussions in the application. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="47" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" compoundref="CoordinatorApp_8java" startline="511" endline="524">com.Divan.coordinator.CoordinatorApp.createDiscussion</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a7e2cf59bf3dca144d02f38f12624731b" prot="public" static="yes" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1Resource" kindref="compound">Resource</ref> &gt;</type>
+        <definition>List&lt;Resource&gt; com.Divan.coordinator.CoordinatorApp.resources</definition>
+        <argsstring></argsstring>
+        <name>resources</name>
+        <initializer>= new ArrayList&lt;<ref refid="classcom_1_1Divan_1_1coordinator_1_1Resource" kindref="compound">Resource</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of resources in the application. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="50" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" compoundref="CoordinatorApp_8java" startline="345" endline="360">com.Divan.coordinator.CoordinatorApp.shareResource</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3cc39bcbad1155d948e33a2657b323ff" prot="public" static="yes" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1Divan_1_1coordinator_1_1Session" kindref="compound">Session</ref> &gt;</type>
+        <definition>List&lt;Session&gt; com.Divan.coordinator.CoordinatorApp.sessions</definition>
+        <argsstring></argsstring>
+        <name>sessions</name>
+        <initializer>= new ArrayList&lt;<ref refid="classcom_1_1Divan_1_1coordinator_1_1Session" kindref="compound">Session</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of sessions in the application. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="53" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" compoundref="CoordinatorApp_8java" startline="177" endline="192">com.Divan.coordinator.CoordinatorApp.scheduleSession</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.clearScreen</definition>
+        <argsstring>()</argsstring>
+        <name>clearScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the console screen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="58" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="58" bodyend="61"/>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" compoundref="CoordinatorApp_8java" startline="511" endline="524">com.Divan.coordinator.CoordinatorApp.createDiscussion</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" compoundref="CoordinatorApp_8java" startline="576" endline="611">com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a353af174f4589fb23caeda677562eb30" compoundref="Account_8java" startline="206" endline="230">com.Divan.coordinator.Account.loginMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a8e0fad675192d53023a422906012b25b" compoundref="Account_8java" startline="111" endline="148">com.Divan.coordinator.Account.register</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" compoundref="CoordinatorApp_8java" startline="177" endline="192">com.Divan.coordinator.CoordinatorApp.scheduleSession</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" compoundref="CoordinatorApp_8java" startline="345" endline="360">com.Divan.coordinator.CoordinatorApp.shareResource</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" compoundref="StudyGroup_8java" startline="169" endline="178">com.Divan.coordinator.StudyGroup.viewStudyGroup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.mainMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>mainMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the main menu of the application. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="67" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="67" bodyend="95"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1aa7f7fe716ce11fe815fa71e3778cf60d" compoundref="User_8java" startline="93" endline="95">com.Divan.coordinator.User.getUsername</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" compoundref="CoordinatorApp_8java" startline="101" endline="120">com.Divan.coordinator.CoordinatorApp.groupManagementMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.groupManagementMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>groupManagementMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the group management menu. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="101" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="101" bodyend="120"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" compoundref="StudyGroup_8java" startline="169" endline="178">com.Divan.coordinator.StudyGroup.viewStudyGroup</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a950023f9b3d3753d57cb840b54326761" compoundref="StudyGroup_8java" startline="96" endline="162">com.Divan.coordinator.StudyGroup.createStudyGroup</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1ViewGroups_1a1fc5603b8e5fafe0beb531a70011d8d5" compoundref="ViewGroups_8java" startline="31" endline="49">com.Divan.coordinator.ViewGroups.viewGroups</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a210699ebd13392bd9e09d478960b8958" compoundref="StudyGroup_8java" startline="169" endline="178">com.Divan.coordinator.StudyGroup.viewStudyGroup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>sessionSchedulingMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the session scheduling menu. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="126" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="126" bodyend="171"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" compoundref="CoordinatorApp_8java" startline="244" endline="287">com.Divan.coordinator.CoordinatorApp.editSessionDetails</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" compoundref="CoordinatorApp_8java" startline="177" endline="192">com.Divan.coordinator.CoordinatorApp.scheduleSession</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" compoundref="CoordinatorApp_8java" startline="177" endline="192">com.Divan.coordinator.CoordinatorApp.scheduleSession</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" compoundref="CoordinatorApp_8java" startline="198" endline="233">com.Divan.coordinator.CoordinatorApp.viewSessions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.scheduleSession</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>scheduleSession</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to schedule a session. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="177" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="177" bodyend="192"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3cc39bcbad1155d948e33a2657b323ff" compoundref="CoordinatorApp_8java" startline="53">com.Divan.coordinator.CoordinatorApp.sessions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1ae5fc2e2ab03e52867ac4bc09c7908f39" compoundref="SessionManager_8java" startline="83" endline="90">com.Divan.coordinator.SessionManager.writeSessionsToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.viewSessions</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewSessions</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of sessions for the user&apos;s group and allows viewing session details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="198" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="198" bodyend="233"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a632885f4e0b3a29ccff786feb1cbbfd1" compoundref="SessionManager_8java" startline="64" endline="76">com.Divan.coordinator.SessionManager.displaySessionsForGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a6e7b0a2be150dc4de733605da96e4ff1" compoundref="Session_8java" startline="73" endline="75">com.Divan.coordinator.Session.getDate</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a2ccf57d8a13b173ab289a3138c8fbfd1" compoundref="Session_8java" startline="91" endline="93">com.Divan.coordinator.Session.getDescription</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" compoundref="StudyGroup_8java" startline="55" endline="57">com.Divan.coordinator.StudyGroup.getName</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a30f149ade2fa7de0c294015dce54f4ae" compoundref="SessionManager_8java" startline="55" endline="57">com.Divan.coordinator.SessionManager.getSessions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a676724b0751a5fa35ed754b99a0ae415" compoundref="Session_8java" startline="64" endline="66">com.Divan.coordinator.Session.getTitle</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a26f3dc1cf8e39d1e920ccfd0f35ad0da" compoundref="CoordinatorApp_8java" startline="38">com.Divan.coordinator.CoordinatorApp.sessionManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.editSessionDetails</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>editSessionDetails</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+<para>Allows the user to edit details of a session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method displays a list of sessions for the current user&apos;s group and prompts the user to choose a session to edit. It then allows the user to edit the session&apos;s title, date, and description.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used for input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="244" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="244" bodyend="287"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a632885f4e0b3a29ccff786feb1cbbfd1" compoundref="SessionManager_8java" startline="64" endline="76">com.Divan.coordinator.SessionManager.displaySessionsForGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" compoundref="StudyGroup_8java" startline="55" endline="57">com.Divan.coordinator.StudyGroup.getName</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a30f149ade2fa7de0c294015dce54f4ae" compoundref="SessionManager_8java" startline="55" endline="57">com.Divan.coordinator.SessionManager.getSessions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a26f3dc1cf8e39d1e920ccfd0f35ad0da" compoundref="CoordinatorApp_8java" startline="38">com.Divan.coordinator.CoordinatorApp.sessionManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a5e4b9cc35f36b379d506414519c79d95" compoundref="Session_8java" startline="109" endline="111">com.Divan.coordinator.Session.setDate</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Session_1ada738496321d00132ae62ae50b73e0b2" compoundref="Session_8java" startline="118" endline="120">com.Divan.coordinator.Session.setDescription</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Session_1a8ac678e4569d78afbf73c177aa1d4039" compoundref="Session_8java" startline="100" endline="102">com.Divan.coordinator.Session.setTitle</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1ae5fc2e2ab03e52867ac4bc09c7908f39" compoundref="SessionManager_8java" startline="83" endline="90">com.Divan.coordinator.SessionManager.writeSessionsToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" compoundref="CoordinatorApp_8java" startline="126" endline="171">com.Divan.coordinator.CoordinatorApp.sessionSchedulingMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>resourceSharingMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the resource sharing menu and handles user choices. Allows users to share resources or view existing resources. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="294" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="294" bodyend="338"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" compoundref="CoordinatorApp_8java" startline="410" endline="452">com.Divan.coordinator.CoordinatorApp.editResourceDetails</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" compoundref="CoordinatorApp_8java" startline="345" endline="360">com.Divan.coordinator.CoordinatorApp.shareResource</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" compoundref="CoordinatorApp_8java" startline="345" endline="360">com.Divan.coordinator.CoordinatorApp.shareResource</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" compoundref="CoordinatorApp_8java" startline="367" endline="400">com.Divan.coordinator.CoordinatorApp.viewResourceDetails</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.shareResource</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>shareResource</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to share a resource by providing title, description, and link. Adds the shared resource to the system and saves it to file. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="345" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="345" bodyend="360"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a7e2cf59bf3dca144d02f38f12624731b" compoundref="CoordinatorApp_8java" startline="50">com.Divan.coordinator.CoordinatorApp.resources</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a6c93b0595574fa774b5231073242a1e6" compoundref="ResourceManager_8java" startline="83" endline="89">com.Divan.coordinator.ResourceManager.writeResourcesToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.viewResourceDetails</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewResourceDetails</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to view details of a specific resource. Displays the title, description, and link of the resource if found. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="367" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="367" bodyend="400"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a296c74edbc13b9f86f585bcd3d3f438b" compoundref="ResourceManager_8java" startline="64" endline="76">com.Divan.coordinator.ResourceManager.displayResourcesForGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a44b131cca615b7d1a19768a5a93b03d3" compoundref="Resource_8java" startline="85" endline="87">com.Divan.coordinator.Resource.getDescription</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1af1fd76932d4dd082c7acf03143d71351" compoundref="Resource_8java" startline="94" endline="96">com.Divan.coordinator.Resource.getLink</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" compoundref="StudyGroup_8java" startline="55" endline="57">com.Divan.coordinator.StudyGroup.getName</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a2eab337c909973723fff30b3799f4385" compoundref="ResourceManager_8java" startline="55" endline="57">com.Divan.coordinator.ResourceManager.getResources</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a52370d3917efbe5f6a128ef177909698" compoundref="Resource_8java" startline="76" endline="78">com.Divan.coordinator.Resource.getTitle</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a2ed7027a62a429af7a1b8e0f3701fa42" compoundref="CoordinatorApp_8java" startline="41">com.Divan.coordinator.CoordinatorApp.resourceManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.editResourceDetails</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>editResourceDetails</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+<para>Allows the user to edit details of a resource. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method displays a list of resources for the current user&apos;s group and prompts the user to choose a resource to edit. It then allows the user to edit the resource&apos;s title, link, and description.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used for input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="410" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="410" bodyend="452"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a296c74edbc13b9f86f585bcd3d3f438b" compoundref="ResourceManager_8java" startline="64" endline="76">com.Divan.coordinator.ResourceManager.displayResourcesForGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" compoundref="StudyGroup_8java" startline="55" endline="57">com.Divan.coordinator.StudyGroup.getName</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a2eab337c909973723fff30b3799f4385" compoundref="ResourceManager_8java" startline="55" endline="57">com.Divan.coordinator.ResourceManager.getResources</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a2ed7027a62a429af7a1b8e0f3701fa42" compoundref="CoordinatorApp_8java" startline="41">com.Divan.coordinator.CoordinatorApp.resourceManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a281e29903e96f8c35a83991f723d5545" compoundref="Resource_8java" startline="130" endline="132">com.Divan.coordinator.Resource.setDescription</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a34ea49d6001a491d7df24de80f87f708" compoundref="Resource_8java" startline="121" endline="123">com.Divan.coordinator.Resource.setLink</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Resource_1a3d258c258a642908892cc547dfd82e3f" compoundref="Resource_8java" startline="112" endline="114">com.Divan.coordinator.Resource.setTitle</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a6c93b0595574fa774b5231073242a1e6" compoundref="ResourceManager_8java" startline="83" endline="89">com.Divan.coordinator.ResourceManager.writeResourcesToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" compoundref="CoordinatorApp_8java" startline="294" endline="338">com.Divan.coordinator.CoordinatorApp.resourceSharingMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>discussionBoardMenu</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the discussion board menu and handles user choices. Allows users to create a new discussion or view existing discussions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="459" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="459" bodyend="504"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" compoundref="CoordinatorApp_8java" startline="511" endline="524">com.Divan.coordinator.CoordinatorApp.createDiscussion</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" compoundref="CoordinatorApp_8java" startline="576" endline="611">com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" compoundref="CoordinatorApp_8java" startline="511" endline="524">com.Divan.coordinator.CoordinatorApp.createDiscussion</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</referencedby>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" compoundref="CoordinatorApp_8java" startline="530" endline="566">com.Divan.coordinator.CoordinatorApp.viewDiscussions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.createDiscussion</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>createDiscussion</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to create a new discussion by providing a topic. Adds the created discussion to the system and saves it to file. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="511" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="511" bodyend="524"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8c9e3ff6f235cc1dcaf5bed4b8f5e745" compoundref="CoordinatorApp_8java" startline="47">com.Divan.coordinator.CoordinatorApp.discussions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a195c251589a45ceeddafb4dfc3ec6c32" compoundref="DiscussionManager_8java" startline="94" endline="100">com.Divan.coordinator.DiscussionManager.writeDiscussionsToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.viewDiscussions</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewDiscussions</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to view details of discussions and add comments to them. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="530" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="530" bodyend="566"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1a503a08c2c9a99500ef5864cd837d6282" compoundref="Discussion_8java" startline="80" endline="82">com.Divan.coordinator.Discussion.addComment</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afabd6e460b7a645c840e97a285833edb" compoundref="CoordinatorApp_8java" startline="44">com.Divan.coordinator.CoordinatorApp.discussionManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8c9e3ff6f235cc1dcaf5bed4b8f5e745" compoundref="CoordinatorApp_8java" startline="47">com.Divan.coordinator.CoordinatorApp.discussions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a2379a7196dae0a83704c0e9a74c770bd" compoundref="DiscussionManager_8java" startline="66" endline="87">com.Divan.coordinator.DiscussionManager.displayDiscussionsForGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1aafbdf6c508faf557ec3777b15afb6f11" compoundref="DiscussionManager_8java" startline="57" endline="59">com.Divan.coordinator.DiscussionManager.getDiscussions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a195c251589a45ceeddafb4dfc3ec6c32" compoundref="DiscussionManager_8java" startline="94" endline="100">com.Divan.coordinator.DiscussionManager.writeDiscussionsToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.editDiscussionDetails</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>editDiscussionDetails</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+<para>Allows the user to edit details of a discussion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method displays the discussions for the current user&apos;s group and prompts the user to choose a discussion to edit. Users can edit the topic of the discussion if they have permission.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used for input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="576" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="576" bodyend="611"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" compoundref="CoordinatorApp_8java" startline="58" endline="61">com.Divan.coordinator.CoordinatorApp.clearScreen</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afabd6e460b7a645c840e97a285833edb" compoundref="CoordinatorApp_8java" startline="44">com.Divan.coordinator.CoordinatorApp.discussionManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a2379a7196dae0a83704c0e9a74c770bd" compoundref="DiscussionManager_8java" startline="66" endline="87">com.Divan.coordinator.DiscussionManager.displayDiscussionsForGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1aafbdf6c508faf557ec3777b15afb6f11" compoundref="DiscussionManager_8java" startline="57" endline="59">com.Divan.coordinator.DiscussionManager.getDiscussions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1User_1a0a84ada8bbaa8a8b47cc2ff02f279485" compoundref="User_8java" startline="111" endline="113">com.Divan.coordinator.User.getGroup</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1StudyGroup_1a599b1b7a96eca32afa9149b350abd373" compoundref="StudyGroup_8java" startline="55" endline="57">com.Divan.coordinator.StudyGroup.getName</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Discussion_1aa455b299ab9bc5fc13cbb0b6311ed4df" compoundref="Discussion_8java" startline="98" endline="100">com.Divan.coordinator.Discussion.setTopic</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a195c251589a45ceeddafb4dfc3ec6c32" compoundref="DiscussionManager_8java" startline="94" endline="100">com.Divan.coordinator.DiscussionManager.writeDiscussionsToFile</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" compoundref="CoordinatorApp_8java" startline="459" endline="504">com.Divan.coordinator.CoordinatorApp.discussionBoardMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.loadAll</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>loadAll</name>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main load point of the <ref refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp" kindref="compound">CoordinatorApp</ref> program. Initializes the application by loading data and starting the main menu. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="618" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="618" bodyend="650"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a9d7328220cd978acf2698e14b7c6f397" compoundref="DiscussionManager_8java" startline="48" endline="50">com.Divan.coordinator.DiscussionManager.addDiscussion</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a6ea9db95697f10a3ea5c77a0137026f9" compoundref="ResourceManager_8java" startline="46" endline="48">com.Divan.coordinator.ResourceManager.addResource</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a05ffbc583a1495d8cb4f68f024f47c2b" compoundref="SessionManager_8java" startline="46" endline="48">com.Divan.coordinator.SessionManager.addSession</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" compoundref="CoordinatorApp_8java" startline="35">com.Divan.coordinator.CoordinatorApp.currentUser</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afabd6e460b7a645c840e97a285833edb" compoundref="CoordinatorApp_8java" startline="44">com.Divan.coordinator.CoordinatorApp.discussionManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8c9e3ff6f235cc1dcaf5bed4b8f5e745" compoundref="CoordinatorApp_8java" startline="47">com.Divan.coordinator.CoordinatorApp.discussions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1aafbdf6c508faf557ec3777b15afb6f11" compoundref="DiscussionManager_8java" startline="57" endline="59">com.Divan.coordinator.DiscussionManager.getDiscussions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a2eab337c909973723fff30b3799f4385" compoundref="ResourceManager_8java" startline="55" endline="57">com.Divan.coordinator.ResourceManager.getResources</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a30f149ade2fa7de0c294015dce54f4ae" compoundref="SessionManager_8java" startline="55" endline="57">com.Divan.coordinator.SessionManager.getSessions</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a978f4ca6a9b672fdc4a3d9980bf5108c" compoundref="Account_8java" startline="84" endline="104">com.Divan.coordinator.Account.loadUsersFromFile</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1Account_1a353af174f4589fb23caeda677562eb30" compoundref="Account_8java" startline="206" endline="230">com.Divan.coordinator.Account.loginMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" compoundref="CoordinatorApp_8java" startline="67" endline="95">com.Divan.coordinator.CoordinatorApp.mainMenu</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager_1a39d9df1905ba74311b59c8cc94c90ec1" compoundref="DiscussionManager_8java" startline="107" endline="116">com.Divan.coordinator.DiscussionManager.readDiscussionsFromFile</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager_1a33c7443854437ffb5bbe125a37ccdb53" compoundref="ResourceManager_8java" startline="96" endline="110">com.Divan.coordinator.ResourceManager.readResourcesFromFile</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager_1a184cf7e68f3064a0733533f7571085fa" compoundref="SessionManager_8java" startline="97" endline="111">com.Divan.coordinator.SessionManager.readSessionsFromFile</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a2ed7027a62a429af7a1b8e0f3701fa42" compoundref="CoordinatorApp_8java" startline="41">com.Divan.coordinator.CoordinatorApp.resourceManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a7e2cf59bf3dca144d02f38f12624731b" compoundref="CoordinatorApp_8java" startline="50">com.Divan.coordinator.CoordinatorApp.resources</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a26f3dc1cf8e39d1e920ccfd0f35ad0da" compoundref="CoordinatorApp_8java" startline="38">com.Divan.coordinator.CoordinatorApp.sessionManager</references>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3cc39bcbad1155d948e33a2657b323ff" compoundref="CoordinatorApp_8java" startline="53">com.Divan.coordinator.CoordinatorApp.sessions</references>
+        <referencedby refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abdf4d2cf05bd70d189d53cae258cb792" compoundref="CoordinatorApp_8java" startline="659" endline="661">com.Divan.coordinator.CoordinatorApp.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abdf4d2cf05bd70d189d53cae258cb792" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.Divan.coordinator.CoordinatorApp.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main entry point of the <ref refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp" kindref="compound">CoordinatorApp</ref> program. Initializes the application by loading data and starting the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command line arguments (not used) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="659" column="24" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="659" bodyend="661"/>
+        <references refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" compoundref="CoordinatorApp_8java" startline="618" endline="650">com.Divan.coordinator.CoordinatorApp.loadAll</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp" kindref="compound">CoordinatorApp</ref> is the main class that manages the functionality of the coordinator application. This application allows users to manage study groups, schedule sessions, share resources, and participate in discussions. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>Serializable</label>
+      </node>
+      <node id="9">
+        <label>com.Divan.coordinator.DiscussionManager</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1DiscussionManager"/>
+      </node>
+      <node id="4">
+        <label>List&lt; com.Divan.coordinator.Session &gt;</label>
+      </node>
+      <node id="6">
+        <label>com.Divan.coordinator.SessionManager</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1SessionManager"/>
+      </node>
+      <node id="1">
+        <label>com.Divan.coordinator.CoordinatorApp</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>discussions</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>resourceManager</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>sessions</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>resources</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>sessionManager</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>currentUser</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>discussionManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>List&lt; com.Divan.coordinator.Discussion &gt;</label>
+      </node>
+      <node id="3">
+        <label>com.Divan.coordinator.ResourceManager</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1ResourceManager"/>
+      </node>
+      <node id="5">
+        <label>List&lt; com.Divan.coordinator.Resource &gt;</label>
+      </node>
+      <node id="7">
+        <label>com.Divan.coordinator.User</label>
+        <link refid="classcom_1_1Divan_1_1coordinator_1_1User"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" line="27" column="7" bodyfile="coordinator-app/src/main/java/com/Divan/coordinator/CoordinatorApp.java" bodystart="27" bodyend="662"/>
+    <listofallmembers>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a6c0e29be455b084548604f4eb52173e2" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>account</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae019a13fe2f897b5105dcaf5c6d2952a" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>clearScreen</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aed92e43a18fbbc17ad9b168d821eb022" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>createDiscussion</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abb920989149d0302795ead382bf67741" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>currentUser</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a45dd1196813c1a0fd9dfc2c8a8f67e45" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>discussionBoardMenu</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afabd6e460b7a645c840e97a285833edb" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>discussionManager</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8c9e3ff6f235cc1dcaf5bed4b8f5e745" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>discussions</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a8ecefb60ad1107f8afd630272d49e71b" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>editDiscussionDetails</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ab8f692cee04e73e97a5135837dcd1b0c" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>editResourceDetails</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a4212742f99b731af451f20969960e51d" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>editSessionDetails</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aab5b6f6ccbe5caf99407c14f8a8191e1" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>groupManagementMenu</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3a0da3166ed9534a8996459afca203ca" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>loadAll</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1abdf4d2cf05bd70d189d53cae258cb792" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>main</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ad94f282fd3684b024c8c6b34029754f3" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>mainMenu</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a2ed7027a62a429af7a1b8e0f3701fa42" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>resourceManager</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a7e2cf59bf3dca144d02f38f12624731b" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>resources</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a17eff7a5151c79f0762338ad8da09bde" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>resourceSharingMenu</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ac776ba5a9a17072479704e015f62ee0e" prot="private" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>scanner</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afefcc6cb0be9cd6ce38683e600fc17d6" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>scheduleSession</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a26f3dc1cf8e39d1e920ccfd0f35ad0da" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>sessionManager</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a3cc39bcbad1155d948e33a2657b323ff" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>sessions</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1a1a42a27289f66655ecd4bc197c67ea47" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>sessionSchedulingMenu</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae25114eb5dffc0fe5c703fbae256c6db" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>shareResource</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1afb3089417c9848cf33c4d053844d1ce6" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>viewDiscussions</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1ae4d80e4553b8278ad2959e42bbecee6b" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>viewResourceDetails</name></member>
+      <member refid="classcom_1_1Divan_1_1coordinator_1_1CoordinatorApp_1aa85d5e1a75024ded32cfcac15c5c2843" prot="public" virt="non-virtual"><scope>com::Divan::coordinator::CoordinatorApp</scope><name>viewSessions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
