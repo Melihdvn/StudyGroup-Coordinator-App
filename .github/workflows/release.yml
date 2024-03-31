@@ -120,7 +120,6 @@ jobs:
             cp "coordinator-app/target/site/coveragereport/badge_branchcoverage.svg" "assets/badge_branchcoverage.svg"
             cp "coordinator-app/target/site/coveragereport/badge_linecoverage.svg" "assets/badge_linecoverage.svg"
             cp "coordinator-app/target/site/coveragereport/badge_methodcoverage.svg" "assets/badge_methodcoverage.svg"    
-            cp "assets/rteu_logo.jpg" "coordinator-app/src/site/resources/images/rteu_logo.jpg"
             cp README.md "coordinator-app/src/site/markdown/readme.md"
             cp -r ./assets/ ./coordinator-app/src/site/resources
         shell: bash
